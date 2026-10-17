@@ -1684,7 +1684,7 @@
           <div>
             <h2 style="font-size: 1.4rem; font-weight: 900; color: #1e1b4b;">💬 沉浸式漫畫對話與閱讀聽力工坊</h2>
             <p style="font-size: 0.88rem; color: var(--text-sub); font-weight: 600;">
-              支援三大實證學習模式：<strong>① 📖 漫畫點讀與單句口說跟讀</strong>、<strong>② 🎭 互動角色扮演配音工坊</strong>、<strong>③ 🎧 關鍵句型聽力克漏字填空</strong>！
+              支援兩大實證學習模式：<strong>① 📖 漫畫點讀與口說跟讀</strong>、<strong>② 🎧 關鍵句型聽力克漏字填空</strong>！
             </p>
           </div>
           <div style="display: flex; gap: 0.45rem; flex-wrap: wrap;">
@@ -3839,7 +3839,7 @@
       const selector = document.getElementById("story-selector-bar");
       selector.innerHTML = readingStories.map(s => {
         const m = appState.storyMastery[s.id] || {};
-        const badges = [m.dub ? "🎬配音" : "", m.cloze ? "🎧聽寫" : "", m.comp ? "🧐閱讀" : ""].filter(Boolean).join(" · ");
+        const badges = [m.dub ? "🎙️口說" : "", m.cloze ? "🎧聽寫" : "", m.comp ? "🧐閱讀" : ""].filter(Boolean).join(" · ");
         return `
           <button class="story-btn ${appState.currentStoryId === s.id ? 'active' : ''}" onclick="selectStory('${s.id}')">
             <div style="font-weight: 900; font-size: 0.96rem; color: #1e1b4b; margin-bottom: 0.15rem;">${s.title}</div>
@@ -3853,26 +3853,7 @@
       const contentBox = document.getElementById("story-content-area");
 
       let modeBannerHtml = "";
-      if (currentReadingMode === "roleplay") {
-        modeBannerHtml = `
-          <div style="background: linear-gradient(135deg, #fff1f2, #fffbeb); border: 2px solid #fb7185; border-radius: 0.95rem; padding: 0.9rem 1.1rem; margin-bottom: 1rem;">
-            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">
-              <div>
-                <h4 style="color:#9f1239; font-weight:900; font-size:1rem;">🎭 互動角色扮演配音工坊（完成配音可獲 🎬 最佳配音員徽章 +35 XP）</h4>
-                <p style="font-size:0.84rem; color:#334155; font-weight:700;">選擇你想扮演的角色，輪到電腦時自動發音，輪到你時按下「🎙️ 換我配音」開口說台詞！</p>
-              </div>
-              <div style="display:flex; gap:0.4rem; flex-wrap:wrap;">
-                <select onchange="rolePlaySelectedRole = this.value; startRolePlaySession();" style="padding:0.4rem 0.65rem; border-radius:0.55rem; border:2px solid #f43f5e; font-weight:800; font-size:0.84rem;">
-                  <option value="all" ${rolePlaySelectedRole === 'all' ? 'selected' : ''}>🎙️ 我要配音全部台詞（全篇跟讀挑戰）</option>
-                  <option value="even" ${rolePlaySelectedRole === 'even' ? 'selected' : ''}>👦 我要扮演角色 B（雙數句台詞）</option>
-                  <option value="odd" ${rolePlaySelectedRole === 'odd' ? 'selected' : ''}>👩‍⚕️ 我要扮演角色 A（單數句台詞）</option>
-                </select>
-                <button class="btn btn-sm mic-btn" onclick="startRolePlaySession()">🎬 從第 1 句開始角色扮演</button>
-              </div>
-            </div>
-          </div>
-        `;
-      } else if (currentReadingMode === "cloze") {
+      if (currentReadingMode === "cloze") {
         modeBannerHtml = `
           <div style="background: linear-gradient(135deg, #eef2ff, #ecfdf5); border: 2px solid #6366f1; border-radius: 0.95rem; padding: 0.9rem 1.1rem; margin-bottom: 1rem;">
             <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">
@@ -3888,16 +3869,13 @@
       }
 
       contentBox.innerHTML = `
-        <!-- 3-Mode Interactive Switcher -->
+        <!-- 2-Mode Clean Interactive Switcher -->
         <div class="mode-subtabs">
           <button class="mode-subtab ${currentReadingMode === 'read' ? 'active' : ''}" onclick="setReadingMode('read')">
-            📖 模式一：漫畫點讀與單句口說跟讀
-          </button>
-          <button class="mode-subtab ${currentReadingMode === 'roleplay' ? 'active' : ''}" onclick="setReadingMode('roleplay')">
-            🎭 模式二：互動角色扮演配音工坊
+            📖 模式一：漫畫點讀與口說跟讀
           </button>
           <button class="mode-subtab ${currentReadingMode === 'cloze' ? 'active' : ''}" onclick="setReadingMode('cloze')">
-            🎧 模式三：關鍵句型聽力克漏字填空
+            🎧 模式二：關鍵句型聽力克漏字填空
           </button>
         </div>
 
@@ -3960,13 +3938,12 @@
               enDisplay = buildClozeLineHtml(l.en, story.id, lIdx);
             }
             const zhVisible = appState.showTranslation ? "block" : "none";
-            const isRoleTurn = currentReadingMode === "roleplay" && activeRolePlayTurn === lIdx;
             const lineDone = rolePlayPassedLines[`${story.id}_${lIdx}`];
 
             return `
               <div class="chat-bubble-row" id="story-row-${lIdx}">
                 <div class="chat-avatar" onclick="speakStoryLine(${lIdx})" title="點擊聽角色發音">${l.avatar}</div>
-                <div class="chat-bubble ${isRoleTurn ? 'role-turn' : ''}" id="story-bubble-${lIdx}">
+                <div class="chat-bubble" id="story-bubble-${lIdx}">
                   <div style="flex: 1;" ${currentReadingMode !== 'cloze' ? `onclick="speakStoryLine(${lIdx})" style="cursor:pointer;"` : ''}>
                     <div style="font-size: 1.04rem; font-weight: 800; color: #1e1b4b;">
                       🔊 ${enDisplay}
@@ -3979,8 +3956,8 @@
                   </div>
                   <div style="display:flex; gap:0.35rem; align-items:center;">
                     <button class="btn btn-sm mic-btn" style="padding: 0.25rem 0.65rem; font-size: 0.76rem;"
-                            onclick="speakAndEvaluateStoryLine('${story.id}', ${lIdx}, this)" title="開口跟讀／配音本句英文">
-                      🎙️ ${currentReadingMode === 'roleplay' ? '換我配音' : '跟讀'}
+                            onclick="speakAndEvaluateStoryLine('${story.id}', ${lIdx}, this)" title="開口跟讀本句英文 (+15 XP)">
+                      🎙️ 跟讀
                     </button>
                     <button class="btn btn-outline btn-sm" style="padding: 0.25rem 0.6rem; font-size: 0.76rem;"
                             onclick="toggleSingleLineZh(${lIdx})" title="點擊顯示/隱藏本句中文">
@@ -4014,7 +3991,6 @@
     }
 
     function getCleanDialogueSpeechTarget(rawLine) {
-      // Strip speaker prefix like "Nurse:" or "Max (Friend):" so student only reads the dialogue
       return rawLine.replace(/^[A-Za-z\s()]+\s*:\s*/, "").trim();
     }
 
@@ -4027,64 +4003,11 @@
 
       runSpeechRecognition(cleanTarget, btnEl, resEl, () => {
         rolePlayPassedLines[`${sId}_${lIdx}`] = true;
-        addXP(15);
-        if (currentReadingMode === "roleplay") {
-          advanceRolePlayTurn(sId, lIdx + 1);
-        }
-      });
-    }
-
-    function startRolePlaySession() {
-      const story = readingStories.find(s => s.id === appState.currentStoryId) || readingStories[0];
-      activeRolePlayTurn = 0;
-      renderReadingWorkshop();
-      processRolePlayStep(story.id, 0);
-    }
-
-    function advanceRolePlayTurn(sId, nextIdx) {
-      const story = readingStories.find(s => s.id === sId) || readingStories[0];
-      if (nextIdx >= story.lines.length) {
         if (!appState.storyMastery[sId]) appState.storyMastery[sId] = {};
         appState.storyMastery[sId].dub = true;
-        addXP(35);
+        addXP(15);
         saveState();
-        playTone("fanfare");
-        renderReadingWorkshop();
-        alert("🎬 恭喜完成整篇對話角色扮演配音！榮獲「🏅 最佳配音員」實證徽章 (+35 XP)！");
-        return;
-      }
-      activeRolePlayTurn = nextIdx;
-      renderReadingWorkshop();
-      processRolePlayStep(sId, nextIdx);
-    }
-
-    function processRolePlayStep(sId, lIdx) {
-      const story = readingStories.find(s => s.id === sId) || readingStories[0];
-      if (lIdx >= story.lines.length) return;
-
-      const bubble = document.getElementById(`story-bubble-${lIdx}`);
-      if (bubble) bubble.scrollIntoView({ behavior: "smooth", block: "center" });
-
-      const isStudentTurn =
-        rolePlaySelectedRole === "all" ||
-        (rolePlaySelectedRole === "odd" && lIdx % 2 === 0) ||
-        (rolePlaySelectedRole === "even" && lIdx % 2 === 1);
-
-      if (!isStudentTurn) {
-        // Computer speaks its role automatically, then advances to student's turn!
-        const resEl = document.getElementById(`line-speak-res-${lIdx}`);
-        if (resEl) {
-          resEl.innerHTML = `<div style="color:#0891b2; font-weight:800; font-size:0.82rem; margin-top:0.3rem;">🤖 電腦對手正在朗讀台詞... 請準備接下一句！</div>`;
-        }
-        speakText(getCleanDialogueSpeechTarget(story.lines[lIdx].raw), 0.9, () => {
-          setTimeout(() => advanceRolePlayTurn(sId, lIdx + 1), 500);
-        });
-      } else {
-        const resEl = document.getElementById(`line-speak-res-${lIdx}`);
-        if (resEl) {
-          resEl.innerHTML = `<div style="color:#e11d48; font-weight:900; font-size:0.84rem; margin-top:0.3rem;">👉 輪到你了！請點擊右側「🎙️ 換我配音」開口唸出這句台詞！</div>`;
-        }
-      }
+      });
     }
 
     function checkStoryCloze(sId) {
