@@ -999,6 +999,178 @@
       margin-top: 1.1rem;
     }
 
+
+    /* ==========================================
+       V7: AI SPEAKING, SPELLING TILES, SCRAMBLER & ROLE-PLAY
+       ========================================== */
+    .vocab-card.verified {
+      border-color: #f59e0b;
+      background: linear-gradient(180deg, #ffffff 0%, #fffbeb 55%, #ecfdf5 100%);
+      box-shadow: 0 5px 0 #fbbf24, 0 10px 20px rgba(245, 158, 11, 0.12);
+    }
+    .verified-stamp {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      background: linear-gradient(135deg, #f59e0b, #10b981);
+      color: white;
+      font-size: 0.72rem;
+      font-weight: 900;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      box-shadow: 0 2px 6px rgba(16, 185, 129, 0.25);
+    }
+    .inline-lab-box {
+      display: none;
+      background: #f8fafc;
+      border: 2px solid #c7d2fe;
+      border-radius: 0.85rem;
+      padding: 0.75rem;
+      margin-bottom: 0.65rem;
+      font-size: 0.84rem;
+    }
+    .inline-lab-box.open {
+      display: block;
+      animation: fadeSlideIn 0.2s ease;
+    }
+    .mic-btn {
+      background: linear-gradient(135deg, #e11d48, #f43f5e);
+      color: white;
+      border: none;
+      box-shadow: 0 3px 0 #9f1239;
+    }
+    .mic-btn.listening {
+      animation: micPulse 1.1s infinite;
+      background: linear-gradient(135deg, #dc2626, #fb7185);
+    }
+    @keyframes micPulse {
+      0% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.55); transform: scale(1); }
+      50% { box-shadow: 0 0 0 10px rgba(225, 29, 72, 0); transform: scale(1.03); }
+      100% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0); transform: scale(1); }
+    }
+    .tile-pool, .tile-tray {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      min-height: 44px;
+      padding: 0.55rem;
+      border-radius: 0.75rem;
+      align-items: center;
+    }
+    .tile-tray {
+      background: #ffffff;
+      border: 2px dashed #94a3b8;
+      margin-bottom: 0.55rem;
+    }
+    .tile-pool {
+      background: #f1f5f9;
+      border: 1.5px solid #cbd5e1;
+      margin-bottom: 0.55rem;
+    }
+    .word-tile {
+      padding: 0.38rem 0.75rem;
+      border-radius: 0.6rem;
+      background: white;
+      border: 2px solid #6366f1;
+      color: #1e1b4b;
+      font-weight: 800;
+      font-size: 0.88rem;
+      cursor: pointer;
+      box-shadow: 0 2px 0 #4f46e5;
+      transition: all 0.12s;
+      user-select: none;
+    }
+    .word-tile:hover {
+      transform: translateY(-2px);
+      background: #eef2ff;
+    }
+    .word-tile.in-tray {
+      background: #eef2ff;
+      border-color: #0891b2;
+      box-shadow: 0 2px 0 #0e7490;
+    }
+    .letter-tile {
+      width: 34px;
+      height: 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.5rem;
+      background: white;
+      border: 2px solid #4f46e5;
+      color: #1e1b4b;
+      font-weight: 900;
+      font-size: 0.95rem;
+      cursor: pointer;
+      box-shadow: 0 2px 0 #4338ca;
+      transition: all 0.12s;
+    }
+    .letter-tile:hover {
+      background: #e0e7ff;
+      transform: translateY(-2px);
+    }
+    .letter-tile.used {
+      opacity: 0.32;
+      pointer-events: none;
+      border-color: #cbd5e1;
+      box-shadow: none;
+    }
+    .mode-subtabs {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      background: #eef2ff;
+      padding: 0.45rem;
+      border-radius: 0.9rem;
+      margin-bottom: 1rem;
+      border: 1.5px solid #c7d2fe;
+    }
+    .mode-subtab {
+      flex: 1;
+      min-width: 170px;
+      padding: 0.55rem 0.85rem;
+      border-radius: 0.65rem;
+      border: none;
+      background: transparent;
+      font-weight: 800;
+      font-size: 0.86rem;
+      color: #312e81;
+      cursor: pointer;
+      transition: all 0.18s;
+      text-align: center;
+    }
+    .mode-subtab.active {
+      background: linear-gradient(135deg, #4f46e5, #0891b2);
+      color: white;
+      box-shadow: 0 4px 10px rgba(79, 70, 229, 0.25);
+    }
+    .cloze-select {
+      padding: 0.25rem 0.55rem;
+      border-radius: 0.5rem;
+      border: 2px solid #4f46e5;
+      background: #eef2ff;
+      color: #1e1b4b;
+      font-weight: 800;
+      font-size: 0.92rem;
+      margin: 0 0.2rem;
+      cursor: pointer;
+    }
+    .cloze-select.correct {
+      background: #d1fae5;
+      border-color: #059669;
+      color: #065f46;
+    }
+    .cloze-select.wrong {
+      background: #ffe4e6;
+      border-color: #e11d48;
+      color: #9f1239;
+    }
+    .chat-bubble.role-turn {
+      border-color: #f43f5e;
+      background: linear-gradient(90deg, #fff1f2 0%, #ffffff 100%);
+      box-shadow: 0 0 0 3px rgba(244, 63, 94, 0.18);
+    }
+
     .cert-frame {
       border: 10px double #1e1b4b;
       background: linear-gradient(135deg, #ffffff 0%, #fefce8 100%);
@@ -1027,7 +1199,7 @@
         <div>
           <div class="brand-pill">✨ 國小六年級（第 7–8 冊）英語教材重點整理與自主練習</div>
           <h1 class="site-title">🚀 國小六年級英語核心能力檢核與自學系統</h1>
-          <p class="site-subtitle">輕量漸進式學習介面 · 互動字卡發音 · 漫畫情境點讀 · 智慧雷達診斷</p>
+          <p class="site-subtitle">AI 口說發音辨識 · 拼字與造句重組積木 · 漫畫角色扮演配音 · 雙軌實證精熟檢核</p>
         </div>
 
         <div class="player-hud">
@@ -1118,7 +1290,7 @@
           </button>
           <div class="expand-drawer">
             <ul style="padding-left: 1.15rem; line-height: 1.7;">
-              <li><strong>經驗值升級機制</strong>：每收服 1 張單字卡 <code>+10 XP</code>、完成 1 題文法練習 <code>+15 XP</code>、讀完 1 篇漫畫故事 <code>+20 XP</code>、完成自我檢測 <code>+50 XP</code>！</li>
+              <li><strong>雙軌實證精熟與 XP 升級機制</strong>：單字與句型採「雙軌認證」——手動標記「👁️ 已讀」得 <code>+5 XP</code>；但通過<strong>「🎙️ AI 口說發音辨識」</strong>、<strong>「✍️ 拼字／語序重組積木」</strong>或<strong>「🎭 對話配音／克漏字聽寫」</strong>客觀檢核，即可榮獲金色<strong>「🏅 實證精熟」</strong>印章與 <code>+25 ~ 35 XP</code> 高額獎勵！</li>
               <li><strong>兩套六年級（第 7–8 冊）教材重點整理</strong>：本系統參考兩套國小第 7–8 冊英語課本的主題與句型整理而成——其中一套側重「生病症狀、點餐與夢想職業」（過去式教 <code>was/were</code>）；另一套側重「交通方式、服飾價格單複數」並多教了「一般動詞過去式 <code>did / -ed</code>」。系統將兩套課本的重點合併，方便同學自我檢核與跨版本補齊！</li><li><strong>🔒 學生隱私安全保障</strong>：本系統為純前端學習工具，無後端伺服器、不蒐集任何真實個資。所有學習進度僅保存在您目前的瀏覽器中，若使用學校公用平板或電腦，下課前可點擊右上角「🧹 清除紀錄」一鍵還原。</li>
             </ul>
           </div>
@@ -1151,7 +1323,7 @@
           <div class="stat-icon-circle" style="background: #ccfbf1; color: #0f766e;">⚡</div>
           <div>
             <div style="font-size: 0.8rem; font-weight: 800; color: var(--text-muted);">文法關卡破解</div>
-            <div id="stat-grammar-val" class="stat-val">0 / 16</div>
+            <div id="stat-grammar-val" class="stat-val">0 / 40</div>
             <div style="font-size: 0.76rem; color: var(--text-muted); font-weight: 700;">8 大核心與高階句型</div>
           </div>
         </div>
@@ -1275,16 +1447,18 @@
       <div class="card">
         <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.85rem; margin-bottom: 1.15rem;">
           <div>
-            <h2 style="font-size: 1.4rem; font-weight: 900; color: #1e1b4b;">🃏 六年級八大主題單字魔法卡館</h2>
+            <h2 style="font-size: 1.4rem; font-weight: 900; color: #1e1b4b;">🃏 六年級八大主題單字魔法卡館（雙軌實證闖關）</h2>
             <p style="font-size: 0.88rem; color: var(--text-sub); font-weight: 600;">
-              版面預設僅顯示<strong>核心單字與發音</strong>，降低視覺負擔！點擊卡片上的<strong>「💡 展開例句與秘訣」</strong>即可深入學習。
+              支援<strong>「🎙️ AI 口說發音辨識」</strong>與<strong>「✍️ 拼字積木重組」</strong>！通過任一客觀實測即可獲得金色<strong>「🏅 實證精熟 (+25 XP)」</strong>印章！
             </p>
           </div>
           <div style="display: flex; gap: 0.45rem; flex-wrap: wrap;">
-            <button class="btn btn-amber btn-sm" onclick="toggleVocabQuiz()">🎮 聽音選字快篩遊戲</button>
-            <button class="btn btn-outline btn-sm" id="btn-expand-all-vocab" onclick="toggleAllVocabDrawers()">📂 展開全部例句秘訣</button>
-            <button class="btn btn-outline btn-sm" onclick="filterVocabByStatus('review')">⭐ 只看待加強</button>
-            <button class="btn btn-outline btn-sm" onclick="filterVocabByStatus('all')">全部</button>
+            <button class="btn btn-amber btn-sm" onclick="toggleVocabQuiz()">🎧 聽音選字快篩</button>
+            <button class="btn btn-primary btn-sm" onclick="toggleSpellingBee()">✍️ 拼字聽寫闖關</button>
+            <button class="btn btn-outline btn-sm" id="btn-expand-all-vocab" onclick="toggleAllVocabDrawers()">📂 展開全部秘訣</button>
+            <button class="btn btn-outline btn-sm" onclick="filterVocabByStatus('verified')">🏅 實證精熟</button>
+            <button class="btn btn-outline btn-sm" onclick="filterVocabByStatus('review')">⭐ 待加強</button>
+            <button class="btn btn-outline btn-sm" onclick="filterVocabByStatus('all')">全部(96)</button>
           </div>
         </div>
 
@@ -1293,10 +1467,19 @@
         <!-- Mini Audio Game -->
         <div id="vocab-mini-quiz" class="practice-widget" style="display: none; margin-bottom: 1.25rem; background: linear-gradient(135deg, #fffbeb, #fef3c7); border-color: #fbbf24;">
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.7rem;">
-            <h4 style="color: #92400e; font-size: 1.05rem; font-weight: 900;">🎧 單字聽音快篩小遊戲（答對自動收服單字 +15 XP！）</h4>
-            <button class="btn btn-outline btn-sm" onclick="toggleVocabQuiz()">關閉遊戲</button>
+            <h4 style="color: #92400e; font-size: 1.05rem; font-weight: 900;">🎧 單字聽音選字快篩（答對直接解鎖「🏅 實證精熟」+25 XP！）</h4>
+            <button class="btn btn-outline btn-sm" onclick="toggleVocabQuiz()">關閉快篩</button>
           </div>
           <div id="vquiz-body"></div>
+        </div>
+
+        <!-- Spelling Bee & Letter Tile Game -->
+        <div id="vocab-spelling-bee" class="practice-widget" style="display: none; margin-bottom: 1.25rem; background: linear-gradient(135deg, #eef2ff, #e0f2fe); border-color: #6366f1;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.7rem; flex-wrap: wrap; gap: 0.5rem;">
+            <h4 style="color: #1e1b4b; font-size: 1.05rem; font-weight: 900;">✍️ 主題單字拼寫與字母積木闖關（點擊字母積木或打字輸入，答對解鎖「🏅 實證精熟」+25 XP！）</h4>
+            <button class="btn btn-outline btn-sm" onclick="toggleSpellingBee()">關閉拼字館</button>
+          </div>
+          <div id="spelling-bee-body"></div>
         </div>
 
         <div id="vocab-cards-container" class="vocab-grid"></div>
@@ -1311,7 +1494,7 @@
         <div style="margin-bottom: 1.15rem;">
           <h2 style="font-size: 1.4rem; font-weight: 900; color: #1e1b4b;">⚡ 六年級核心句型與文法互動實驗室</h2>
           <p style="font-size: 0.88rem; color: var(--text-sub); font-weight: 600;">
-            先看<strong>彩色核心公式</strong>並直接作答下方<strong>隨堂闖關練習</strong>！需要看完整主詞變化表或跨版本陷阱時，點擊展開即可。
+            每單元配備<strong>「三階段實證闖關」</strong>：① 觀念選擇快篩 ➔ ② <strong>🧱 語序重組造句積木</strong> ➔ ③ <strong>🎙️ AI 情境口說問答實測</strong>，告別死背與猜題！
           </p>
         </div>
 
@@ -1331,7 +1514,7 @@
           <div>
             <h2 style="font-size: 1.4rem; font-weight: 900; color: #1e1b4b;">💬 沉浸式漫畫對話與閱讀聽力工坊</h2>
             <p style="font-size: 0.88rem; color: var(--text-sub); font-weight: 600;">
-              預設隱藏中文翻譯以培養英語直覺！點擊任一對話氣泡可<strong>聽美語發音</strong>，點擊右側<strong>「🀄 譯」</strong>可單句展開中文。
+              支援三大實證學習模式：<strong>① 📖 漫畫點讀與單句口說跟讀</strong>、<strong>② 🎭 互動角色扮演配音工坊</strong>、<strong>③ 🎧 關鍵句型聽力克漏字填空</strong>！
             </p>
           </div>
           <div style="display: flex; gap: 0.45rem; flex-wrap: wrap;">
@@ -2219,7 +2402,114 @@
       saveState();
     }
 
+    /* =========================================================================
+       V7 DATA EXTENSIONS: GRAMMAR SCRAMBLERS, ORAL DRILLS & STORY CLOZE
+       ========================================================================= */
+    const grammarActiveData = {
+      g1: {
+        scramblers: [
+          { zh: "他幾點做他的功課？（注意助動詞 does 與原形動詞 do）", words: ["What time", "does", "he", "do", "his homework", "?"], ans: "What time does he do his homework ?" },
+          { zh: "她在空閒時間喜歡去游泳。（注意第三人稱單數 likes to）", words: ["She", "likes to", "go swimming", "in her", "free time", "."], ans: "She likes to go swimming in her free time ." }
+        ],
+        oral: {
+          promptZh: "⏰ 情境：Leo 每天早上 6:30 起床 (gets up at six thirty)。請聽外師提問並用英文回答！",
+          teacherQ: "What time does Leo get up?",
+          targetAns: "He gets up at six thirty.",
+          altAccept: ["he gets up at 6:30", "he gets up at six thirty", "gets up at six thirty", "six thirty"]
+        }
+      },
+      g2: {
+        scramblers: [
+          { zh: "他們來自英國嗎？（注意縮寫國名前必加 the）", words: ["Are", "they", "from", "the UK", "?"], ans: "Are they from the UK ?" },
+          { zh: "他每天走路去上學。（注意走路介系詞用 on foot）", words: ["He", "goes", "to school", "on foot", "."], ans: "He goes to school on foot ." }
+        ],
+        oral: {
+          promptZh: "🚶 情境：你每天「走路 (on foot)」去上學。請聽外師提問並開口回答！",
+          teacherQ: "How do you go to school?",
+          targetAns: "I go to school on foot.",
+          altAccept: ["i go to school on foot", "go to school on foot", "on foot"]
+        }
+      },
+      g3: {
+        scramblers: [
+          { zh: "她有發燒和喉嚨痛嗎？（注意助動詞 Does 後接原形 have）", words: ["Does", "she", "have", "a fever", "and", "a sore throat", "?"], ans: "Does she have a fever and a sore throat ?" },
+          { zh: "你未來想要成為一名作家嗎？", words: ["Do", "you", "want", "to be", "a writer", "?"], ans: "Do you want to be a writer ?" }
+        ],
+        oral: {
+          promptZh: "🤒 情境：你在保健室，護理師問你怎麼了，請回答「我頭痛而且發燒了」！",
+          teacherQ: "You don't look well. What's wrong?",
+          targetAns: "I have a headache and a fever.",
+          altAccept: ["i have a headache and a fever", "have a headache", "have a fever"]
+        }
+      },
+      g4: {
+        scramblers: [
+          { zh: "這件藍色牛仔褲多少錢？（注意褲子恆複數搭配 are these）", words: ["How much", "are", "these", "blue jeans", "?"], ans: "How much are these blue jeans ?" },
+          { zh: "它們是五百元。（注意 hundred 不加 s，dollars 要加 s）", words: ["They", "are", "five", "hundred", "dollars", "."], ans: "They are five hundred dollars ." }
+        ],
+        oral: {
+          promptZh: "👖 情境：顧客指著標價 $500 的牛仔褲問價錢，請開口回答「它們是五百元」！",
+          teacherQ: "How much are these jeans?",
+          targetAns: "They are five hundred dollars.",
+          altAccept: ["they are five hundred dollars", "theyre five hundred dollars", "they are $500", "five hundred dollars"]
+        }
+      },
+      g5: {
+        scramblers: [
+          { zh: "你一小時前在哪裡？（注意 second/you 搭配 were 與 an hour ago）", words: ["Where", "were", "you", "an hour", "ago", "?"], ans: "Where were you an hour ago ?" },
+          { zh: "我昨天下午在博物館。（注意單數 I 搭配過去式 was）", words: ["I", "was", "at the", "museum", "yesterday", "."], ans: "I was at the museum yesterday ." }
+        ],
+        oral: {
+          promptZh: "🏛️ 情境：媽媽問你昨天下午在哪裡，請回答「我昨天在博物館」！",
+          teacherQ: "Where were you yesterday afternoon?",
+          targetAns: "I was at the museum yesterday.",
+          altAccept: ["i was at the museum", "was at the museum"]
+        }
+      },
+      g6: {
+        scramblers: [
+          { zh: "你昨晚做了什麼事？（注意過去式助動詞 did + 原形 do）", words: ["What", "did", "you", "do", "last night", "?"], ans: "What did you do last night ?" },
+          { zh: "我整理了房間並且去公園遛狗。（注意規則過去式 -ed）", words: ["I", "cleaned", "my room", "and", "walked the dog", "."], ans: "I cleaned my room and walked the dog ." }
+        ],
+        oral: {
+          promptZh: "🧹 情境：朋友問你昨晚做了什麼，請開口回答「我整理了房間並聽了音樂」！",
+          teacherQ: "What did you do last night?",
+          targetAns: "I cleaned my room and listened to music.",
+          altAccept: ["i cleaned my room", "listened to music", "cleaned my room and listened to music"]
+        }
+      },
+      g7: {
+        scramblers: [
+          { zh: "我想要一些牛排和一些水餃。（不可數 steak 不加 s，可數 dumplings 加 s）", words: ["I'd like", "some", "steak", "and", "some dumplings", "."], ans: "I'd like some steak and some dumplings ." },
+          { zh: "椅子上那個後背包是誰的？（注意所有權疑問詞 Whose）", words: ["Whose", "backpack", "is", "that", "on the chair", "?"], ans: "Whose backpack is that on the chair ?" }
+        ],
+        oral: {
+          promptZh: "🥟 情境：服務生問你想點什麼，請開口回答「我想要一些湯和一些三明治」！",
+          teacherQ: "What would you like to eat?",
+          targetAns: "I'd like some soup and some sandwiches.",
+          altAccept: ["id like some soup and some sandwiches", "i would like some soup and some sandwiches", "some soup and some sandwiches"]
+        }
+      },
+      g8: {
+        scramblers: [
+          { zh: "我迫不及待要去賞鯨了！（注意高階句型 can't wait to + V）", words: ["I", "can't wait", "to", "go", "whale watching", "!"], ans: "I can't wait to go whale watching !" },
+          { zh: "多麼巨大的一隻哺乳動物啊！（注意感嘆句 What + a + adj. + N!）", words: ["What", "a", "big", "mammal", "!"], ans: "What a big mammal !" }
+        ],
+        oral: {
+          promptZh: "🐴 情境：已到午餐時間你肚子超餓，請用課本經典諺語開口說出「我太餓了！我餓到可以吃下一匹馬！」",
+          teacherQ: "Lunch is ready! Are you hungry?",
+          targetAns: "I'm so hungry! I could eat a horse!",
+          altAccept: ["i could eat a horse", "im so hungry i could eat a horse", "i am so hungry i could eat a horse"]
+        }
+      }
+    };
+
+    const storyClozeDistractors = [
+      "by bus", "a toothache", "were", "cleaned", "the USA", "How many", "Whose", "some rice", "winter", "a dentist"
+    ];
+
     function refreshDashboardUI() {
+      if (!appState.storyMastery) appState.storyMastery = {};
       document.getElementById("hdr-student-name").innerText = appState.studentName;
       document.getElementById("hud-avatar").innerText = appState.avatar || "🦊";
 
@@ -2228,14 +2518,15 @@
       document.getElementById("hud-xp-fill").style.width = `${lvInfo.pct}%`;
       document.getElementById("hud-xp-text").innerText = `${appState.xp || 0} XP`;
 
-      const masteredCount = Object.values(appState.vocabStatus).filter(v => v === "mastered").length;
+      const verifiedCount = Object.values(appState.vocabStatus).filter(v => v === "verified").length;
+      const masteredCount = Object.values(appState.vocabStatus).filter(v => v === "mastered" || v === "verified").length;
       const reviewCount = Object.values(appState.vocabStatus).filter(v => v === "review").length;
-      document.getElementById("hdr-vocab-count").innerText = `${masteredCount}/64`;
+      document.getElementById("hdr-vocab-count").innerText = `${masteredCount}/${vocabList.length} (🏅實證:${verifiedCount})`;
       document.getElementById("stat-vocab-val").innerText = `${masteredCount} / ${vocabList.length}`;
-      document.getElementById("stat-vocab-review").innerText = reviewCount;
+      document.getElementById("stat-vocab-review").innerHTML = `${reviewCount} 詞 · <span style="color:#059669;">🏅實證 ${verifiedCount} 詞</span>`;
 
       const gDoneCount = Object.keys(appState.grammarDone).length;
-      document.getElementById("stat-grammar-val").innerText = `${gDoneCount} / 12`;
+      document.getElementById("stat-grammar-val").innerText = `${gDoneCount} / 40`;
 
       document.getElementById("stat-wrong-count").innerText = `${appState.wrongBank.length} 題`;
       const wrongDesc = document.getElementById("wrong-mode-desc");
@@ -2277,38 +2568,257 @@
       }
     }
 
-    function speakText(text, rate = 0.92) {
-      if (!('speechSynthesis' in window)) return;
+    function speakText(text, rate = 0.92, onEndCallback = null) {
+      if (!('speechSynthesis' in window)) {
+        if (onEndCallback) setTimeout(onEndCallback, 600);
+        return;
+      }
       window.speechSynthesis.cancel();
       const u = new SpeechSynthesisUtterance(text);
       u.lang = "en-US";
       u.rate = rate;
+      if (onEndCallback) {
+        u.onend = () => onEndCallback();
+        u.onerror = () => onEndCallback();
+      }
       window.speechSynthesis.speak(u);
     }
 
     /* =========================================================================
-       TAB 2: VOCABULARY HUB (PROGRESSIVE DISCLOSURE CARDS)
+       GLOBAL AI SPEECH RECOGNITION & PRONUNCIATION EVALUATOR (WEB SPEECH API)
        ========================================================================= */
+    let activeRecognition = null;
+
+    function normalizeEnglishForMatch(str) {
+      return (str || "")
+        .toLowerCase()
+        .replace(/i'm/g, "i am")
+        .replace(/he's/g, "he is")
+        .replace(/she's/g, "she is")
+        .replace(/it's/g, "it is")
+        .replace(/we're/g, "we are")
+        .replace(/they're/g, "they are")
+        .replace(/you're/g, "you are")
+        .replace(/don't/g, "do not")
+        .replace(/doesn't/g, "does not")
+        .replace(/didn't/g, "did not")
+        .replace(/wasn't/g, "was not")
+        .replace(/weren't/g, "were not")
+        .replace(/can't/g, "can not")
+        .replace(/cannot/g, "can not")
+        .replace(/i'd/g, "i would")
+        .replace(/what's/g, "what is")
+        .replace(/who's/g, "who is")
+        .replace(/38\.5/g, "thirty eight point five")
+        .replace(/7:00/g, "seven")
+        .replace(/\$400/g, "four hundred dollars")
+        .replace(/\$500/g, "five hundred dollars")
+        .replace(/400/g, "four hundred")
+        .replace(/500/g, "five hundred")
+        .replace(/850/g, "eight hundred fifty")
+        .replace(/[^a-z0-9\s]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+    }
+
+    function evaluatePronunciationMatch(targetRaw, spokenTranscript, altAcceptList = []) {
+      const spokenNorm = normalizeEnglishForMatch(spokenTranscript);
+      const spokenWords = spokenNorm.split(" ").filter(Boolean);
+
+      // Check if any altAccept phrase is directly contained in spokenNorm
+      for (const alt of altAcceptList) {
+        const altNorm = normalizeEnglishForMatch(alt);
+        if (altNorm && spokenNorm.includes(altNorm)) {
+          return { score: 96, stars: 3, diffHtml: `<span style="color:#059669; font-weight:900;">${targetRaw} ✓</span>` };
+        }
+      }
+
+      // Handle slash/ampersand options in vocab cards (e.g. "by metro / MRT" or "hat & cap")
+      const segments = targetRaw.replace(/\.\.\./g, "").split(/[\/&]/).map(s => s.trim()).filter(Boolean);
+      let bestScore = 0;
+      let bestDiffHtml = "";
+
+      const candidates = [targetRaw.replace(/\.\.\./g, ""), ...segments];
+      candidates.forEach(cand => {
+        const candWordsRaw = cand.split(/\s+/).filter(Boolean);
+        const candWordsNorm = normalizeEnglishForMatch(cand).split(" ").filter(Boolean);
+        if (candWordsNorm.length === 0) return;
+
+        let matched = 0;
+        const diffParts = candWordsRaw.map(wRaw => {
+          const wClean = normalizeEnglishForMatch(wRaw);
+          if (!wClean) return wRaw;
+          const subTokens = wClean.split(" ").filter(Boolean);
+          const hit = subTokens.every(st => spokenWords.some(sw => sw === st || (sw.length > 3 && st.length > 3 && (sw.startsWith(st.slice(0, 3)) || st.startsWith(sw.slice(0, 3))))));
+          if (hit) {
+            matched++;
+            return `<span style="color:#059669; font-weight:900;">${wRaw}</span>`;
+          } else {
+            return `<span style="color:#e11d48; text-decoration:underline;">${wRaw}</span>`;
+          }
+        });
+
+        const pct = Math.round((matched / candWordsRaw.length) * 100);
+        if (pct >= bestScore) {
+          bestScore = pct;
+          bestDiffHtml = diffParts.join(" ");
+        }
+      });
+
+      const stars = bestScore >= 80 ? 3 : bestScore >= 55 ? 2 : 1;
+      return { score: bestScore, stars, diffHtml: bestDiffHtml };
+    }
+
+    function runSpeechRecognition(targetText, btnEl, resultEl, onPassCallback, altAcceptList = []) {
+      const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SpeechRec) {
+        resultEl.innerHTML = `
+          <div style="color:#b45309; background:#fffbeb; padding:0.55rem; border-radius:0.6rem; border:1.5px solid #fcd34d; margin-top:0.45rem;">
+            ⚠️ 您目前的瀏覽器或設備未開放語音辨識麥克風（建議使用 Chrome / Edge 瀏覽器）。<br>
+            <button class="btn btn-teal btn-sm" style="margin-top:0.4rem;" onclick="fallbackShadowingPass('${targetText.replace(/'/g, "\\'")}', this)">
+              🎧 啟動「聽音跟讀 2 次」替代口說實證 ➔
+            </button>
+          </div>
+        `;
+        window._pendingFallbackPass = onPassCallback;
+        return;
+      }
+
+      if (activeRecognition) {
+        try { activeRecognition.stop(); } catch (e) {}
+        activeRecognition = null;
+      }
+
+      const rec = new SpeechRec();
+      activeRecognition = rec;
+      rec.lang = "en-US";
+      rec.interimResults = false;
+      rec.maxAlternatives = 3;
+
+      const origBtnHtml = btnEl.innerHTML;
+      btnEl.classList.add("listening");
+      btnEl.innerHTML = "🎙️ 正在聆聽... 請大聲唸出英文";
+      resultEl.innerHTML = `<div style="color:#4f46e5; font-weight:800; margin-top:0.4rem;">👂 請對著麥克風清楚唸出：<span style="color:#0f172a;">"${targetText}"</span></div>`;
+
+      rec.onresult = (event) => {
+        btnEl.classList.remove("listening");
+        btnEl.innerHTML = origBtnHtml;
+
+        let bestEval = { score: -1, stars: 1, diffHtml: "", transcript: "" };
+        for (let i = 0; i < event.results[0].length; i++) {
+          const t = event.results[0][i].transcript;
+          const ev = evaluatePronunciationMatch(targetText, t, altAcceptList);
+          if (ev.score > bestEval.score) {
+            bestEval = { ...ev, transcript: t };
+          }
+        }
+
+        const starStr = "⭐".repeat(bestEval.stars);
+        if (bestEval.score >= 55) {
+          playTone("correct");
+          resultEl.innerHTML = `
+            <div style="background:#ecfdf5; border:1.5px solid #34d399; padding:0.6rem; border-radius:0.65rem; margin-top:0.45rem;">
+              <div style="font-weight:900; color:#065f46;">${starStr} 口說辨識通過！（契合度：${bestEval.score}%）</div>
+              <div style="font-size:0.82rem; color:#334155; margin-top:0.2rem;">🗣️ 聽到的發音：<code>"${bestEval.transcript}"</code></div>
+              <div style="font-size:0.86rem; margin-top:0.2rem;">🎯 逐字診斷：${bestEval.diffHtml}</div>
+            </div>
+          `;
+          if (onPassCallback) onPassCallback(bestEval.score);
+        } else {
+          playTone("wrong");
+          resultEl.innerHTML = `
+            <div style="background:#fff1f2; border:1.5px solid #fda4af; padding:0.6rem; border-radius:0.65rem; margin-top:0.45rem;">
+              <div style="font-weight:900; color:#be123c;">${starStr} 契合度 ${bestEval.score}% — 再試一次喔！（綠字為發音正確，紅底線為待加強）</div>
+              <div style="font-size:0.82rem; color:#334155; margin-top:0.2rem;">🗣️ 系統聽到：<code>"${bestEval.transcript}"</code></div>
+              <div style="font-size:0.86rem; margin-top:0.2rem;">🎯 逐字診斷：${bestEval.diffHtml}</div>
+              <div style="margin-top:0.4rem; display:flex; gap:0.4rem; flex-wrap:wrap;">
+                <button class="btn btn-outline btn-sm" onclick="speakText('${targetText.replace(/'/g, "\\'")}', 0.8)">🐢 先聽慢速示範發音</button>
+              </div>
+            </div>
+          `;
+        }
+      };
+
+      rec.onerror = (err) => {
+        btnEl.classList.remove("listening");
+        btnEl.innerHTML = origBtnHtml;
+        resultEl.innerHTML = `
+          <div style="background:#fffbeb; border:1.5px solid #fcd34d; padding:0.55rem; border-radius:0.6rem; margin-top:0.45rem; color:#92400e;">
+            💡 未偵測到麥克風聲音或權限未開啟（代碼：${err.error}）。請確認瀏覽器允許麥克風，或使用下方無麥克風跟讀模式：<br>
+            <button class="btn btn-teal btn-sm" style="margin-top:0.4rem;" onclick="fallbackShadowingPass('${targetText.replace(/'/g, "\\'")}', this)">
+              🎧 聽音大聲跟讀 2 次（無麥克風實證通道） ➔
+            </button>
+          </div>
+        `;
+        window._pendingFallbackPass = onPassCallback;
+      };
+
+      rec.onend = () => {
+        btnEl.classList.remove("listening");
+        btnEl.innerHTML = origBtnHtml;
+      };
+
+      try {
+        rec.start();
+      } catch (e) {
+        btnEl.classList.remove("listening");
+        btnEl.innerHTML = origBtnHtml;
+      }
+    }
+
+    function fallbackShadowingPass(text, btnEl) {
+      btnEl.disabled = true;
+      btnEl.innerText = "🔊 第 1 次標準示範朗讀中（請開口跟讀）...";
+      speakText(text, 0.9, () => {
+        btnEl.innerText = "🐢 第 2 次慢速跟讀驗證中（請再次大聲跟讀）...";
+        setTimeout(() => {
+          speakText(text, 0.75, () => {
+            playTone("correct");
+            btnEl.innerText = "✅ 已完成雙次跟讀口說實證！";
+            if (window._pendingFallbackPass) {
+              window._pendingFallbackPass(85);
+              window._pendingFallbackPass = null;
+            }
+          });
+        }, 450);
+      });
+    }
+
+    /* =========================================================================
+       TAB 2: VOCABULARY HUB (DUAL-TRACK VERIFIED MASTERY + SPEAKING + SPELLING)
+       ========================================================================= */
+    function getSpellTarget(wordStr) {
+      // Extract clean primary word/phrase for spelling puzzle
+      const firstSeg = wordStr.split(/[\/&]/)[0].replace(/\.\.\./g, "").replace(/[^a-zA-Z\s'-]/g, "").trim();
+      return firstSeg || wordStr;
+    }
+
     function renderVocabHub() {
       const pillsBox = document.getElementById("vocab-topic-pills");
-      pillsBox.innerHTML = vocabTopics.map(t => `
-        <button class="topic-pill ${appState.currentVocabTopic === t.id && appState.currentVocabFilter === 'all' ? 'active' : ''}"
-                onclick="selectVocabTopic('${t.id}')">
-          ${t.name}
-        </button>
-      `).join("");
+      pillsBox.innerHTML = vocabTopics.map(t => {
+        const topicWords = vocabList.filter(v => v.topic === t.id);
+        const verCnt = topicWords.filter(v => appState.vocabStatus[v.id] === "verified").length;
+        return `
+          <button class="topic-pill ${appState.currentVocabTopic === t.id && appState.currentVocabFilter === 'all' ? 'active' : ''}"
+                  onclick="selectVocabTopic('${t.id}')">
+            ${t.name} <span style="font-size:0.75rem; opacity:0.85;">(${verCnt}/${topicWords.length}🏅)</span>
+          </button>
+        `;
+      }).join("");
 
       const container = document.getElementById("vocab-cards-container");
       let items = vocabList;
       if (appState.currentVocabFilter === "review") {
         items = vocabList.filter(v => appState.vocabStatus[v.id] === "review");
+      } else if (appState.currentVocabFilter === "verified") {
+        items = vocabList.filter(v => appState.vocabStatus[v.id] === "verified");
       } else {
         items = vocabList.filter(v => v.topic === appState.currentVocabTopic);
       }
 
       if (items.length === 0) {
         container.innerHTML = `<div class="card" style="grid-column: 1/-1; text-align:center; color: var(--text-muted); font-weight:700;">
-          🌟 目前沒有標記為「⭐ 待加強」的單字！
+          🌟 目前此篩選分類下沒有單字卡！可切換上方主題或點擊「🎙️開口唸 / ✍️拼字」來取得「🏅 實證精熟」印章！
         </div>`;
         return;
       }
@@ -2318,21 +2828,55 @@
         const safeWord = v.word.replace(/'/g, "\\'");
         const safeEx = v.ex.replace(/'/g, "\\'");
         const openCls = allVocabExpanded ? "open" : "";
+        const spellTarget = getSpellTarget(v.word);
+        const maskedHint = spellTarget.split(" ").map(w => w.length <= 2 ? w : w[0] + "_".repeat(w.length - 2) + w[w.length - 1]).join("  ");
+
         return `
-          <div class="vocab-card ${st}">
+          <div class="vocab-card ${st}" id="vcard-${v.id}">
             <div>
               <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.35rem;">
                 <div class="vocab-emoji-box">${v.icon}</div>
-                <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.3rem;">
-                  <span class="tag ${v.ver.includes('A') || v.ver.includes('健康') || v.ver.includes('職業') ? 'tag-blue' : v.ver.includes('B') || v.ver.includes('交通') || v.ver.includes('服飾') || v.ver.includes('過去') ? 'tag-teal' : 'tag-purple'}">${v.ver}</span>
-                  <div style="display: flex; gap: 0.25rem;">
-                    <button class="btn btn-outline btn-sm" style="padding: 0.2rem 0.5rem;" onclick="speakText('${safeWord}', 0.95)">🔊 正常</button>
-                    <button class="btn btn-outline btn-sm" style="padding: 0.2rem 0.5rem;" onclick="speakText('${safeWord}', 0.6)">🐢 慢速</button>
+                <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.28rem;">
+                  <div style="display:flex; gap:0.3rem; align-items:center;">
+                    ${st === 'verified' ? '<span class="verified-stamp">🏅 實證精熟</span>' : ''}
+                    <span class="tag ${v.ver.includes('A') ? 'tag-blue' : v.ver.includes('B') ? 'tag-teal' : 'tag-purple'}">${v.ver}</span>
+                  </div>
+                  <div style="display: flex; gap: 0.22rem; flex-wrap: wrap; justify-content: flex-end;">
+                    <button class="btn btn-outline btn-sm" style="padding: 0.18rem 0.45rem; font-size:0.75rem;" onclick="speakText('${safeWord}', 0.95)">🔊 正常</button>
+                    <button class="btn btn-outline btn-sm" style="padding: 0.18rem 0.45rem; font-size:0.75rem;" onclick="speakText('${safeWord}', 0.6)">🐢 慢速</button>
+                    <button class="btn btn-sm mic-btn" style="padding: 0.18rem 0.5rem; font-size:0.75rem;" onclick="toggleCardLab('${v.id}', 'speak')">🎙️ 開口唸</button>
+                    <button class="btn btn-primary btn-sm" style="padding: 0.18rem 0.5rem; font-size:0.75rem;" onclick="toggleCardLab('${v.id}', 'spell')">✍️ 拼字</button>
                   </div>
                 </div>
               </div>
               <div class="vocab-word">${v.word}</div>
               <div class="vocab-zh">${v.zh}</div>
+
+              <!-- Inline AI Speaking Lab -->
+              <div id="vcard-speak-${v.id}" class="inline-lab-box">
+                <div style="font-weight:800; color:#1e1b4b; margin-bottom:0.35rem;">
+                  🎙️ 口說發音實測（通過即獲 <span style="color:#d97706;">🏅 實證精熟 +25 XP</span>）
+                </div>
+                <div style="display:flex; gap:0.4rem; flex-wrap:wrap;">
+                  <button class="btn btn-sm mic-btn" onclick="startCardSpeaking('${v.id}', 'word', this)">🎙️ 唸單字片語</button>
+                  <button class="btn btn-outline btn-sm" onclick="startCardSpeaking('${v.id}', 'ex', this)">🎙️ 挑戰唸完整例句</button>
+                </div>
+                <div id="vcard-speak-res-${v.id}"></div>
+              </div>
+
+              <!-- Inline Spelling & Cloze Lab -->
+              <div id="vcard-spell-${v.id}" class="inline-lab-box">
+                <div style="font-weight:800; color:#1e1b4b; margin-bottom:0.3rem;">
+                  ✍️ 聽音拼字實測：<span style="color:#4f46e5; font-family:monospace;">${maskedHint}</span>
+                </div>
+                <div style="display:flex; gap:0.35rem; align-items:center;">
+                  <input type="text" id="vcard-spell-in-${v.id}" placeholder="輸入英文拼字: ${spellTarget[0]}..."
+                         style="flex:1; padding:0.38rem 0.6rem; border:2px solid #a5b4fc; border-radius:0.55rem; font-weight:800; font-size:0.86rem;"
+                         onkeydown="if(event.key==='Enter') checkCardSpelling('${v.id}')">
+                  <button class="btn btn-primary btn-sm" onclick="checkCardSpelling('${v.id}')">驗證</button>
+                </div>
+                <div id="vcard-spell-res-${v.id}" style="margin-top:0.35rem; font-weight:800;"></div>
+              </div>
 
               <!-- Click-to-Expand Example & Exam Note -->
               <button class="expand-toggle-btn ${openCls}" style="margin-bottom: 0.65rem;" onclick="toggleAccordion(this)">
@@ -2349,11 +2893,17 @@
               </div>
             </div>
 
-            <div style="display: flex; gap: 0.45rem; padding-top: 0.55rem; border-top: 1.5px solid #f1f5f9;">
-              <button class="btn btn-sm ${st === 'mastered' ? 'btn-teal' : 'btn-outline'}" style="flex:1;"
-                      onclick="setVocabStatus('${v.id}', 'mastered')">
-                ${st === 'mastered' ? '✅ 已收服' : '✅ 收服 (+10 XP)'}
-              </button>
+            <div style="display: flex; gap: 0.4rem; padding-top: 0.55rem; border-top: 1.5px solid #f1f5f9;">
+              ${st === 'verified' ? `
+                <button class="btn btn-sm btn-teal" style="flex:1.4; background:linear-gradient(135deg,#059669,#10b981);" onclick="toggleCardLab('${v.id}', 'speak')">
+                  🏅 已實證精熟 (+25 XP)
+                </button>
+              ` : `
+                <button class="btn btn-sm ${st === 'mastered' ? 'btn-teal' : 'btn-outline'}" style="flex:1.2;"
+                        onclick="setVocabStatus('${v.id}', 'mastered')" title="快速標記已讀 (+5 XP)；建議點擊上方「🎙️開口唸」或「✍️拼字」取得 🏅實證精熟 (+25 XP)！">
+                  ${st === 'mastered' ? '👁️ 自評已讀 ✓' : '👁️ 自評已讀 (+5)'}
+                </button>
+              `}
               <button class="btn btn-sm ${st === 'review' ? 'btn-amber' : 'btn-outline'}" style="flex:1;"
                       onclick="setVocabStatus('${v.id}', 'review')">
                 ${st === 'review' ? '⭐ 待加強中' : '⭐ 待加強'}
@@ -2364,12 +2914,84 @@
       }).join("");
     }
 
+    function toggleCardLab(vocabId, mode) {
+      const speakBox = document.getElementById(`vcard-speak-${vocabId}`);
+      const spellBox = document.getElementById(`vcard-spell-${vocabId}`);
+      if (mode === "speak") {
+        if (spellBox) spellBox.classList.remove("open");
+        if (speakBox) speakBox.classList.toggle("open");
+      } else {
+        if (speakBox) speakBox.classList.remove("open");
+        if (spellBox) {
+          spellBox.classList.toggle("open");
+          if (spellBox.classList.contains("open")) {
+            const v = vocabList.find(item => item.id === vocabId);
+            if (v) speakText(getSpellTarget(v.word), 0.9);
+            const inp = document.getElementById(`vcard-spell-in-${vocabId}`);
+            if (inp) setTimeout(() => inp.focus(), 80);
+          }
+        }
+      }
+    }
+
+    function markVocabVerified(vocabId) {
+      const prev = appState.vocabStatus[vocabId];
+      appState.vocabStatus[vocabId] = "verified";
+      if (prev !== "verified") {
+        addXP(25);
+      }
+      saveState();
+      const card = document.getElementById(`vcard-${vocabId}`);
+      if (card) {
+        card.classList.remove("mastered", "review");
+        card.classList.add("verified");
+      }
+    }
+
+    function startCardSpeaking(vocabId, targetType, btnEl) {
+      const v = vocabList.find(item => item.id === vocabId);
+      if (!v) return;
+      const targetStr = targetType === "ex" ? v.ex : v.word;
+      const resEl = document.getElementById(`vcard-speak-res-${vocabId}`);
+      runSpeechRecognition(targetStr, btnEl, resEl, () => {
+        markVocabVerified(vocabId);
+        setTimeout(() => renderVocabHub(), 1400);
+      });
+    }
+
+    function checkCardSpelling(vocabId) {
+      const v = vocabList.find(item => item.id === vocabId);
+      if (!v) return;
+      const target = getSpellTarget(v.word);
+      const inp = document.getElementById(`vcard-spell-in-${vocabId}`);
+      const resEl = document.getElementById(`vcard-spell-res-${vocabId}`);
+      const userVal = normalizeEnglishForMatch(inp.value);
+      const targetVal = normalizeEnglishForMatch(target);
+      const fullVal = normalizeEnglishForMatch(v.word);
+
+      if (userVal && (userVal === targetVal || userVal === fullVal)) {
+        playTone("correct");
+        speakText(v.word, 0.95);
+        markVocabVerified(vocabId);
+        resEl.style.color = "#059669";
+        resEl.innerHTML = `🎉 拼字完全正確！榮獲 <span class="verified-stamp">🏅 實證精熟 (+25 XP)</span>`;
+        setTimeout(() => renderVocabHub(), 1300);
+      } else {
+        playTone("wrong");
+        resEl.style.color = "#be123c";
+        resEl.innerHTML = `❌ 拼字還差一點點喔！正確拼法提示：<code>${target}</code>（請再輸入一次）`;
+      }
+    }
+
     function selectVocabTopic(topicId) {
       appState.currentVocabTopic = topicId;
       appState.currentVocabFilter = "all";
       renderVocabHub();
       if (document.getElementById("vocab-mini-quiz").style.display !== "none") {
         loadVocabMiniQuizQuestion();
+      }
+      if (document.getElementById("vocab-spelling-bee").style.display !== "none") {
+        loadSpellingBeeQuestion();
       }
     }
 
@@ -2384,9 +3006,9 @@
         delete appState.vocabStatus[vocabId];
       } else {
         appState.vocabStatus[vocabId] = status;
-        if (status === "mastered" && prev !== "mastered") {
+        if (status === "mastered" && prev !== "mastered" && prev !== "verified") {
           playTone("correct");
-          addXP(10);
+          addXP(5);
         }
       }
       saveState();
@@ -2396,6 +3018,8 @@
     let currentVQuizItem = null;
     function toggleVocabQuiz() {
       const box = document.getElementById("vocab-mini-quiz");
+      const spellBox = document.getElementById("vocab-spelling-bee");
+      if (spellBox) spellBox.style.display = "none";
       if (box.style.display === "none") {
         box.style.display = "block";
         loadVocabMiniQuizQuestion();
@@ -2415,7 +3039,7 @@
       body.innerHTML = `
         <p style="margin-bottom: 0.8rem; font-weight: 800; color: #1e1b4b;">
           <button class="btn btn-primary btn-sm" onclick="speakText('${safeWord}', 0.9)">🔊 點擊播放發音</button>
-          <span style="margin-left: 0.6rem;">例句填空提示：${currentVQuizItem.ex.replace(new RegExp(currentVQuizItem.word, 'gi'), '______')}</span>
+          <span style="margin-left: 0.6rem;">例句填空提示：${currentVQuizItem.ex.replace(new RegExp(getSpellTarget(currentVQuizItem.word), 'gi'), '______')}</span>
         </p>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0.6rem;">
           ${opts.map(o => `
@@ -2433,13 +3057,11 @@
       const fb = document.getElementById("vquiz-feedback");
       if (pickedId === currentVQuizItem.id) {
         playTone("correct");
-        addXP(15);
+        markVocabVerified(currentVQuizItem.id);
         btnEl.style.background = "#ecfdf5";
         btnEl.style.borderColor = "#10b981";
         fb.style.color = "#065f46";
-        fb.innerHTML = `🎉 答對了！+15 XP！${currentVQuizItem.word} 就是「${currentVQuizItem.zh}」。 <button class="btn btn-primary btn-sm" style="margin-left:0.5rem;" onclick="loadVocabMiniQuizQuestion()">下一題 ➔</button>`;
-        appState.vocabStatus[currentVQuizItem.id] = "mastered";
-        saveState();
+        fb.innerHTML = `🎉 答對了！榮獲 <span class="verified-stamp">🏅 實證精熟 (+25 XP)</span>！${currentVQuizItem.word} 就是「${currentVQuizItem.zh}」。 <button class="btn btn-primary btn-sm" style="margin-left:0.5rem;" onclick="loadVocabMiniQuizQuestion()">下一題 ➔</button>`;
         renderVocabHub();
       } else {
         playTone("wrong");
@@ -2450,27 +3072,150 @@
       }
     }
 
+    /* Dedicated Spelling Bee & Letter Tile Widget */
+    let currentSpellBeeItem = null;
+    let currentSpellLetters = [];
+    let currentSpellBuilt = "";
+
+    function toggleSpellingBee() {
+      const box = document.getElementById("vocab-spelling-bee");
+      const qBox = document.getElementById("vocab-mini-quiz");
+      if (qBox) qBox.style.display = "none";
+      if (box.style.display === "none") {
+        box.style.display = "block";
+        loadSpellingBeeQuestion();
+      } else {
+        box.style.display = "none";
+      }
+    }
+
+    function loadSpellingBeeQuestion() {
+      const pool = vocabList.filter(v => v.topic === appState.currentVocabTopic);
+      currentSpellBeeItem = pool[Math.floor(Math.random() * pool.length)];
+      const target = getSpellTarget(currentSpellBeeItem.word);
+      currentSpellBuilt = "";
+
+      // Build scrambled character tiles (preserving spaces separately)
+      const chars = target.split("");
+      currentSpellLetters = chars.map((ch, idx) => ({ ch, idx, used: false })).sort(() => 0.5 - Math.random());
+
+      renderSpellingBeeUI();
+      setTimeout(() => speakText(target, 0.9), 200);
+    }
+
+    function renderSpellingBeeUI() {
+      const body = document.getElementById("spelling-bee-body");
+      const target = getSpellTarget(currentSpellBeeItem.word);
+      const safeTarget = target.replace(/'/g, "\\'");
+
+      body.innerHTML = `
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.65rem;">
+          <div>
+            <span style="font-size:1.5rem; margin-right:0.4rem;">${currentSpellBeeItem.icon}</span>
+            <strong style="font-size:1.1rem; color:#1e1b4b;">中文提示：${currentSpellBeeItem.zh}</strong>
+            <span class="tag tag-purple" style="margin-left:0.4rem;">共 ${target.length} 個字元</span>
+          </div>
+          <div style="display:flex; gap:0.4rem;">
+            <button class="btn btn-primary btn-sm" onclick="speakText('${safeTarget}', 0.88)">🔊 聽發音</button>
+            <button class="btn btn-outline btn-sm" onclick="loadSpellingBeeQuestion()">🔄 換一詞</button>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.65rem; flex-wrap:wrap;">
+          <input type="text" id="spell-bee-input" value="${currentSpellBuilt}" placeholder="點擊下方字母積木或直接打字..."
+                 style="flex:1; min-width:220px; padding:0.55rem 0.85rem; border:2px solid #4f46e5; border-radius:0.65rem; font-size:1.05rem; font-weight:900; letter-spacing:0.06em;"
+                 oninput="currentSpellBuilt = this.value"
+                 onkeydown="if(event.key==='Enter') submitSpellingBee()">
+          <button class="btn btn-outline btn-sm" onclick="clearSpellingBee()">⌫ 清除重排</button>
+          <button class="btn btn-teal btn-sm" onclick="submitSpellingBee()">✅ 送出驗證</button>
+        </div>
+
+        <div class="tile-pool">
+          ${currentSpellLetters.map((item, i) => `
+            <button class="letter-tile ${item.used ? 'used' : ''}" onclick="pickSpellLetter(${i})">
+              ${item.ch === ' ' ? '␣' : item.ch}
+            </button>
+          `).join("")}
+        </div>
+        <div id="spell-bee-fb" style="font-weight:800; margin-top:0.45rem;"></div>
+      `;
+    }
+
+    function pickSpellLetter(i) {
+      if (currentSpellLetters[i].used) return;
+      currentSpellLetters[i].used = true;
+      currentSpellBuilt += currentSpellLetters[i].ch;
+      renderSpellingBeeUI();
+    }
+
+    function clearSpellingBee() {
+      currentSpellBuilt = "";
+      currentSpellLetters.forEach(l => l.used = false);
+      renderSpellingBeeUI();
+    }
+
+    function submitSpellingBee() {
+      const target = getSpellTarget(currentSpellBeeItem.word);
+      const fb = document.getElementById("spell-bee-fb");
+      if (normalizeEnglishForMatch(currentSpellBuilt) === normalizeEnglishForMatch(target)) {
+        playTone("correct");
+        speakText(currentSpellBeeItem.word, 0.95);
+        markVocabVerified(currentSpellBeeItem.id);
+        fb.style.color = "#065f46";
+        fb.innerHTML = `🎉 太棒了！拼寫完全正確 (<strong>${target}</strong>)，榮獲 <span class="verified-stamp">🏅 實證精熟 (+25 XP)</span>！ <button class="btn btn-primary btn-sm" style="margin-left:0.5rem;" onclick="loadSpellingBeeQuestion()">下一題 ➔</button>`;
+        renderVocabHub();
+      } else {
+        playTone("wrong");
+        fb.style.color = "#be123c";
+        fb.innerHTML = `❌ 拼寫順序有誤喔！提示字首：<code>${target.slice(0, 3)}...</code>，可點「🔊 聽發音」或「⌫ 清除重排」再試一次！`;
+      }
+    }
+
     /* =========================================================================
-       TAB 3: GRAMMAR LAB (FORMULA FIRST + CLICK TO EXPAND TABLES)
+       TAB 3: GRAMMAR LAB (3-STAGE VERIFIED MASTERY: MCQ + SCRAMBLER + ORAL)
        ========================================================================= */
+    let scramblerState = {};
+
+    function initScramblerState(gId) {
+      const gExtra = grammarActiveData[gId];
+      if (!gExtra) return;
+      gExtra.scramblers.forEach((sc, sIdx) => {
+        const key = `${gId}_sc_${sIdx}`;
+        if (!scramblerState[key]) {
+          const shuffled = sc.words.map((w, idx) => ({ w, idx, used: false })).sort(() => 0.5 - Math.random());
+          scramblerState[key] = { pool: shuffled, tray: [] };
+        }
+      });
+    }
+
     function renderGrammarLab() {
       const menu = document.getElementById("grammar-menu-list");
       menu.innerHTML = grammarModules.map(g => {
-        const isComplete = appState.grammarDone[`${g.id}_0`] && appState.grammarDone[`${g.id}_1`];
+        const mcqDone = appState.grammarDone[`${g.id}_0`] && appState.grammarDone[`${g.id}_1`];
+        const scDone = appState.grammarDone[`${g.id}_sc_0`] && appState.grammarDone[`${g.id}_sc_1`];
+        const spkDone = appState.grammarDone[`${g.id}_spk`];
+        const isVerified = mcqDone && (scDone || spkDone);
         return `
           <button class="grammar-menu-item ${appState.currentGrammarId === g.id ? 'active' : ''}"
                   onclick="selectGrammarUnit('${g.id}')">
             <span>${g.title}</span>
-            <span>${isComplete ? '🌟' : '⚡'}</span>
+            <span>${isVerified ? '🏅' : mcqDone ? '🌟' : '⚡'}</span>
           </button>
         `;
       }).join("");
 
       const g = grammarModules.find(m => m.id === appState.currentGrammarId) || grammarModules[0];
+      initScramblerState(g.id);
+      const gExtra = grammarActiveData[g.id];
       const view = document.getElementById("grammar-detail-view");
 
       view.innerHTML = `
-        <span class="tag tag-teal" style="margin-bottom: 0.4rem;">${g.tag}</span>
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.4rem; margin-bottom:0.4rem;">
+          <span class="tag tag-teal">${g.tag}</span>
+          ${(appState.grammarDone[`${g.id}_0`] && appState.grammarDone[`${g.id}_1`] && (appState.grammarDone[`${g.id}_sc_0`] || appState.grammarDone[`${g.id}_spk`]))
+            ? '<span class="verified-stamp">🏅 本單元已實證精熟</span>'
+            : '<span class="tag tag-amber">完成下方 3 階段實作即可獲得 🏅 實證精熟</span>'}
+        </div>
         <h3 style="font-size: 1.35rem; font-weight: 900; color: #1e1b4b; margin-bottom: 0.4rem;">${g.title}</h3>
         <p style="font-size: 0.94rem; color: var(--text-sub); font-weight: 700;">${g.summary}</p>
 
@@ -2512,9 +3257,11 @@
           ${g.tip}
         </div>
 
-        <!-- Primary Action: Interactive Practice -->
-        <div class="practice-widget">
-          <h4 style="color: #065f46; font-size: 1.05rem; font-weight: 900; margin-bottom: 0.8rem;">✍️ 隨堂文法闖關挑戰（答對 +15 XP）</h4>
+        <!-- STAGE 1: Multiple-Choice Concept Check -->
+        <div class="practice-widget" style="margin-bottom: 1rem;">
+          <h4 style="color: #065f46; font-size: 1.02rem; font-weight: 900; margin-bottom: 0.75rem;">
+            🎯 第一階段：觀念選擇快篩（每題 +15 XP）
+          </h4>
           ${g.practices.map((p, idx) => {
             const key = `${g.id}_${idx}`;
             const isDone = appState.grammarDone[key];
@@ -2535,7 +3282,135 @@
             `;
           }).join("")}
         </div>
+
+        <!-- STAGE 2: Interactive Sentence Scrambler (Word Order Blocks) -->
+        <div class="practice-widget" style="margin-bottom: 1rem; background: linear-gradient(135deg, #eef2ff 0%, #f8fafc 100%); border-color: #818cf8;">
+          <h4 style="color: #312e81; font-size: 1.02rem; font-weight: 900; margin-bottom: 0.75rem;">
+            🧱 第二階段：互動語序重組造句積木（點擊詞塊排出正確英文句子，每題 +25 XP）
+          </h4>
+          ${gExtra.scramblers.map((sc, sIdx) => {
+            const key = `${g.id}_sc_${sIdx}`;
+            const st = scramblerState[key];
+            const isDone = appState.grammarDone[key];
+            return `
+              <div style="margin-bottom: 1rem; padding-bottom: 0.9rem; border-bottom: 1.5px dashed #c7d2fe;">
+                <div style="font-weight: 800; color: #1e1b4b; margin-bottom: 0.4rem;">
+                  造句 ${sIdx + 1}：${sc.zh} ${isDone ? '<span class="verified-stamp">🏅 語序通過 ✓</span>' : ''}
+                </div>
+                <div class="tile-tray" id="sc-tray-${key}">
+                  ${st.tray.length === 0
+                    ? '<span style="color:#94a3b8; font-size:0.82rem; font-weight:700;">👇 請依序點擊下方詞彙積木放入此作答區（點擊已放入的積木可退回）</span>'
+                    : st.tray.map((item, tIdx) => `
+                        <button class="word-tile in-tray" onclick="removeScramblerTile('${g.id}', ${sIdx}, ${tIdx})">${item.w}</button>
+                      `).join("")}
+                </div>
+                <div class="tile-pool" id="sc-pool-${key}">
+                  ${st.pool.map((item, pIdx) => item.used ? '' : `
+                    <button class="word-tile" onclick="addScramblerTile('${g.id}', ${sIdx}, ${pIdx})">${item.w}</button>
+                  `).join("")}
+                </div>
+                <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+                  <button class="btn btn-primary btn-sm" onclick="checkScramblerAnswer('${g.id}', ${sIdx})">✅ 檢查句子語序</button>
+                  <button class="btn btn-outline btn-sm" onclick="resetScrambler('${g.id}', ${sIdx})">🔄 重新排列</button>
+                  <button class="btn btn-outline btn-sm" onclick="speakText('${sc.ans.replace(/'/g, "\\'")}', 0.9)">🔊 聽標準句發音</button>
+                </div>
+                <div id="sc-fb-${key}" style="font-size: 0.86rem; margin-top: 0.45rem; font-weight: 800;"></div>
+              </div>
+            `;
+          }).join("")}
+        </div>
+
+        <!-- STAGE 3: Situational Oral Pattern Drill (AI Speech-to-Text) -->
+        <div class="practice-widget" style="background: linear-gradient(135deg, #fff1f2 0%, #fffbeb 100%); border-color: #fb7185;">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.4rem; margin-bottom:0.5rem;">
+            <h4 style="color: #9f1239; font-size: 1.02rem; font-weight: 900;">
+              🎙️ 第三階段：AI 情境口說問答實測（開口回答外師提問，通過 +30 XP）
+            </h4>
+            ${appState.grammarDone[`${g.id}_spk`] ? '<span class="verified-stamp">🏅 口說實證通過 ✓</span>' : ''}
+          </div>
+          <p style="font-size: 0.88rem; font-weight: 800; color: #1e1b4b; margin-bottom: 0.55rem;">
+            ${gExtra.oral.promptZh}
+          </p>
+          <div style="background:white; border:1.5px solid #fecdd3; border-radius:0.75rem; padding:0.75rem; margin-bottom:0.65rem;">
+            <div style="font-size:0.86rem; font-weight:800; color:#4f46e5; margin-bottom:0.25rem;">
+              👩‍🏫 外師提問：<code>"${gExtra.oral.teacherQ}"</code>
+            </div>
+            <div style="font-size:0.95rem; font-weight:900; color:#0f172a;">
+              🗣️ 你的目標回答：<code>"${gExtra.oral.targetAns}"</code>
+            </div>
+          </div>
+          <div style="display:flex; gap:0.55rem; flex-wrap:wrap;">
+            <button class="btn btn-outline btn-sm" onclick="speakText('${gExtra.oral.teacherQ.replace(/'/g, "\\'")}', 0.9)">🔊 1. 先聽外師提問</button>
+            <button class="btn btn-outline btn-sm" onclick="speakText('${gExtra.oral.targetAns.replace(/'/g, "\\'")}', 0.88)">🔊 2. 聽目標答句示範</button>
+            <button class="btn btn-sm mic-btn" onclick="startGrammarOralDrill('${g.id}', this)">🎙️ 3. 按下開口回答外師</button>
+          </div>
+          <div id="grammar-oral-res-${g.id}"></div>
+        </div>
       `;
+    }
+
+    function addScramblerTile(gId, sIdx, pIdx) {
+      const key = `${gId}_sc_${sIdx}`;
+      const st = scramblerState[key];
+      if (!st || st.pool[pIdx].used) return;
+      st.pool[pIdx].used = true;
+      st.tray.push({ w: st.pool[pIdx].w, poolIdx: pIdx });
+      renderGrammarLab();
+    }
+
+    function removeScramblerTile(gId, sIdx, tIdx) {
+      const key = `${gId}_sc_${sIdx}`;
+      const st = scramblerState[key];
+      if (!st) return;
+      const removed = st.tray.splice(tIdx, 1)[0];
+      if (removed && st.pool[removed.poolIdx]) {
+        st.pool[removed.poolIdx].used = false;
+      }
+      renderGrammarLab();
+    }
+
+    function resetScrambler(gId, sIdx) {
+      const key = `${gId}_sc_${sIdx}`;
+      delete scramblerState[key];
+      renderGrammarLab();
+    }
+
+    function checkScramblerAnswer(gId, sIdx) {
+      const key = `${gId}_sc_${sIdx}`;
+      const st = scramblerState[key];
+      const sc = grammarActiveData[gId].scramblers[sIdx];
+      const userSent = st.tray.map(t => t.w).join(" ");
+      const fb = document.getElementById(`sc-fb-${key}`);
+
+      if (normalizeEnglishForMatch(userSent) === normalizeEnglishForMatch(sc.ans)) {
+        playTone("correct");
+        speakText(sc.ans, 0.92);
+        if (!appState.grammarDone[key]) addXP(25);
+        appState.grammarDone[key] = true;
+        saveState();
+        renderGrammarLab();
+        const fbAfter = document.getElementById(`sc-fb-${key}`);
+        if (fbAfter) {
+          fbAfter.style.color = "#065f46";
+          fbAfter.innerHTML = `🎉 語序完全正確 (+25 XP)！完整句子：<strong>${sc.ans}</strong>`;
+        }
+      } else {
+        playTone("wrong");
+        fb.style.color = "#be123c";
+        fb.innerHTML = `❌ 語序還不太對喔！請對照上方彩色公式檢查「疑問詞 / 助動詞 / 主詞 / 動詞」的位置！`;
+      }
+    }
+
+    function startGrammarOralDrill(gId, btnEl) {
+      const oral = grammarActiveData[gId].oral;
+      const resEl = document.getElementById(`grammar-oral-res-${gId}`);
+      runSpeechRecognition(oral.targetAns, btnEl, resEl, () => {
+        const key = `${gId}_spk`;
+        if (!appState.grammarDone[key]) addXP(30);
+        appState.grammarDone[key] = true;
+        saveState();
+        setTimeout(() => renderGrammarLab(), 1400);
+      }, oral.altAccept);
     }
 
     function selectGrammarUnit(gId) {
@@ -2568,21 +3443,105 @@
     }
 
     /* =========================================================================
-       TAB 4: COMIC DIALOGUE & READING WORKSHOP (SINGLE-LINE CLICK TRANSLATION)
+       TAB 4: COMIC DIALOGUE & READING WORKSHOP
+       (3 MODES: READ & SHADOW, ROLE-PLAY DUBBING, LISTENING CLOZE)
        ========================================================================= */
+    let currentReadingMode = "read"; // 'read' | 'roleplay' | 'cloze'
+    let activeRolePlayTurn = 0;
+    let rolePlaySelectedRole = "all"; // 'all' | 'odd' | 'even'
+    let rolePlayPassedLines = {};
+
+    function setReadingMode(mode) {
+      currentReadingMode = mode;
+      activeRolePlayTurn = 0;
+      renderReadingWorkshop();
+    }
+
+    function buildClozeLineHtml(enHtml, sId, lIdx) {
+      let blankIdx = 0;
+      return enHtml.replace(/<span class=['"]hl-(vocab|grammar)['"]>(.*?)<\/span>/g, (match, type, innerText) => {
+        const cleanAns = innerText.trim();
+        const selectId = `cloze-${sId}-${lIdx}-${blankIdx++}`;
+        const dPool = storyClozeDistractors.filter(d => d.toLowerCase() !== cleanAns.toLowerCase());
+        const d1 = dPool[(lIdx * 3 + blankIdx) % dPool.length];
+        const d2 = dPool[(lIdx * 5 + blankIdx + 2) % dPool.length];
+        const opts = [cleanAns, d1, d2].sort((a, b) => a.localeCompare(b));
+        return `
+          <select id="${selectId}" data-ans="${cleanAns.replace(/"/g, '&quot;')}" class="cloze-select">
+            <option value="">-- 聽音選詞 --</option>
+            ${opts.map(o => `<option value="${o.replace(/"/g, '&quot;')}">${o}</option>`).join("")}
+          </select>
+        `;
+      });
+    }
+
     function renderReadingWorkshop() {
+      if (!appState.storyMastery) appState.storyMastery = {};
       const selector = document.getElementById("story-selector-bar");
-      selector.innerHTML = readingStories.map(s => `
-        <button class="story-btn ${appState.currentStoryId === s.id ? 'active' : ''}" onclick="selectStory('${s.id}')">
-          <div style="font-weight: 900; font-size: 0.96rem; color: #1e1b4b; margin-bottom: 0.15rem;">${s.title}</div>
-          <div style="font-size: 0.78rem; color: var(--text-sub); font-weight: 600;">${s.subtitle}</div>
-        </button>
-      `).join("");
+      selector.innerHTML = readingStories.map(s => {
+        const m = appState.storyMastery[s.id] || {};
+        const badges = [m.dub ? "🎬配音" : "", m.cloze ? "🎧聽寫" : "", m.comp ? "🧐閱讀" : ""].filter(Boolean).join(" · ");
+        return `
+          <button class="story-btn ${appState.currentStoryId === s.id ? 'active' : ''}" onclick="selectStory('${s.id}')">
+            <div style="font-weight: 900; font-size: 0.96rem; color: #1e1b4b; margin-bottom: 0.15rem;">${s.title}</div>
+            <div style="font-size: 0.78rem; color: var(--text-sub); font-weight: 600;">${s.subtitle}</div>
+            ${badges ? `<div style="margin-top:0.3rem;"><span class="verified-stamp">🏅 已通關：${badges}</span></div>` : ''}
+          </button>
+        `;
+      }).join("");
 
       const story = readingStories.find(s => s.id === appState.currentStoryId) || readingStories[0];
       const contentBox = document.getElementById("story-content-area");
 
+      let modeBannerHtml = "";
+      if (currentReadingMode === "roleplay") {
+        modeBannerHtml = `
+          <div style="background: linear-gradient(135deg, #fff1f2, #fffbeb); border: 2px solid #fb7185; border-radius: 0.95rem; padding: 0.9rem 1.1rem; margin-bottom: 1rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">
+              <div>
+                <h4 style="color:#9f1239; font-weight:900; font-size:1rem;">🎭 互動角色扮演配音工坊（完成配音可獲 🎬 最佳配音員徽章 +35 XP）</h4>
+                <p style="font-size:0.84rem; color:#334155; font-weight:700;">選擇你想扮演的角色，輪到電腦時自動發音，輪到你時按下「🎙️ 換我配音」開口說台詞！</p>
+              </div>
+              <div style="display:flex; gap:0.4rem; flex-wrap:wrap;">
+                <select onchange="rolePlaySelectedRole = this.value; startRolePlaySession();" style="padding:0.4rem 0.65rem; border-radius:0.55rem; border:2px solid #f43f5e; font-weight:800; font-size:0.84rem;">
+                  <option value="all" ${rolePlaySelectedRole === 'all' ? 'selected' : ''}>🎙️ 我要配音全部台詞（全篇跟讀挑戰）</option>
+                  <option value="even" ${rolePlaySelectedRole === 'even' ? 'selected' : ''}>👦 我要扮演角色 B（雙數句台詞）</option>
+                  <option value="odd" ${rolePlaySelectedRole === 'odd' ? 'selected' : ''}>👩‍⚕️ 我要扮演角色 A（單數句台詞）</option>
+                </select>
+                <button class="btn btn-sm mic-btn" onclick="startRolePlaySession()">🎬 從第 1 句開始角色扮演</button>
+              </div>
+            </div>
+          </div>
+        `;
+      } else if (currentReadingMode === "cloze") {
+        modeBannerHtml = `
+          <div style="background: linear-gradient(135deg, #eef2ff, #ecfdf5); border: 2px solid #6366f1; border-radius: 0.95rem; padding: 0.9rem 1.1rem; margin-bottom: 1rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">
+              <div>
+                <h4 style="color:#1e1b4b; font-weight:900; font-size:1rem;">🎧 關鍵句型聽力克漏字挑戰（全對可獲 🎧 聽力實證徽章 +30 XP）</h4>
+                <p style="font-size:0.84rem; color:#334155; font-weight:700;">請點擊每句左側頭像或「🔊 全篇連續朗讀」聆聽對話，將挖空處選出正確的單字與句型！</p>
+              </div>
+              <button class="btn btn-primary btn-sm" onclick="checkStoryCloze('${story.id}')">✅ 批改聽力克漏字答案</button>
+            </div>
+            <div id="story-cloze-result" style="margin-top:0.5rem; font-weight:900;"></div>
+          </div>
+        `;
+      }
+
       contentBox.innerHTML = `
+        <!-- 3-Mode Interactive Switcher -->
+        <div class="mode-subtabs">
+          <button class="mode-subtab ${currentReadingMode === 'read' ? 'active' : ''}" onclick="setReadingMode('read')">
+            📖 模式一：漫畫點讀與單句口說跟讀
+          </button>
+          <button class="mode-subtab ${currentReadingMode === 'roleplay' ? 'active' : ''}" onclick="setReadingMode('roleplay')">
+            🎭 模式二：互動角色扮演配音工坊
+          </button>
+          <button class="mode-subtab ${currentReadingMode === 'cloze' ? 'active' : ''}" onclick="setReadingMode('cloze')">
+            🎧 模式三：關鍵句型聽力克漏字填空
+          </button>
+        </div>
+
         <div style="margin-bottom: 0.85rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
           <div>
             <h3 style="font-size: 1.3rem; font-weight: 900; color: #1e1b4b;">${story.title}</h3>
@@ -2624,6 +3583,8 @@
           </div>
         </div>
 
+        ${modeBannerHtml}
+
         <!-- Expandable Key Notes Summary -->
         <button class="expand-toggle-btn" style="margin-bottom: 1rem;" onclick="toggleAccordion(this)">
           <span>📚 點擊展開：本篇必背單字與核心句型速覽</span>
@@ -2635,23 +3596,38 @@
 
         <div>
           ${story.lines.map((l, lIdx) => {
-            const safeRaw = l.raw.replace(/'/g, "\'");
-            const enDisplay = appState.showHighlights ? l.en : l.raw;
+            let enDisplay = appState.showHighlights ? l.en : l.raw;
+            if (currentReadingMode === "cloze") {
+              enDisplay = buildClozeLineHtml(l.en, story.id, lIdx);
+            }
             const zhVisible = appState.showTranslation ? "block" : "none";
+            const isRoleTurn = currentReadingMode === "roleplay" && activeRolePlayTurn === lIdx;
+            const lineDone = rolePlayPassedLines[`${story.id}_${lIdx}`];
+
             return `
               <div class="chat-bubble-row" id="story-row-${lIdx}">
                 <div class="chat-avatar" onclick="speakStoryLine(${lIdx})" title="點擊聽角色發音">${l.avatar}</div>
-                <div class="chat-bubble" id="story-bubble-${lIdx}">
-                  <div style="flex: 1; cursor: pointer;" onclick="speakStoryLine(${lIdx})">
-                    <div style="font-size: 1.04rem; font-weight: 800; color: #1e1b4b;">🔊 ${enDisplay}</div>
+                <div class="chat-bubble ${isRoleTurn ? 'role-turn' : ''}" id="story-bubble-${lIdx}">
+                  <div style="flex: 1;" ${currentReadingMode !== 'cloze' ? `onclick="speakStoryLine(${lIdx})" style="cursor:pointer;"` : ''}>
+                    <div style="font-size: 1.04rem; font-weight: 800; color: #1e1b4b;">
+                      🔊 ${enDisplay}
+                      ${lineDone ? '<span class="verified-stamp" style="margin-left:0.35rem;">⭐ 口說通過</span>' : ''}
+                    </div>
                     <div id="line-zh-${lIdx}" style="display: ${zhVisible}; font-size: 0.88rem; color: var(--primary); margin-top: 0.3rem; font-weight: 700;">
                       ${l.zh}
                     </div>
+                    <div id="line-speak-res-${lIdx}"></div>
                   </div>
-                  <button class="btn btn-outline btn-sm" style="padding: 0.25rem 0.6rem; font-size: 0.76rem;"
-                          onclick="toggleSingleLineZh(${lIdx})" title="點擊顯示/隱藏本句中文">
-                    🀄 譯
-                  </button>
+                  <div style="display:flex; gap:0.35rem; align-items:center;">
+                    <button class="btn btn-sm mic-btn" style="padding: 0.25rem 0.65rem; font-size: 0.76rem;"
+                            onclick="speakAndEvaluateStoryLine('${story.id}', ${lIdx}, this)" title="開口跟讀／配音本句英文">
+                      🎙️ ${currentReadingMode === 'roleplay' ? '換我配音' : '跟讀'}
+                    </button>
+                    <button class="btn btn-outline btn-sm" style="padding: 0.25rem 0.6rem; font-size: 0.76rem;"
+                            onclick="toggleSingleLineZh(${lIdx})" title="點擊顯示/隱藏本句中文">
+                      🀄 譯
+                    </button>
+                  </div>
                 </div>
               </div>
             `;
@@ -2678,6 +3654,112 @@
       `;
     }
 
+    function getCleanDialogueSpeechTarget(rawLine) {
+      // Strip speaker prefix like "Nurse:" or "Max (Friend):" so student only reads the dialogue
+      return rawLine.replace(/^[A-Za-z\s()]+\s*:\s*/, "").trim();
+    }
+
+    function speakAndEvaluateStoryLine(sId, lIdx, btnEl) {
+      const story = readingStories.find(s => s.id === sId) || readingStories[0];
+      const line = story.lines[lIdx];
+      if (!line) return;
+      const cleanTarget = getCleanDialogueSpeechTarget(line.raw);
+      const resEl = document.getElementById(`line-speak-res-${lIdx}`);
+
+      runSpeechRecognition(cleanTarget, btnEl, resEl, () => {
+        rolePlayPassedLines[`${sId}_${lIdx}`] = true;
+        addXP(15);
+        if (currentReadingMode === "roleplay") {
+          advanceRolePlayTurn(sId, lIdx + 1);
+        }
+      });
+    }
+
+    function startRolePlaySession() {
+      const story = readingStories.find(s => s.id === appState.currentStoryId) || readingStories[0];
+      activeRolePlayTurn = 0;
+      renderReadingWorkshop();
+      processRolePlayStep(story.id, 0);
+    }
+
+    function advanceRolePlayTurn(sId, nextIdx) {
+      const story = readingStories.find(s => s.id === sId) || readingStories[0];
+      if (nextIdx >= story.lines.length) {
+        if (!appState.storyMastery[sId]) appState.storyMastery[sId] = {};
+        appState.storyMastery[sId].dub = true;
+        addXP(35);
+        saveState();
+        playTone("fanfare");
+        renderReadingWorkshop();
+        alert("🎬 恭喜完成整篇對話角色扮演配音！榮獲「🏅 最佳配音員」實證徽章 (+35 XP)！");
+        return;
+      }
+      activeRolePlayTurn = nextIdx;
+      renderReadingWorkshop();
+      processRolePlayStep(sId, nextIdx);
+    }
+
+    function processRolePlayStep(sId, lIdx) {
+      const story = readingStories.find(s => s.id === sId) || readingStories[0];
+      if (lIdx >= story.lines.length) return;
+
+      const bubble = document.getElementById(`story-bubble-${lIdx}`);
+      if (bubble) bubble.scrollIntoView({ behavior: "smooth", block: "center" });
+
+      const isStudentTurn =
+        rolePlaySelectedRole === "all" ||
+        (rolePlaySelectedRole === "odd" && lIdx % 2 === 0) ||
+        (rolePlaySelectedRole === "even" && lIdx % 2 === 1);
+
+      if (!isStudentTurn) {
+        // Computer speaks its role automatically, then advances to student's turn!
+        const resEl = document.getElementById(`line-speak-res-${lIdx}`);
+        if (resEl) {
+          resEl.innerHTML = `<div style="color:#0891b2; font-weight:800; font-size:0.82rem; margin-top:0.3rem;">🤖 電腦對手正在朗讀台詞... 請準備接下一句！</div>`;
+        }
+        speakText(getCleanDialogueSpeechTarget(story.lines[lIdx].raw), 0.9, () => {
+          setTimeout(() => advanceRolePlayTurn(sId, lIdx + 1), 500);
+        });
+      } else {
+        const resEl = document.getElementById(`line-speak-res-${lIdx}`);
+        if (resEl) {
+          resEl.innerHTML = `<div style="color:#e11d48; font-weight:900; font-size:0.84rem; margin-top:0.3rem;">👉 輪到你了！請點擊右側「🎙️ 換我配音」開口唸出這句台詞！</div>`;
+        }
+      }
+    }
+
+    function checkStoryCloze(sId) {
+      const selects = document.querySelectorAll("#story-content-area .cloze-select");
+      let total = selects.length;
+      let correct = 0;
+      selects.forEach(sel => {
+        const ans = sel.getAttribute("data-ans");
+        if (sel.value === ans) {
+          correct++;
+          sel.classList.remove("wrong");
+          sel.classList.add("correct");
+        } else {
+          sel.classList.remove("correct");
+          sel.classList.add("wrong");
+        }
+      });
+
+      const resBox = document.getElementById("story-cloze-result");
+      if (correct === total && total > 0) {
+        playTone("fanfare");
+        if (!appState.storyMastery[sId]) appState.storyMastery[sId] = {};
+        if (!appState.storyMastery[sId].cloze) addXP(30);
+        appState.storyMastery[sId].cloze = true;
+        saveState();
+        resBox.style.color = "#065f46";
+        resBox.innerHTML = `🎉 太厲害了！${total} 格聽力克漏字全數答對，榮獲 <span class="verified-stamp">🏅 聽力克漏字實證通關 (+30 XP)</span>！`;
+      } else {
+        playTone("wrong");
+        resBox.style.color = "#be123c";
+        resBox.innerHTML = `💡 目前答對 ${correct} / ${total} 格（紅框為待修正項目），請點擊對話左側角色頭像再聽一次發音喔！`;
+      }
+    }
+
     function speakStoryLine(lIdx) {
       const story = readingStories.find(s => s.id === appState.currentStoryId) || readingStories[0];
       const line = story.lines[lIdx];
@@ -2687,7 +3769,7 @@
       if (targetBubble) {
         targetBubble.classList.add("active-line");
       }
-      speakText(line.raw, 0.9);
+      speakText(getCleanDialogueSpeechTarget(line.raw), 0.9);
     }
 
     function playComicPanel(lineIdx, panelIdx) {
@@ -2710,6 +3792,7 @@
 
     function selectStory(sId) {
       appState.currentStoryId = sId;
+      activeRolePlayTurn = 0;
       renderReadingWorkshop();
     }
 
@@ -2725,7 +3808,7 @@
 
     function speakEntireStory() {
       const story = readingStories.find(s => s.id === appState.currentStoryId) || readingStories[0];
-      speakText(story.lines.map(l => l.raw).join(" "), 0.88);
+      speakText(story.lines.map(l => getCleanDialogueSpeechTarget(l.raw)).join(" "), 0.88);
     }
 
     function checkStoryQuestion(sId, qIdx, oIdx, btnEl) {
@@ -2735,6 +3818,9 @@
       if (oIdx === q.ans) {
         playTone("correct");
         addXP(20);
+        if (!appState.storyMastery[sId]) appState.storyMastery[sId] = {};
+        appState.storyMastery[sId].comp = true;
+        saveState();
         btnEl.style.background = "#10b981";
         btnEl.style.color = "white";
         fb.style.color = "#065f46";
@@ -3115,7 +4201,7 @@
       document.getElementById("cert-name").innerText = appState.studentName;
       document.getElementById("cert-score").innerText = score;
       document.getElementById("cert-xp").innerText = appState.xp || 0;
-      document.getElementById("cert-words").innerText = Object.values(appState.vocabStatus).filter(v => v === "mastered").length;
+      document.getElementById("cert-words").innerText = Object.values(appState.vocabStatus).filter(v => v === "mastered" || v === "verified").length;
       document.getElementById("cert-level").innerText = cefrFull;
       document.getElementById("cert-date").innerText = new Date().toLocaleDateString("zh-TW");
     }
