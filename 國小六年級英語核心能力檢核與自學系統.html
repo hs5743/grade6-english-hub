@@ -1025,7 +1025,7 @@
     <div class="header-inner">
       <div class="header-top">
         <div>
-          <div class="brand-pill">✨ 教育部 108 課綱 · 國小高年級（第 7–8 冊）全國英語核心素養標準</div>
+          <div class="brand-pill">✨ 國小六年級（第 7–8 冊）英語教材重點整理與自主練習</div>
           <h1 class="site-title">🚀 國小六年級英語核心能力檢核與自學系統</h1>
           <p class="site-subtitle">輕量漸進式學習介面 · 互動字卡發音 · 漫畫情境點讀 · 智慧雷達診斷</p>
         </div>
@@ -1083,11 +1083,11 @@
               <input type="text" id="input-student-name" style="padding:0.5rem 0.85rem; border:2px solid #c7d2fe; border-radius:0.7rem; font-weight:800; font-size:0.92rem; width: 150px;" value="小六同學" onchange="updateProfile()">
             </div>
             <div>
-              <label style="font-size: 0.78rem; font-weight: 800; color: #334155; display:block; margin-bottom:0.2rem;">🧭 課綱學習軌跡：</label>
+              <label style="font-size: 0.78rem; font-weight: 800; color: #334155; display:block; margin-bottom:0.2rem;">📘 教材重點範圍：</label>
               <select id="select-school-version" style="padding:0.5rem 0.85rem; border:2px solid #c7d2fe; border-radius:0.7rem; font-weight:800; font-size:0.92rem; background:white;" onchange="updateProfile()">
-                <option value="both">🌟 全國完整雙軌 (生活交際 ＋ 過去式動作)</option>
-                <option value="ww">📘 課綱 A 軌 (生活交際・健康關懷・職業志向)</option>
-                <option value="hwg">📗 課綱 B 軌 (跨文化・交通購物・過去式雙軌)</option>
+                <option value="both">🌟 兩版本綜合重點 (第 7–8 冊完整範圍)</option>
+                <option value="ww">📘 教材版本 A 重點 (生病症狀・點餐・職業)</option>
+                <option value="hwg">📗 教材版本 B 重點 (交通・服飾價格・過去式動作)</option>
               </select>
             </div>
           </div>
@@ -1113,13 +1113,13 @@
 
           <!-- Progressive Disclosure: Click to expand rules & version note -->
           <button class="expand-toggle-btn" onclick="toggleAccordion(this)">
-            <span>💡 點擊展開：系統 XP 升級規則、課綱雙軌差異與個資保護說明</span>
+            <span>💡 點擊展開：系統 XP 升級規則、兩套教材重點差異與隱私說明</span>
             <span class="arrow">▼</span>
           </button>
           <div class="expand-drawer">
             <ul style="padding-left: 1.15rem; line-height: 1.7;">
               <li><strong>經驗值升級機制</strong>：每收服 1 張單字卡 <code>+10 XP</code>、完成 1 題文法練習 <code>+15 XP</code>、讀完 1 篇漫畫故事 <code>+20 XP</code>、完成自我檢測 <code>+50 XP</code>！</li>
-              <li><strong>全國課綱雙軌整合</strong>：不同版本國小六年級教材各有側重——A 軌強化「生病健康照護、點餐與夢想職業」（過去式僅涵蓋 <code>was/were</code>）；B 軌強化「交通方式、服飾價格單複數」並延伸教授升國中必考的「一般動詞過去式 <code>did / -ed</code>」。本系統將全臺各版本核心精華 100% 原創整合！</li><li><strong>🔒 學生隱私安全保障</strong>：本系統為純前端學習工具，無後端伺服器、不蒐集任何真實個資。所有學習進度僅保存在您目前的瀏覽器中，若使用學校公用平板或電腦，下課前可點擊右上角「🧹 清除紀錄」一鍵還原。</li>
+              <li><strong>兩套六年級（第 7–8 冊）教材重點整理</strong>：本系統參考兩套國小第 7–8 冊英語課本的主題與句型整理而成——其中一套側重「生病症狀、點餐與夢想職業」（過去式教 <code>was/were</code>）；另一套側重「交通方式、服飾價格單複數」並多教了「一般動詞過去式 <code>did / -ed</code>」。系統將兩套課本的重點合併，方便同學自我檢核與跨版本補齊！</li><li><strong>🔒 學生隱私安全保障</strong>：本系統為純前端學習工具，無後端伺服器、不蒐集任何真實個資。所有學習進度僅保存在您目前的瀏覽器中，若使用學校公用平板或電腦，下課前可點擊右上角「🧹 清除紀錄」一鍵還原。</li>
             </ul>
           </div>
         </div>
@@ -1553,7 +1553,7 @@
             <strong id="cert-level" style="font-size: 1.3rem; color: #312e81;"></strong>
           </div>
           <div style="font-size: 0.84rem; color: var(--text-muted); margin-top: 0.85rem; font-weight: 600;">
-            簽發日期：<span id="cert-date"></span> · 依據教育部 108 課綱國小高年級（第 7–8 冊）全國英語核心能力標準核定
+            簽發日期：<span id="cert-date"></span> · 整理自國小六年級（第 7–8 冊）兩套常見英語教材之重點字彙與句型
           </div>
           <div class="no-print" style="margin-top: 1.35rem;">
             <button class="btn btn-primary" onclick="window.print()">🖨️ 立即列印 / 另存為 PDF</button>
@@ -1568,7 +1568,7 @@
     <div class="card" style="padding: 1.15rem 1.4rem; background: rgba(255,255,255,0.88); margin-bottom: 0;">
       <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
         <div style="font-size: 0.84rem; font-weight: 800; color: var(--text-sub);">
-          🛡️ <strong>公開版權與學生隱私保護驗證通過</strong> · 對齊教育部 108 課綱國小高年級（第 7–8 冊）英語學習指標
+          🛡️ <strong>內容來源與隱私保護說明</strong> · 參考國小六年級（第 7–8 冊）兩套英語教材重點重新編寫之自主練習網站
         </div>
         <button class="btn btn-outline btn-sm" onclick="resetStudentData()" style="font-size: 0.78rem; padding: 0.35rem 0.85rem;">
           🧹 清除本機學習紀錄（公用設備下課重置）
@@ -1580,7 +1580,7 @@
       </button>
       <div class="expand-drawer" style="font-size: 0.82rem; line-height: 1.7;">
         <ul style="padding-left: 1.15rem;">
-          <li><strong>100% 獨立原創內容與插圖（無版權侵權疑慮）</strong>：本系統收錄之單字與文法架構係依據中華民國教育部公開之「十二年國民基本教育課程綱要國民中小學暨普通型高級中等學校—英語文領域（國小高年級）」核心學習內容編製；所有例句、4 篇情境對話文本、24 道診斷試題及 3D／四格漫畫視覺插圖均為 100% 獨立原創生成，未使用任何商業出版社之受著作權保護課文原圖、音檔或專屬商標角色。</li>
+          <li><strong>教材參考來源與原創聲明</strong>：本網站為非營利之教學輔助與學生自學工具，單字與句型範圍係參考國小六年級（第 7–8 冊）兩套主流英語教科書之單元主題（國家、生病症狀、交通、作息、休閒、職業、服飾與過去式）進行歸納；網站內所有例句、4 篇短篇對話、24 道練習題及 AI 四格漫畫插圖均為重新編寫與生成之原創內容，未使用原教科書之課文原圖、音檔或專屬角色名稱。</li>
           <li><strong>零伺服器個資蒐集（Zero-Server Privacy Protection）</strong>：本系統採純前端靜態架構運轉，不設後端資料庫、無第三方追蹤器、亦不會將學生姓名或測驗成績上傳至任何外部網路伺服器。所有學習進度僅暫存於使用者本機瀏覽器之 <code>localStorage</code>，並支援隨時一鍵徹底清除，完全符合校園資訊安全與個人資料保護規範。</li>
         </ul>
       </div>
@@ -1731,11 +1731,11 @@
 
     const vocabList = [
       { id: "v1", icon: "🦘", topic: "countries", word: "Australia", zh: "澳洲", ver: "共同核心", ex: "Koalas come from Australia.", note: "字首母音發音，國名首字母大寫。" },
-      { id: "v2", icon: "🍁", topic: "countries", word: "Canada", zh: "加拿大", ver: "課綱 A 軌核心", ex: "He is from Canada.", note: "楓葉之國，直接說 from Canada。" },
-      { id: "v3", icon: "🗼", topic: "countries", word: "France", zh: "法國", ver: "課綱 A 軌核心", ex: "Is she from France?", note: "艾菲爾鐵塔所在的歐洲國家。" },
+      { id: "v2", icon: "🍁", topic: "countries", word: "Canada", zh: "加拿大", ver: "版本 A 重點", ex: "He is from Canada.", note: "楓葉之國，直接說 from Canada。" },
+      { id: "v3", icon: "🗼", topic: "countries", word: "France", zh: "法國", ver: "版本 A 重點", ex: "Is she from France?", note: "艾菲爾鐵塔所在的歐洲國家。" },
       { id: "v4", icon: "🕌", topic: "countries", word: "India", zh: "印度", ver: "共同核心", ex: "Curry is famous in India.", note: "首字母 I 大寫。" },
       { id: "v5", icon: "🗾", topic: "countries", word: "Japan", zh: "日本", ver: "共同核心", ex: "I’m from Japan.", note: "重音在第二音節 pan。" },
-      { id: "v6", icon: "🦁", topic: "countries", word: "Singapore", zh: "新加坡", ver: "課綱 B 軌核心", ex: "My uncle lives in Singapore.", note: "東南亞花園城市國家。" },
+      { id: "v6", icon: "🦁", topic: "countries", word: "Singapore", zh: "新加坡", ver: "版本 B 重點", ex: "My uncle lives in Singapore.", note: "東南亞花園城市國家。" },
       { id: "v7", icon: "💂", topic: "countries", word: "the UK", zh: "英國", ver: "共同核心", ex: "Are you from the UK?", note: "★必考：縮寫國名前面一定要加定冠詞 the！" },
       { id: "v8", icon: "🗽", topic: "countries", word: "the USA", zh: "美國", ver: "共同核心", ex: "They are from the USA.", note: "★必考：前面一定要加定冠詞 the！" },
 
@@ -1839,7 +1839,7 @@
       {
         id: "g3",
         title: "單元 3：生病症狀、點餐意願與未來職業志向",
-        tag: "課綱 A 軌核心主題",
+        tag: "版本 A 重點主題",
         summary: "掌握三大生活溝通句：(1) 詢問身體不適 (What's wrong?)、(2) 點餐意願 (Would you like...?)、(3) 職業志向 (want to be)。",
         formula: "1. <span class='formula-highlight'>What's wrong?</span> ➔ I <span class='formula-warn'>have a headache / fever</span>.<br>2. What <span class='formula-highlight'>would you like</span> to eat? ➔ <span class='formula-warn'>I'd like</span> some pizza.<br>3. What do you <span class='formula-highlight'>want to be</span>? ➔ I want to be <span class='formula-warn'>a doctor / an artist</span>.",
         rows: [
@@ -1856,7 +1856,7 @@
       {
         id: "g4",
         title: "單元 4：服飾購物與價格單複數一致性",
-        tag: "課綱 B 軌核心主題",
+        tag: "版本 B 重點主題",
         summary: "詢問價格時，單數衣物用 How much is...? (It's...)；成雙的褲類 (pants/jeans/shorts) 用 How much are...? (They're...)！",
         formula: "【單數服飾】How much <span class='formula-highlight'>is</span> this T-shirt / dress / jacket? ➔ <span class='formula-warn'>It's</span> 200 dollars.<br>【複數褲類】How much <span class='formula-highlight'>are</span> these pants / jeans / shorts? ➔ <span class='formula-warn'>They're</span> 500 dollars.",
         rows: [
@@ -2006,15 +2006,15 @@
 
     const masterQuestionBank = [
       { id: "q1", dim: "dim1", dimName: "主題字彙廣度", ver: "共同核心 (7上)", remedyTab: "tab-vocab", remedyTarget: "countries", stem: "Big Ben (大笨鐘) is in London. My pen pal lives in London, so she is from ______.", options: ["Canada", "Australia", "the UK", "Singapore"], correct: 2, exp: "倫敦是英國首都，英國英文為 the UK（注意前面必須有定冠詞 the）。" },
-      { id: "q2", dim: "dim1", dimName: "主題字彙廣度", ver: "課綱核心 (健康關懷)", remedyTab: "tab-vocab", remedyTarget: "health", stem: "Kevin ate too much ice cream and candy. Now his teeth hurt badly. He has a ______.", options: ["headache", "toothache", "runny nose", "fever"], correct: 1, exp: "teeth hurt（牙齒痛）對應的疾病症狀單字為 toothache（牙痛）。" },
-      { id: "q3", dim: "dim1", dimName: "主題字彙廣度", ver: "課綱核心 (交通方式)", remedyTab: "tab-vocab", remedyTarget: "transport", stem: "The bookstore is very close to my house. I don't take a bus; I just go there ______.", options: ["by foot", "on foot", "by walk", "in foot"], correct: 1, exp: "「步行、走路」是六年級必考片語，固定使用介系詞 on foot！" },
-      { id: "q4", dim: "dim1", dimName: "主題字彙廣度", ver: "課綱核心 (夢想職業)", remedyTab: "tab-vocab", remedyTarget: "jobs", stem: "Ms. Lin works in a hospital and takes care of sick people with doctors. She is a kind ______.", options: ["artist", "writer", "nurse", "cook"], correct: 2, exp: "在醫院工作並與醫生一起照顧病患的是護理師 (nurse)。" },
+      { id: "q2", dim: "dim1", dimName: "主題字彙廣度", ver: "第7冊重點 (健康關懷)", remedyTab: "tab-vocab", remedyTarget: "health", stem: "Kevin ate too much ice cream and candy. Now his teeth hurt badly. He has a ______.", options: ["headache", "toothache", "runny nose", "fever"], correct: 1, exp: "teeth hurt（牙齒痛）對應的疾病症狀單字為 toothache（牙痛）。" },
+      { id: "q3", dim: "dim1", dimName: "主題字彙廣度", ver: "第7冊重點 (交通方式)", remedyTab: "tab-vocab", remedyTarget: "transport", stem: "The bookstore is very close to my house. I don't take a bus; I just go there ______.", options: ["by foot", "on foot", "by walk", "in foot"], correct: 1, exp: "「步行、走路」是六年級必考片語，固定使用介系詞 on foot！" },
+      { id: "q4", dim: "dim1", dimName: "主題字彙廣度", ver: "第8冊重點 (夢想職業)", remedyTab: "tab-vocab", remedyTarget: "jobs", stem: "Ms. Lin works in a hospital and takes care of sick people with doctors. She is a kind ______.", options: ["artist", "writer", "nurse", "cook"], correct: 2, exp: "在醫院工作並與醫生一起照顧病患的是護理師 (nurse)。" },
 
       { id: "q5", dim: "dim2", dimName: "現在式與單複數語法", ver: "共同核心 (7上 U4)", remedyTab: "tab-grammar", remedyTarget: "g1", stem: "A: What time ______ your father go to work?\nB: He ______ to work at eight o'clock.", options: ["do; go", "does; goes", "does; go", "is; goes"], correct: 1, exp: "主詞 your father / He 為第三人稱單數：問句助動詞用 does（後面配原形 go），肯定答句動詞加 -es (goes)。" },
-      { id: "q6", dim: "dim2", dimName: "現在式與單複數語法", ver: "課綱核心 (休閒生活)", remedyTab: "tab-grammar", remedyTarget: "g1", stem: "My sister likes music and sports. In her free time, she ______ to music and ______ basketball.", options: ["listen; play", "listens; plays", "listening; playing", "listens; play"], correct: 1, exp: "主詞 she 為第三人稱單數，對等連接詞 and 連接的兩個現在式動詞皆須加 -s (listens; plays)。" },
-      { id: "q7", dim: "dim2", dimName: "現在式與單複數語法", ver: "課綱核心 (服飾購物)", remedyTab: "tab-grammar", remedyTarget: "g4", stem: "A: How much ______ these black pants?\nB: ______ six hundred dollars.", options: ["is; It's", "are; They're", "are; It's", "is; They're"], correct: 1, exp: "pants（長褲）為恆複數名詞，問句動詞用 are，答句代名詞用 They're。" },
-      { id: "q8", dim: "dim2", dimName: "現在式與單複數語法", ver: "課綱核心 (餐飲點餐)", remedyTab: "tab-grammar", remedyTarget: "g3", stem: "A: What ______ you like to eat for lunch?\nB: I'd like some dumplings and soup, please.", options: ["do", "are", "would", "were"], correct: 2, exp: "答句為 I'd like (I would like)...，故問句為禮貌詢問點餐意願：What would you like to eat?" },
-      { id: "q9", dim: "dim2", dimName: "現在式與單複數語法", ver: "課綱核心 (戶外休閒)", remedyTab: "tab-vocab", remedyTarget: "freetime", stem: "A: What does Tina like to do in her free time?\nB: She likes to play ______ piano.", options: ["a", "the", "× (不加冠詞)", "an"], correct: 1, exp: "彈奏西洋樂器（piano, violin）前面必須加上定冠詞 the (play the piano)；打球類運動才不加 the。" },
+      { id: "q6", dim: "dim2", dimName: "現在式與單複數語法", ver: "第7冊重點 (休閒生活)", remedyTab: "tab-grammar", remedyTarget: "g1", stem: "My sister likes music and sports. In her free time, she ______ to music and ______ basketball.", options: ["listen; play", "listens; plays", "listening; playing", "listens; play"], correct: 1, exp: "主詞 she 為第三人稱單數，對等連接詞 and 連接的兩個現在式動詞皆須加 -s (listens; plays)。" },
+      { id: "q7", dim: "dim2", dimName: "現在式與單複數語法", ver: "第8冊重點 (服飾購物)", remedyTab: "tab-grammar", remedyTarget: "g4", stem: "A: How much ______ these black pants?\nB: ______ six hundred dollars.", options: ["is; It's", "are; They're", "are; It's", "is; They're"], correct: 1, exp: "pants（長褲）為恆複數名詞，問句動詞用 are，答句代名詞用 They're。" },
+      { id: "q8", dim: "dim2", dimName: "現在式與單複數語法", ver: "第7冊重點 (餐飲點餐)", remedyTab: "tab-grammar", remedyTarget: "g3", stem: "A: What ______ you like to eat for lunch?\nB: I'd like some dumplings and soup, please.", options: ["do", "are", "would", "were"], correct: 2, exp: "答句為 I'd like (I would like)...，故問句為禮貌詢問點餐意願：What would you like to eat?" },
+      { id: "q9", dim: "dim2", dimName: "現在式與單複數語法", ver: "第8冊重點 (戶外休閒)", remedyTab: "tab-vocab", remedyTarget: "freetime", stem: "A: What does Tina like to do in her free time?\nB: She likes to play ______ piano.", options: ["a", "the", "× (不加冠詞)", "an"], correct: 1, exp: "彈奏西洋樂器（piano, violin）前面必須加上定冠詞 the (play the piano)；打球類運動才不加 the。" },
 
       { id: "q10", dim: "dim3", dimName: "Be動詞過去式(was/were)", ver: "第8冊核心 (過去狀態)", remedyTab: "tab-grammar", remedyTarget: "g5", stem: "A: Where ______ you last night?\nB: I ______ at the night market with my family.", options: ["were; was", "was; were", "are; am", "did; was"], correct: 0, exp: "last night 為過去時間：第二人稱 you 搭配 were；第一人稱單數 I 搭配 was。" },
       { id: "q11", dim: "dim3", dimName: "Be動詞過去式(was/were)", ver: "第8冊核心 (過去狀態)", remedyTab: "tab-grammar", remedyTarget: "g5", stem: "Leo and his brother ______ at the train station an hour ago.", options: ["is", "are", "was", "were"], correct: 3, exp: "主詞 Leo and his brother 為兩個人（複數），且時間為 an hour ago（一小時前），Be動詞過去式用 were。" },
