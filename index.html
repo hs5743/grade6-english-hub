@@ -1213,10 +1213,10 @@
               彩色積木公式秒懂高年級 8 大核心與高階句構，隨堂填空即時驗收。
             </p>
             <button class="expand-toggle-btn" style="margin-bottom: 0.85rem;" onclick="toggleAccordion(this)">
-              <span>📋 查看 6 大文法單元</span><span class="arrow">▼</span>
+              <span>📋 查看 8 大文法與高階句構單元</span><span class="arrow">▼</span>
             </button>
             <div class="expand-drawer" style="margin-bottom: 0.85rem;">
-              涵蓋：現在式三單 (-s/-es)、交通與國籍問句、生病與點餐、服飾價格單複數、Be動詞過去式 (was/were) 與一般動詞過去式 (did/-ed)。
+              涵蓋：現在式三單 (-s/-es)、交通與國籍問句、生病與職業、服飾價格單複數、Be動詞過去式 (was/were)、一般動詞過去式 (did/-ed)、可數與不可數名詞 (some / Whose) 及課文高層次感嘆與序列敘事句構。
             </div>
           </div>
           <button class="btn btn-outline" style="width:100%;" onclick="goToTab('tab-grammar')">進入文法島嶼 ➔</button>
@@ -1405,7 +1405,7 @@
           <div class="mode-card" id="mode-vocab" onclick="selectAssessMode('vocab')">
             <div style="display:flex; justify-content:space-between; align-items:center;">
               <span style="font-size: 1.85rem;">🃏</span>
-              <span class="tag tag-amber">基礎核心 · 9題</span>
+              <span class="tag tag-amber">基礎核心 · 11題</span>
             </div>
             <h4 style="font-size: 1.1rem; font-weight: 900; margin: 0.45rem 0 0.25rem;">高頻單字與現在式挑戰</h4>
             <p style="font-size: 0.82rem; color: var(--text-sub); font-weight: 600;">檢測八大主題字彙與第三人稱單數。</p>
@@ -1413,7 +1413,7 @@
               <span>ℹ️ 查看測驗範圍明細</span><span class="arrow">▼</span>
             </button>
             <div class="expand-drawer" onclick="event.stopPropagation()">
-              涵蓋國籍、疾病、交通介系詞 (on foot)、服飾單複數價格 (How much is/are) 與現在簡單式三單動詞變化。
+              涵蓋八大主題單字（國籍、疾病、交通 on foot、四季氣候 wet/dry，共 5 題）與現在式暨單複數語法（三單動詞變化、服飾單複數價格 How much is/are、可數與不可數名詞 some，共 6 題），合計 11 題。
             </div>
           </div>
 
@@ -1580,7 +1580,7 @@
       </button>
       <div class="expand-drawer" style="font-size: 0.82rem; line-height: 1.7;">
         <ul style="padding-left: 1.15rem;">
-          <li><strong>教材參考來源與原創聲明</strong>：本網站為非營利之教學輔助與學生自學工具，單字與句型範圍係參考國小六年級（第 7–8 冊）兩套主流英語教科書之單元主題（國家、生病症狀、交通、作息、休閒、職業、服飾與過去式）進行歸納；網站內所有例句、4 篇短篇對話、24 道練習題及 AI 四格漫畫插圖均為重新編寫與生成之原創內容，未使用原教科書之課文原圖、音檔或專屬角色名稱。</li>
+          <li><strong>教材參考來源與原創聲明</strong>：本網站為非營利之教學輔助與學生自學工具，單字與句型範圍係參考國小六年級（第 7–8 冊）兩套主流英語教科書之單元主題（國家、生病症狀、交通、作息、休閒、職業、服飾與過去式）進行歸納；網站內所有例句、4 篇短篇對話、30 道練習題及 AI 四格漫畫插圖均為重新編寫與生成之原創內容，未使用原教科書之課文原圖、音檔或專屬角色名稱。</li>
           <li><strong>零伺服器個資蒐集（Zero-Server Privacy Protection）</strong>：本系統採純前端靜態架構運轉，不設後端資料庫、無第三方追蹤器、亦不會將學生姓名或測驗成績上傳至任何外部網路伺服器。所有學習進度僅暫存於使用者本機瀏覽器之 <code>localStorage</code>，並支援隨時一鍵徹底清除，完全符合校園資訊安全與個人資料保護規範。</li>
         </ul>
       </div>
@@ -2768,10 +2768,10 @@
         document.getElementById("quiz-mode-title").innerText = "🏆 全能力綜合檢定 (30題)";
       } else if (mode === "past") {
         activeQuizQuestions = masterQuestionBank.filter(q => q.dim === "dim3" || q.dim === "dim4" || q.id === "q20" || q.id === "q23");
-        document.getElementById("quiz-mode-title").innerText = "⚡ 過去式雙軌專項挑戰";
+        document.getElementById("quiz-mode-title").innerText = "⚡ 過去式雙軌專項挑戰 (10題)";
       } else if (mode === "vocab") {
         activeQuizQuestions = masterQuestionBank.filter(q => q.dim === "dim1" || q.dim === "dim2");
-        document.getElementById("quiz-mode-title").innerText = "🃏 單字與現在式專項挑戰";
+        document.getElementById("quiz-mode-title").innerText = "🃏 高頻單字與現在式挑戰 (11題)";
       } else if (mode === "wrong") {
         if (appState.wrongBank.length === 0) {
           alert("目前你的錯題本是空的（0題）！系統將為你啟動「全能力綜合檢定」。");
