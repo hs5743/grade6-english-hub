@@ -1171,6 +1171,177 @@
       box-shadow: 0 0 0 3px rgba(244, 63, 94, 0.18);
     }
 
+
+    /* ==========================================
+       V8: ULTRA-CLEAN VOCAB CARDS & LARGE-FONT POPUP MODAL
+       ========================================== */
+    .vocab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 1.1rem;
+    }
+    .vocab-card-clean {
+      background: white;
+      border: 2px solid #e2e8f0;
+      border-radius: 1.25rem;
+      padding: 1.25rem 1.2rem;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 0 #e2e8f0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      min-height: 168px;
+    }
+    .vocab-card-clean:hover {
+      transform: translateY(-5px);
+      border-color: #6366f1;
+      box-shadow: 0 8px 20px rgba(79, 70, 229, 0.15), 0 4px 0 #6366f1;
+    }
+    .vocab-card-clean.verified {
+      border-color: #f59e0b;
+      background: linear-gradient(180deg, #ffffff 0%, #fffbeb 100%);
+      box-shadow: 0 4px 0 #fbbf24;
+    }
+    .vocab-card-clean.mastered {
+      border-color: #34d399;
+      background: linear-gradient(180deg, #ffffff 0%, #ecfdf5 100%);
+      box-shadow: 0 4px 0 #6ee7b7;
+    }
+    .vocab-card-clean.review {
+      border-color: #fb7185;
+      background: linear-gradient(180deg, #ffffff 0%, #fff1f2 100%);
+      box-shadow: 0 4px 0 #fda4af;
+    }
+    .card-quick-speak {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1.5px solid #cbd5e1;
+      background: #f8fafc;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .card-quick-speak:hover {
+      background: #4f46e5;
+      color: white;
+      border-color: #4f46e5;
+      transform: scale(1.08);
+    }
+    .card-cta-hint {
+      margin-top: 0.75rem;
+      padding-top: 0.55rem;
+      border-top: 1.5px dashed #e2e8f0;
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: #64748b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .vocab-card-clean:hover .card-cta-hint {
+      color: #4f46e5;
+    }
+
+    /* Large-Font Interactive Word Modal */
+    .vocab-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.62);
+      backdrop-filter: blur(5px);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      overflow-y: auto;
+    }
+    .vocab-modal-backdrop.open {
+      display: flex;
+      animation: fadeSlideIn 0.22s ease;
+    }
+    .vocab-modal-dialog {
+      background: #ffffff;
+      width: 100%;
+      max-width: 720px;
+      border-radius: 1.6rem;
+      border: 3px solid #c7d2fe;
+      box-shadow: 0 25px 60px rgba(15, 23, 42, 0.35);
+      overflow: hidden;
+      max-height: 92vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .vocab-modal-header {
+      background: linear-gradient(135deg, #1e1b4b 0%, #312e81 60%, #0f766e 100%);
+      color: white;
+      padding: 1.4rem 1.75rem;
+      position: relative;
+    }
+    .vocab-modal-close {
+      position: absolute;
+      top: 1.1rem;
+      right: 1.25rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.3);
+      background: rgba(255,255,255,0.12);
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 900;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s;
+    }
+    .vocab-modal-close:hover {
+      background: rgba(244, 63, 94, 0.9);
+      border-color: white;
+      transform: scale(1.06);
+    }
+    .vocab-modal-body {
+      padding: 1.5rem 1.75rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+    .vocab-modal-ex-box {
+      background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
+      border: 2px solid #c7d2fe;
+      border-left: 6px solid #4f46e5;
+      border-radius: 1rem;
+      padding: 1.15rem 1.35rem;
+      margin-bottom: 1rem;
+    }
+    .vocab-modal-note-box {
+      background: #fffbeb;
+      border: 2px solid #fde68a;
+      border-left: 6px solid #f59e0b;
+      border-radius: 1rem;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.25rem;
+      font-size: 1.05rem;
+      color: #92400e;
+      font-weight: 700;
+      line-height: 1.65;
+    }
+    .vocab-modal-footer {
+      background: #f8fafc;
+      border-top: 2px solid #e2e8f0;
+      padding: 1rem 1.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
     .cert-frame {
       border: 10px double #1e1b4b;
       background: linear-gradient(135deg, #ffffff 0%, #fefce8 100%);
@@ -1447,18 +1618,17 @@
       <div class="card">
         <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.85rem; margin-bottom: 1.15rem;">
           <div>
-            <h2 style="font-size: 1.4rem; font-weight: 900; color: #1e1b4b;">🃏 六年級八大主題單字魔法卡館（雙軌實證闖關）</h2>
-            <p style="font-size: 0.88rem; color: var(--text-sub); font-weight: 600;">
-              支援<strong>「🎙️ AI 口說發音辨識」</strong>與<strong>「✍️ 拼字積木重組」</strong>！通過任一客觀實測即可獲得金色<strong>「🏅 實證精熟 (+25 XP)」</strong>印章！
+            <h2 style="font-size: 1.4rem; font-weight: 900; color: #1e1b4b;">🃏 六年級八大主題單字魔法卡館</h2>
+            <p style="font-size: 0.9rem; color: var(--text-sub); font-weight: 700;">
+              ✨ <strong>極簡清爽字卡牆</strong>：點擊任一單字卡即可彈出<strong>「🔍 大字體清晰例句、必考秘訣、🎙️ 口說辨識與 ✍️ 拼字闖關視窗」</strong>！
             </p>
           </div>
           <div style="display: flex; gap: 0.45rem; flex-wrap: wrap;">
             <button class="btn btn-amber btn-sm" onclick="toggleVocabQuiz()">🎧 聽音選字快篩</button>
-            <button class="btn btn-primary btn-sm" onclick="toggleSpellingBee()">✍️ 拼字聽寫闖關</button>
-            <button class="btn btn-outline btn-sm" id="btn-expand-all-vocab" onclick="toggleAllVocabDrawers()">📂 展開全部秘訣</button>
+            <button class="btn btn-primary btn-sm" onclick="toggleSpellingBee()">✍️ 主題拼字闖關</button>
             <button class="btn btn-outline btn-sm" onclick="filterVocabByStatus('verified')">🏅 實證精熟</button>
             <button class="btn btn-outline btn-sm" onclick="filterVocabByStatus('review')">⭐ 待加強</button>
-            <button class="btn btn-outline btn-sm" onclick="filterVocabByStatus('all')">全部(96)</button>
+            <button class="btn btn-outline btn-sm" onclick="filterVocabByStatus('all')">全部顯示</button>
           </div>
         </div>
 
@@ -1770,6 +1940,12 @@
     </div>
   </footer>
 
+
+
+  <!-- LARGE-FONT INTERACTIVE VOCABULARY DETAIL & PRACTICE MODAL -->
+  <div id="vocab-detail-modal" class="vocab-modal-backdrop no-print" onclick="if(event.target===this) closeVocabModal()">
+    <div class="vocab-modal-dialog" id="vocab-modal-content"></div>
+  </div>
 
   <script>
     /* =========================================================================
@@ -2785,12 +2961,26 @@
     }
 
     /* =========================================================================
-       TAB 2: VOCABULARY HUB (DUAL-TRACK VERIFIED MASTERY + SPEAKING + SPELLING)
+       TAB 2: VOCABULARY HUB (CLEAN MINIMALIST GRID + LARGE-FONT POPUP MODAL)
        ========================================================================= */
+    let activeModalVocabId = null;
+    let activeModalTab = "speak"; // 'speak' | 'spell'
+    let modalSpellLetters = [];
+    let modalSpellBuilt = "";
+
     function getSpellTarget(wordStr) {
-      // Extract clean primary word/phrase for spelling puzzle
       const firstSeg = wordStr.split(/[\/&]/)[0].replace(/\.\.\./g, "").replace(/[^a-zA-Z\s'-]/g, "").trim();
       return firstSeg || wordStr;
+    }
+
+    function getFilteredVocabItems() {
+      if (appState.currentVocabFilter === "review") {
+        return vocabList.filter(v => appState.vocabStatus[v.id] === "review");
+      } else if (appState.currentVocabFilter === "verified") {
+        return vocabList.filter(v => appState.vocabStatus[v.id] === "verified");
+      } else {
+        return vocabList.filter(v => v.topic === appState.currentVocabTopic);
+      }
     }
 
     function renderVocabHub() {
@@ -2807,18 +2997,11 @@
       }).join("");
 
       const container = document.getElementById("vocab-cards-container");
-      let items = vocabList;
-      if (appState.currentVocabFilter === "review") {
-        items = vocabList.filter(v => appState.vocabStatus[v.id] === "review");
-      } else if (appState.currentVocabFilter === "verified") {
-        items = vocabList.filter(v => appState.vocabStatus[v.id] === "verified");
-      } else {
-        items = vocabList.filter(v => v.topic === appState.currentVocabTopic);
-      }
+      const items = getFilteredVocabItems();
 
       if (items.length === 0) {
-        container.innerHTML = `<div class="card" style="grid-column: 1/-1; text-align:center; color: var(--text-muted); font-weight:700;">
-          🌟 目前此篩選分類下沒有單字卡！可切換上方主題或點擊「🎙️開口唸 / ✍️拼字」來取得「🏅 實證精熟」印章！
+        container.innerHTML = `<div class="card" style="grid-column: 1/-1; text-align:center; color: var(--text-muted); font-weight:700; padding: 2.2rem;">
+          🌟 目前此篩選分類下沒有單字卡！可切換上方主題，或點擊任一單字卡進入「彈出學習視窗」完成口說／拼字取得「🏅 實證精熟」印章！
         </div>`;
         return;
       }
@@ -2826,113 +3009,294 @@
       container.innerHTML = items.map(v => {
         const st = appState.vocabStatus[v.id] || "";
         const safeWord = v.word.replace(/'/g, "\\'");
-        const safeEx = v.ex.replace(/'/g, "\\'");
-        const openCls = allVocabExpanded ? "open" : "";
-        const spellTarget = getSpellTarget(v.word);
-        const maskedHint = spellTarget.split(" ").map(w => w.length <= 2 ? w : w[0] + "_".repeat(w.length - 2) + w[w.length - 1]).join("  ");
+        let statusBadge = `<span class="tag" style="background:#f1f5f9; color:#475569;">尚未學習</span>`;
+        if (st === "verified") {
+          statusBadge = `<span class="verified-stamp">🏅 實證精熟</span>`;
+        } else if (st === "mastered") {
+          statusBadge = `<span class="tag tag-teal">👁️ 已讀</span>`;
+        } else if (st === "review") {
+          statusBadge = `<span class="tag tag-red">⭐ 待加強</span>`;
+        }
 
         return `
-          <div class="vocab-card ${st}" id="vcard-${v.id}">
+          <div class="vocab-card-clean ${st}" id="vcard-${v.id}" onclick="openVocabModal('${v.id}')">
             <div>
-              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.35rem;">
-                <div class="vocab-emoji-box">${v.icon}</div>
-                <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.28rem;">
-                  <div style="display:flex; gap:0.3rem; align-items:center;">
-                    ${st === 'verified' ? '<span class="verified-stamp">🏅 實證精熟</span>' : ''}
-                    <span class="tag ${v.ver.includes('A') ? 'tag-blue' : v.ver.includes('B') ? 'tag-teal' : 'tag-purple'}">${v.ver}</span>
-                  </div>
-                  <div style="display: flex; gap: 0.22rem; flex-wrap: wrap; justify-content: flex-end;">
-                    <button class="btn btn-outline btn-sm" style="padding: 0.18rem 0.45rem; font-size:0.75rem;" onclick="speakText('${safeWord}', 0.95)">🔊 正常</button>
-                    <button class="btn btn-outline btn-sm" style="padding: 0.18rem 0.45rem; font-size:0.75rem;" onclick="speakText('${safeWord}', 0.6)">🐢 慢速</button>
-                    <button class="btn btn-sm mic-btn" style="padding: 0.18rem 0.5rem; font-size:0.75rem;" onclick="toggleCardLab('${v.id}', 'speak')">🎙️ 開口唸</button>
-                    <button class="btn btn-primary btn-sm" style="padding: 0.18rem 0.5rem; font-size:0.75rem;" onclick="toggleCardLab('${v.id}', 'spell')">✍️ 拼字</button>
-                  </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.65rem;">
+                <div class="vocab-emoji-box" style="width:48px; height:48px; font-size:1.75rem;">${v.icon}</div>
+                <div style="display: flex; align-items: center; gap: 0.4rem;">
+                  ${statusBadge}
+                  <button class="card-quick-speak" onclick="event.stopPropagation(); speakText('${safeWord}', 0.92)" title="點擊直接聽發音">
+                    🔊
+                  </button>
                 </div>
               </div>
-              <div class="vocab-word">${v.word}</div>
-              <div class="vocab-zh">${v.zh}</div>
-
-              <!-- Inline AI Speaking Lab -->
-              <div id="vcard-speak-${v.id}" class="inline-lab-box">
-                <div style="font-weight:800; color:#1e1b4b; margin-bottom:0.35rem;">
-                  🎙️ 口說發音實測（通過即獲 <span style="color:#d97706;">🏅 實證精熟 +25 XP</span>）
-                </div>
-                <div style="display:flex; gap:0.4rem; flex-wrap:wrap;">
-                  <button class="btn btn-sm mic-btn" onclick="startCardSpeaking('${v.id}', 'word', this)">🎙️ 唸單字片語</button>
-                  <button class="btn btn-outline btn-sm" onclick="startCardSpeaking('${v.id}', 'ex', this)">🎙️ 挑戰唸完整例句</button>
-                </div>
-                <div id="vcard-speak-res-${v.id}"></div>
+              <div style="font-size: 1.45rem; font-weight: 900; color: #1e1b4b; line-height: 1.25; margin-bottom: 0.25rem;">
+                ${v.word}
               </div>
-
-              <!-- Inline Spelling & Cloze Lab -->
-              <div id="vcard-spell-${v.id}" class="inline-lab-box">
-                <div style="font-weight:800; color:#1e1b4b; margin-bottom:0.3rem;">
-                  ✍️ 聽音拼字實測：<span style="color:#4f46e5; font-family:monospace;">${maskedHint}</span>
-                </div>
-                <div style="display:flex; gap:0.35rem; align-items:center;">
-                  <input type="text" id="vcard-spell-in-${v.id}" placeholder="輸入英文拼字: ${spellTarget[0]}..."
-                         style="flex:1; padding:0.38rem 0.6rem; border:2px solid #a5b4fc; border-radius:0.55rem; font-weight:800; font-size:0.86rem;"
-                         onkeydown="if(event.key==='Enter') checkCardSpelling('${v.id}')">
-                  <button class="btn btn-primary btn-sm" onclick="checkCardSpelling('${v.id}')">驗證</button>
-                </div>
-                <div id="vcard-spell-res-${v.id}" style="margin-top:0.35rem; font-weight:800;"></div>
-              </div>
-
-              <!-- Click-to-Expand Example & Exam Note -->
-              <button class="expand-toggle-btn ${openCls}" style="margin-bottom: 0.65rem;" onclick="toggleAccordion(this)">
-                <span>💡 展開例句發音 & 必考秘訣</span>
-                <span class="arrow">${allVocabExpanded ? '▲' : '▼'}</span>
-              </button>
-              <div class="expand-drawer ${openCls}" style="margin-bottom: 0.65rem;">
-                <div style="font-weight: 700; color: #1e1b4b; margin-bottom: 0.4rem; cursor: pointer;" onclick="speakText('${safeEx}', 0.9)">
-                  🔊 ${v.ex} <span style="font-size:0.75rem; color:var(--primary);">(點擊朗讀)</span>
-                </div>
-                <div style="font-size: 0.8rem; color: #b45309; background: #fffbeb; padding: 0.4rem 0.55rem; border-radius: 0.45rem; font-weight: 600;">
-                  📌 ${v.note}
-                </div>
+              <div style="font-size: 1.05rem; font-weight: 800; color: var(--primary);">
+                ${v.zh}
               </div>
             </div>
 
-            <div style="display: flex; gap: 0.4rem; padding-top: 0.55rem; border-top: 1.5px solid #f1f5f9;">
-              ${st === 'verified' ? `
-                <button class="btn btn-sm btn-teal" style="flex:1.4; background:linear-gradient(135deg,#059669,#10b981);" onclick="toggleCardLab('${v.id}', 'speak')">
-                  🏅 已實證精熟 (+25 XP)
-                </button>
-              ` : `
-                <button class="btn btn-sm ${st === 'mastered' ? 'btn-teal' : 'btn-outline'}" style="flex:1.2;"
-                        onclick="setVocabStatus('${v.id}', 'mastered')" title="快速標記已讀 (+5 XP)；建議點擊上方「🎙️開口唸」或「✍️拼字」取得 🏅實證精熟 (+25 XP)！">
-                  ${st === 'mastered' ? '👁️ 自評已讀 ✓' : '👁️ 自評已讀 (+5)'}
-                </button>
-              `}
-              <button class="btn btn-sm ${st === 'review' ? 'btn-amber' : 'btn-outline'}" style="flex:1;"
-                      onclick="setVocabStatus('${v.id}', 'review')">
-                ${st === 'review' ? '⭐ 待加強中' : '⭐ 待加強'}
-              </button>
+            <div class="card-cta-hint">
+              <span>🔍 點擊展開大字例句與闖關</span>
+              <span>➔</span>
             </div>
           </div>
         `;
       }).join("");
     }
 
-    function toggleCardLab(vocabId, mode) {
-      const speakBox = document.getElementById(`vcard-speak-${vocabId}`);
-      const spellBox = document.getElementById(`vcard-spell-${vocabId}`);
-      if (mode === "speak") {
-        if (spellBox) spellBox.classList.remove("open");
-        if (speakBox) speakBox.classList.toggle("open");
-      } else {
-        if (speakBox) speakBox.classList.remove("open");
-        if (spellBox) {
-          spellBox.classList.toggle("open");
-          if (spellBox.classList.contains("open")) {
-            const v = vocabList.find(item => item.id === vocabId);
-            if (v) speakText(getSpellTarget(v.word), 0.9);
-            const inp = document.getElementById(`vcard-spell-in-${vocabId}`);
-            if (inp) setTimeout(() => inp.focus(), 80);
-          }
-        }
+    function openVocabModal(vocabId, keepTab = false) {
+      const v = vocabList.find(item => item.id === vocabId);
+      if (!v) return;
+      activeModalVocabId = vocabId;
+      if (!keepTab) activeModalTab = "speak";
+
+      // Initialize modal spelling tiles for this word
+      const target = getSpellTarget(v.word);
+      modalSpellBuilt = "";
+      modalSpellLetters = target.split("").map((ch, idx) => ({ ch, idx, used: false })).sort(() => 0.5 - Math.random());
+
+      renderVocabModalContent();
+      const modal = document.getElementById("vocab-detail-modal");
+      modal.classList.add("open");
+      speakText(v.word, 0.92);
+    }
+
+    function closeVocabModal() {
+      const modal = document.getElementById("vocab-detail-modal");
+      if (modal) modal.classList.remove("open");
+      activeModalVocabId = null;
+    }
+
+    function navigateVocabModal(dir) {
+      const items = getFilteredVocabItems();
+      if (items.length === 0) return;
+      const idx = items.findIndex(v => v.id === activeModalVocabId);
+      const nextIdx = (idx + dir + items.length) % items.length;
+      openVocabModal(items[nextIdx].id, true);
+    }
+
+    function switchModalPracticeTab(tab) {
+      activeModalTab = tab;
+      renderVocabModalContent();
+      if (tab === "spell") {
+        const v = vocabList.find(item => item.id === activeModalVocabId);
+        if (v) speakText(getSpellTarget(v.word), 0.9);
       }
     }
+
+    function renderVocabModalContent() {
+      const v = vocabList.find(item => item.id === activeModalVocabId);
+      if (!v) return;
+      const st = appState.vocabStatus[v.id] || "";
+      const safeWord = v.word.replace(/'/g, "\\'");
+      const safeEx = v.ex.replace(/'/g, "\\'");
+      const spellTarget = getSpellTarget(v.word);
+      const maskedHint = spellTarget.split(" ").map(w => w.length <= 2 ? w : w[0] + " _ ".repeat(w.length - 2) + w[w.length - 1]).join("   ");
+
+      const items = getFilteredVocabItems();
+      const curIdx = items.findIndex(item => item.id === v.id);
+
+      let practiceHtml = "";
+      if (activeModalTab === "speak") {
+        practiceHtml = `
+          <div style="background: #fff1f2; border: 2px solid #fecdd3; border-radius: 1.1rem; padding: 1.2rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.75rem;">
+              <div>
+                <h4 style="font-size: 1.12rem; font-weight: 900; color: #9f1239;">🎙️ AI 語音辨識口說挑戰</h4>
+                <p style="font-size: 0.92rem; color: #475569; font-weight: 700;">選擇「唸單字片語」或「唸完整例句」，發音契合度達標即獲 <strong style="color:#d97706;">🏅 實證精熟 (+25 XP)</strong>！</p>
+              </div>
+              ${st === 'verified' ? '<span class="verified-stamp" style="font-size:0.85rem; padding:0.3rem 0.8rem;">🏅 已獲實證精熟</span>' : ''}
+            </div>
+            <div style="display:flex; gap:0.65rem; flex-wrap:wrap;">
+              <button class="btn mic-btn" style="font-size:1rem; padding:0.7rem 1.35rem;" onclick="startModalSpeaking('${v.id}', 'word', this)">
+                🎙️ 按此開口唸單字：「${v.word}」
+              </button>
+              <button class="btn btn-outline" style="font-size:0.96rem; padding:0.7rem 1.2rem; background:white;" onclick="startModalSpeaking('${v.id}', 'ex', this)">
+                🎙️ 挑戰唸完整例句
+              </button>
+            </div>
+            <div id="modal-speak-res-${v.id}" style="font-size:0.98rem;"></div>
+          </div>
+        `;
+      } else {
+        practiceHtml = `
+          <div style="background: #eef2ff; border: 2px solid #a5b4fc; border-radius: 1.1rem; padding: 1.2rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.7rem;">
+              <div>
+                <h4 style="font-size: 1.12rem; font-weight: 900; color: #1e1b4b;">✍️ 互動字母積木與聽音拼字挑戰</h4>
+                <p style="font-size: 0.94rem; color: #4f46e5; font-weight: 800; font-family: monospace;">
+                  字首字尾提示：${maskedHint} （共 ${spellTarget.length} 字元）
+                </p>
+              </div>
+              <button class="btn btn-outline btn-sm" style="background:white;" onclick="speakText('${spellTarget.replace(/'/g, "\\'")}', 0.85)">🔊 再聽一次發音</button>
+            </div>
+
+            <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.75rem; flex-wrap:wrap;">
+              <input type="text" id="modal-spell-input" value="${modalSpellBuilt}" placeholder="點擊下方大字母積木或直接打字輸入..."
+                     style="flex:1; min-width:220px; padding:0.65rem 1rem; border:2.5px solid #4f46e5; border-radius:0.75rem; font-size:1.18rem; font-weight:900; letter-spacing:0.06em;"
+                     oninput="modalSpellBuilt = this.value"
+                     onkeydown="if(event.key==='Enter') checkModalSpelling('${v.id}')">
+              <button class="btn btn-outline" style="background:white;" onclick="clearModalSpelling()">⌫ 清除重排</button>
+              <button class="btn btn-primary" onclick="checkModalSpelling('${v.id}')">✅ 驗證拼字</button>
+            </div>
+
+            <div class="tile-pool" style="background:white;">
+              ${modalSpellLetters.map((item, i) => `
+                <button class="letter-tile ${item.used ? 'used' : ''}" style="width:40px; height:42px; font-size:1.08rem;" onclick="pickModalSpellLetter(${i})">
+                  ${item.ch === ' ' ? '␣' : item.ch}
+                </button>
+              `).join("")}
+            </div>
+            <div id="modal-spell-res-${v.id}" style="margin-top:0.55rem; font-size:1rem; font-weight:900;"></div>
+          </div>
+        `;
+      }
+
+      const content = document.getElementById("vocab-modal-content");
+      content.innerHTML = `
+        <div class="vocab-modal-header">
+          <button class="vocab-modal-close" onclick="closeVocabModal()" title="關閉視窗 (Esc)">✕</button>
+          <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.5rem; flex-wrap:wrap;">
+            <span class="tag" style="background:rgba(255,255,255,0.2); color:white; font-size:0.82rem;">${v.ver}</span>
+            <span style="font-size:0.82rem; color:#a5f3fc; font-weight:800;">第 ${curIdx + 1} / ${items.length} 張字卡</span>
+            ${st === 'verified' ? '<span class="verified-stamp">🏅 實證精熟達成</span>' : ''}
+          </div>
+
+          <div style="display:flex; align-items:center; gap:1.15rem; flex-wrap:wrap;">
+            <div style="width:76px; height:76px; border-radius:1.25rem; background:rgba(255,255,255,0.15); display:flex; align-items:center; justify-content:center; font-size:3.1rem; flex-shrink:0;">
+              ${v.icon}
+            </div>
+            <div style="flex:1; min-width:200px;">
+              <div style="font-size: 2.35rem; font-weight: 900; letter-spacing: 0.01em; line-height: 1.15; color: #ffffff;">
+                ${v.word}
+              </div>
+              <div style="font-size: 1.35rem; font-weight: 800; color: #fde047; margin-top: 0.25rem;">
+                ${v.zh}
+              </div>
+            </div>
+            <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+              <button class="btn btn-amber" style="font-size:0.98rem; padding:0.65rem 1.15rem;" onclick="speakText('${safeWord}', 0.92)">
+                🔊 正常發音
+              </button>
+              <button class="btn btn-outline" style="background:rgba(255,255,255,0.15); color:white; border-color:rgba(255,255,255,0.35); font-size:0.98rem; padding:0.65rem 1.15rem;" onclick="speakText('${safeWord}', 0.58)">
+                🐢 慢速發音
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="vocab-modal-body">
+          <!-- Large-Font Example Sentence -->
+          <div class="vocab-modal-ex-box">
+            <div style="display:flex; justify-content:space-between; align-items:center; gap:0.75rem; flex-wrap:wrap;">
+              <div>
+                <div style="font-size:0.8rem; font-weight:900; color:#4f46e5; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.2rem;">
+                  📖 課本核心情境例句 (Example Sentence)
+                </div>
+                <div style="font-size: 1.35rem; font-weight: 900; color: #1e1b4b; line-height: 1.45;">
+                  ${v.ex}
+                </div>
+              </div>
+              <button class="btn btn-primary btn-sm" style="font-size:0.9rem; padding:0.5rem 1rem; flex-shrink:0;" onclick="speakText('${safeEx}', 0.88)">
+                🔊 朗讀完整例句
+              </button>
+            </div>
+          </div>
+
+          <!-- Large-Font Exam Tip & Grammar Note -->
+          <div class="vocab-modal-note-box">
+            <div style="font-size:0.82rem; font-weight:900; color:#b45309; margin-bottom:0.2rem;">📌 必考秘訣與語法重點解析：</div>
+            <div>${v.note}</div>
+          </div>
+
+          <!-- Interactive Verification Subtabs Inside Modal -->
+          <div class="mode-subtabs" style="margin-bottom: 0.85rem;">
+            <button class="mode-subtab ${activeModalTab === 'speak' ? 'active' : ''}" onclick="switchModalPracticeTab('speak')">
+              🎙️ 挑戰一：AI 口說發音實測 (+25 XP)
+            </button>
+            <button class="mode-subtab ${activeModalTab === 'spell' ? 'active' : ''}" onclick="switchModalPracticeTab('spell')">
+              ✍️ 挑戰二：字母積木拼字實測 (+25 XP)
+            </button>
+          </div>
+
+          ${practiceHtml}
+        </div>
+
+        <div class="vocab-modal-footer">
+          <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+            <button class="btn btn-sm ${st === 'mastered' ? 'btn-teal' : 'btn-outline'}" onclick="setVocabStatus('${v.id}', 'mastered'); renderVocabModalContent();">
+              ${st === 'mastered' ? '👁️ 已標記自評已讀 ✓' : '👁️ 自評已讀 (+5 XP)'}
+            </button>
+            <button class="btn btn-sm ${st === 'review' ? 'btn-amber' : 'btn-outline'}" onclick="setVocabStatus('${v.id}', 'review'); renderVocabModalContent();">
+              ${st === 'review' ? '⭐ 已在待加強清單' : '⭐ 加入待加強'}
+            </button>
+          </div>
+
+          <div style="display:flex; gap:0.5rem;">
+            <button class="btn btn-outline btn-sm" onclick="navigateVocabModal(-1)">⬅️ 上一單字</button>
+            <button class="btn btn-primary btn-sm" onclick="navigateVocabModal(1)">下一單字 ➡️</button>
+          </div>
+        </div>
+      `;
+    }
+
+    function startModalSpeaking(vocabId, targetType, btnEl) {
+      const v = vocabList.find(item => item.id === vocabId);
+      if (!v) return;
+      const targetStr = targetType === "ex" ? v.ex : v.word;
+      const resEl = document.getElementById(`modal-speak-res-${vocabId}`);
+      runSpeechRecognition(targetStr, btnEl, resEl, () => {
+        markVocabVerified(vocabId);
+        renderVocabHub();
+      });
+    }
+
+    function pickModalSpellLetter(i) {
+      if (modalSpellLetters[i].used) return;
+      modalSpellLetters[i].used = true;
+      modalSpellBuilt += modalSpellLetters[i].ch;
+      renderVocabModalContent();
+    }
+
+    function clearModalSpelling() {
+      modalSpellBuilt = "";
+      modalSpellLetters.forEach(l => l.used = false);
+      renderVocabModalContent();
+    }
+
+    function checkModalSpelling(vocabId) {
+      const v = vocabList.find(item => item.id === vocabId);
+      if (!v) return;
+      const target = getSpellTarget(v.word);
+      const resEl = document.getElementById(`modal-spell-res-${vocabId}`);
+      const userVal = normalizeEnglishForMatch(modalSpellBuilt);
+      const targetVal = normalizeEnglishForMatch(target);
+      const fullVal = normalizeEnglishForMatch(v.word);
+
+      if (userVal && (userVal === targetVal || userVal === fullVal)) {
+        playTone("correct");
+        speakText(v.word, 0.95);
+        markVocabVerified(vocabId);
+        renderVocabHub();
+        resEl.style.color = "#059669";
+        resEl.innerHTML = `🎉 拼字完全正確！榮獲 <span class="verified-stamp">🏅 實證精熟 (+25 XP)</span>！`;
+      } else {
+        playTone("wrong");
+        resEl.style.color = "#be123c";
+        resEl.innerHTML = `❌ 順序或字母有誤喔！提示：<code>${target}</code>，請點「⌫ 清除重排」再試一次！`;
+      }
+    }
+
+    // Keyboard navigation for Word Modal
+    window.addEventListener("keydown", (e) => {
+      if (!activeModalVocabId) return;
+      if (e.key === "Escape") closeVocabModal();
+      else if (e.key === "ArrowRight" && document.activeElement.tagName !== "INPUT") navigateVocabModal(1);
+      else if (e.key === "ArrowLeft" && document.activeElement.tagName !== "INPUT") navigateVocabModal(-1);
+    });
 
     function markVocabVerified(vocabId) {
       const prev = appState.vocabStatus[vocabId];
@@ -2945,41 +3309,6 @@
       if (card) {
         card.classList.remove("mastered", "review");
         card.classList.add("verified");
-      }
-    }
-
-    function startCardSpeaking(vocabId, targetType, btnEl) {
-      const v = vocabList.find(item => item.id === vocabId);
-      if (!v) return;
-      const targetStr = targetType === "ex" ? v.ex : v.word;
-      const resEl = document.getElementById(`vcard-speak-res-${vocabId}`);
-      runSpeechRecognition(targetStr, btnEl, resEl, () => {
-        markVocabVerified(vocabId);
-        setTimeout(() => renderVocabHub(), 1400);
-      });
-    }
-
-    function checkCardSpelling(vocabId) {
-      const v = vocabList.find(item => item.id === vocabId);
-      if (!v) return;
-      const target = getSpellTarget(v.word);
-      const inp = document.getElementById(`vcard-spell-in-${vocabId}`);
-      const resEl = document.getElementById(`vcard-spell-res-${vocabId}`);
-      const userVal = normalizeEnglishForMatch(inp.value);
-      const targetVal = normalizeEnglishForMatch(target);
-      const fullVal = normalizeEnglishForMatch(v.word);
-
-      if (userVal && (userVal === targetVal || userVal === fullVal)) {
-        playTone("correct");
-        speakText(v.word, 0.95);
-        markVocabVerified(vocabId);
-        resEl.style.color = "#059669";
-        resEl.innerHTML = `🎉 拼字完全正確！榮獲 <span class="verified-stamp">🏅 實證精熟 (+25 XP)</span>`;
-        setTimeout(() => renderVocabHub(), 1300);
-      } else {
-        playTone("wrong");
-        resEl.style.color = "#be123c";
-        resEl.innerHTML = `❌ 拼字還差一點點喔！正確拼法提示：<code>${target}</code>（請再輸入一次）`;
       }
     }
 
@@ -3037,7 +3366,7 @@
       const body = document.getElementById("vquiz-body");
       const safeWord = currentVQuizItem.word.replace(/'/g, "\\'");
       body.innerHTML = `
-        <p style="margin-bottom: 0.8rem; font-weight: 800; color: #1e1b4b;">
+        <p style="margin-bottom: 0.8rem; font-weight: 800; color: #1e1b4b; font-size: 1.05rem;">
           <button class="btn btn-primary btn-sm" onclick="speakText('${safeWord}', 0.9)">🔊 點擊播放發音</button>
           <span style="margin-left: 0.6rem;">例句填空提示：${currentVQuizItem.ex.replace(new RegExp(getSpellTarget(currentVQuizItem.word), 'gi'), '______')}</span>
         </p>
@@ -3095,7 +3424,6 @@
       const target = getSpellTarget(currentSpellBeeItem.word);
       currentSpellBuilt = "";
 
-      // Build scrambled character tiles (preserving spaces separately)
       const chars = target.split("");
       currentSpellLetters = chars.map((ch, idx) => ({ ch, idx, used: false })).sort(() => 0.5 - Math.random());
 
@@ -3172,9 +3500,15 @@
     }
 
     /* =========================================================================
-       TAB 3: GRAMMAR LAB (3-STAGE VERIFIED MASTERY: MCQ + SCRAMBLER + ORAL)
+       TAB 3: GRAMMAR LAB (CLEAN TABBED 3-STAGE VERIFIED MASTERY)
        ========================================================================= */
     let scramblerState = {};
+    let currentGrammarStageTab = "mcq"; // 'mcq' | 'scrambler' | 'oral'
+
+    function setGrammarStageTab(stage) {
+      currentGrammarStageTab = stage;
+      renderGrammarLab();
+    }
 
     function initScramblerState(gId) {
       const gExtra = grammarActiveData[gId];
@@ -3209,18 +3543,118 @@
       const gExtra = grammarActiveData[g.id];
       const view = document.getElementById("grammar-detail-view");
 
+      const mcqDone = appState.grammarDone[`${g.id}_0`] && appState.grammarDone[`${g.id}_1`];
+      const scDone = appState.grammarDone[`${g.id}_sc_0`] && appState.grammarDone[`${g.id}_sc_1`];
+      const spkDone = appState.grammarDone[`${g.id}_spk`];
+
+      let stageContentHtml = "";
+      if (currentGrammarStageTab === "mcq") {
+        stageContentHtml = `
+          <div class="practice-widget" style="margin-top:0;">
+            <h4 style="color: #065f46; font-size: 1.08rem; font-weight: 900; margin-bottom: 0.85rem;">
+              🎯 第一階段：觀念選擇快篩（每題 +15 XP）
+            </h4>
+            ${g.practices.map((p, idx) => {
+              const key = `${g.id}_${idx}`;
+              const isDone = appState.grammarDone[key];
+              return `
+                <div style="margin-bottom: 1rem; padding-bottom: 0.9rem; border-bottom: 1.5px dashed #a7f3d0;">
+                  <div style="font-weight: 800; font-size: 1.05rem; margin-bottom: 0.6rem; color: #1e1b4b;">
+                    ${p.q} ${isDone ? '<span class="tag tag-teal">已破解 ✓</span>' : ''}
+                  </div>
+                  <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
+                    ${p.opts.map((opt, oIdx) => `
+                      <button class="btn btn-outline" style="font-size:0.95rem;" onclick="checkGrammarPractice('${g.id}', ${idx}, ${oIdx}, this)">
+                        ${opt}
+                      </button>
+                    `).join("")}
+                  </div>
+                  <div id="gp-fb-${g.id}-${idx}" style="font-size: 0.92rem; margin-top: 0.5rem; font-weight: 800;"></div>
+                </div>
+              `;
+            }).join("")}
+          </div>
+        `;
+      } else if (currentGrammarStageTab === "scrambler") {
+        stageContentHtml = `
+          <div class="practice-widget" style="margin-top:0; background: linear-gradient(135deg, #eef2ff 0%, #f8fafc 100%); border-color: #818cf8;">
+            <h4 style="color: #312e81; font-size: 1.08rem; font-weight: 900; margin-bottom: 0.85rem;">
+              🧱 第二階段：互動語序重組造句積木（點擊詞塊排出正確英文句子，每題 +25 XP）
+            </h4>
+            ${gExtra.scramblers.map((sc, sIdx) => {
+              const key = `${g.id}_sc_${sIdx}`;
+              const st = scramblerState[key];
+              const isDone = appState.grammarDone[key];
+              return `
+                <div style="margin-bottom: 1.1rem; padding-bottom: 1rem; border-bottom: 1.5px dashed #c7d2fe;">
+                  <div style="font-weight: 800; font-size: 1.04rem; color: #1e1b4b; margin-bottom: 0.5rem;">
+                    造句 ${sIdx + 1}：${sc.zh} ${isDone ? '<span class="verified-stamp">🏅 語序通過 ✓</span>' : ''}
+                  </div>
+                  <div class="tile-tray" id="sc-tray-${key}">
+                    ${st.tray.length === 0
+                      ? '<span style="color:#94a3b8; font-size:0.88rem; font-weight:700;">👇 請依序點擊下方詞彙積木放入此作答區（點擊已放入的積木可退回）</span>'
+                      : st.tray.map((item, tIdx) => `
+                          <button class="word-tile in-tray" style="font-size:0.96rem;" onclick="removeScramblerTile('${g.id}', ${sIdx}, ${tIdx})">${item.w}</button>
+                        `).join("")}
+                  </div>
+                  <div class="tile-pool" id="sc-pool-${key}">
+                    ${st.pool.map((item, pIdx) => item.used ? '' : `
+                      <button class="word-tile" style="font-size:0.96rem;" onclick="addScramblerTile('${g.id}', ${sIdx}, ${pIdx})">${item.w}</button>
+                    `).join("")}
+                  </div>
+                  <div style="display:flex; gap:0.55rem; flex-wrap:wrap;">
+                    <button class="btn btn-primary btn-sm" onclick="checkScramblerAnswer('${g.id}', ${sIdx})">✅ 檢查句子語序</button>
+                    <button class="btn btn-outline btn-sm" onclick="resetScrambler('${g.id}', ${sIdx})">🔄 重新排列</button>
+                    <button class="btn btn-outline btn-sm" onclick="speakText('${sc.ans.replace(/'/g, "\\'")}', 0.9)">🔊 聽標準句發音</button>
+                  </div>
+                  <div id="sc-fb-${key}" style="font-size: 0.92rem; margin-top: 0.5rem; font-weight: 800;"></div>
+                </div>
+              `;
+            }).join("")}
+          </div>
+        `;
+      } else {
+        stageContentHtml = `
+          <div class="practice-widget" style="margin-top:0; background: linear-gradient(135deg, #fff1f2 0%, #fffbeb 100%); border-color: #fb7185;">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.4rem; margin-bottom:0.65rem;">
+              <h4 style="color: #9f1239; font-size: 1.08rem; font-weight: 900;">
+                🎙️ 第三階段：AI 情境口說問答實測（開口回答外師提問，通過 +30 XP）
+              </h4>
+              ${spkDone ? '<span class="verified-stamp">🏅 口說實證通過 ✓</span>' : ''}
+            </div>
+            <p style="font-size: 1rem; font-weight: 800; color: #1e1b4b; margin-bottom: 0.75rem;">
+              ${gExtra.oral.promptZh}
+            </p>
+            <div style="background:white; border:2px solid #fecdd3; border-radius:0.85rem; padding:1rem; margin-bottom:0.85rem;">
+              <div style="font-size:0.98rem; font-weight:800; color:#4f46e5; margin-bottom:0.35rem;">
+                👩‍🏫 外師提問：<code>"${gExtra.oral.teacherQ}"</code>
+              </div>
+              <div style="font-size:1.15rem; font-weight:900; color:#0f172a;">
+                🗣️ 你的目標回答：<code>"${gExtra.oral.targetAns}"</code>
+              </div>
+            </div>
+            <div style="display:flex; gap:0.6rem; flex-wrap:wrap;">
+              <button class="btn btn-outline" style="background:white;" onclick="speakText('${gExtra.oral.teacherQ.replace(/'/g, "\\'")}', 0.9)">🔊 1. 先聽外師提問</button>
+              <button class="btn btn-outline" style="background:white;" onclick="speakText('${gExtra.oral.targetAns.replace(/'/g, "\\'")}', 0.88)">🔊 2. 聽目標答句示範</button>
+              <button class="btn mic-btn" onclick="startGrammarOralDrill('${g.id}', this)">🎙️ 3. 按下開口回答外師</button>
+            </div>
+            <div id="grammar-oral-res-${g.id}" style="font-size:0.96rem;"></div>
+          </div>
+        `;
+      }
+
       view.innerHTML = `
         <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.4rem; margin-bottom:0.4rem;">
           <span class="tag tag-teal">${g.tag}</span>
-          ${(appState.grammarDone[`${g.id}_0`] && appState.grammarDone[`${g.id}_1`] && (appState.grammarDone[`${g.id}_sc_0`] || appState.grammarDone[`${g.id}_spk`]))
+          ${(mcqDone && (scDone || spkDone))
             ? '<span class="verified-stamp">🏅 本單元已實證精熟</span>'
-            : '<span class="tag tag-amber">完成下方 3 階段實作即可獲得 🏅 實證精熟</span>'}
+            : '<span class="tag tag-amber">可透過下方切換頁籤進行選擇、造句與口說闖關</span>'}
         </div>
-        <h3 style="font-size: 1.35rem; font-weight: 900; color: #1e1b4b; margin-bottom: 0.4rem;">${g.title}</h3>
-        <p style="font-size: 0.94rem; color: var(--text-sub); font-weight: 700;">${g.summary}</p>
+        <h3 style="font-size: 1.4rem; font-weight: 900; color: #1e1b4b; margin-bottom: 0.4rem;">${g.title}</h3>
+        <p style="font-size: 0.98rem; color: var(--text-sub); font-weight: 700;">${g.summary}</p>
 
         <!-- Primary Focus: Visual Formula Block -->
-        <div class="formula-stage">${g.formula}</div>
+        <div class="formula-stage" style="font-size:1.05rem;">${g.formula}</div>
 
         <!-- Progressive Disclosure 1: Full Subject/Pattern Table -->
         <button class="expand-toggle-btn" onclick="toggleAccordion(this)">
@@ -3249,103 +3683,28 @@
         </div>
 
         <!-- Progressive Disclosure 2: Exam Traps & Version Notes -->
-        <button class="expand-toggle-btn" onclick="toggleAccordion(this)">
+        <button class="expand-toggle-btn" style="margin-bottom: 1.1rem;" onclick="toggleAccordion(this)">
           <span>⚠️ 點擊展開：跨版本差異與常犯錯誤秘笈</span>
           <span class="arrow">▼</span>
         </button>
-        <div class="expand-drawer" style="background: #fffbeb; border-color: #fcd34d; color: #92400e; font-weight: 700;">
+        <div class="expand-drawer" style="background: #fffbeb; border-color: #fcd34d; color: #92400e; font-weight: 700; margin-bottom: 1.1rem;">
           ${g.tip}
         </div>
 
-        <!-- STAGE 1: Multiple-Choice Concept Check -->
-        <div class="practice-widget" style="margin-bottom: 1rem;">
-          <h4 style="color: #065f46; font-size: 1.02rem; font-weight: 900; margin-bottom: 0.75rem;">
-            🎯 第一階段：觀念選擇快篩（每題 +15 XP）
-          </h4>
-          ${g.practices.map((p, idx) => {
-            const key = `${g.id}_${idx}`;
-            const isDone = appState.grammarDone[key];
-            return `
-              <div style="margin-bottom: 0.9rem; padding-bottom: 0.85rem; border-bottom: 1.5px dashed #a7f3d0;">
-                <div style="font-weight: 800; margin-bottom: 0.5rem; color: #1e1b4b;">
-                  ${p.q} ${isDone ? '<span class="tag tag-teal">已破解 ✓</span>' : ''}
-                </div>
-                <div style="display: flex; gap: 0.55rem; flex-wrap: wrap;">
-                  ${p.opts.map((opt, oIdx) => `
-                    <button class="btn btn-outline btn-sm" onclick="checkGrammarPractice('${g.id}', ${idx}, ${oIdx}, this)">
-                      ${opt}
-                    </button>
-                  `).join("")}
-                </div>
-                <div id="gp-fb-${g.id}-${idx}" style="font-size: 0.86rem; margin-top: 0.45rem; font-weight: 800;"></div>
-              </div>
-            `;
-          }).join("")}
+        <!-- Clean 3-Stage Subtab Switcher (Prevents Clutter!) -->
+        <div class="mode-subtabs">
+          <button class="mode-subtab ${currentGrammarStageTab === 'mcq' ? 'active' : ''}" onclick="setGrammarStageTab('mcq')">
+            🎯 階段一：觀念選擇快篩 ${mcqDone ? '✓' : ''}
+          </button>
+          <button class="mode-subtab ${currentGrammarStageTab === 'scrambler' ? 'active' : ''}" onclick="setGrammarStageTab('scrambler')">
+            🧱 階段二：語序重組造句積木 ${scDone ? '🏅' : ''}
+          </button>
+          <button class="mode-subtab ${currentGrammarStageTab === 'oral' ? 'active' : ''}" onclick="setGrammarStageTab('oral')">
+            🎙️ 階段三：AI 情境口說問答 ${spkDone ? '🏅' : ''}
+          </button>
         </div>
 
-        <!-- STAGE 2: Interactive Sentence Scrambler (Word Order Blocks) -->
-        <div class="practice-widget" style="margin-bottom: 1rem; background: linear-gradient(135deg, #eef2ff 0%, #f8fafc 100%); border-color: #818cf8;">
-          <h4 style="color: #312e81; font-size: 1.02rem; font-weight: 900; margin-bottom: 0.75rem;">
-            🧱 第二階段：互動語序重組造句積木（點擊詞塊排出正確英文句子，每題 +25 XP）
-          </h4>
-          ${gExtra.scramblers.map((sc, sIdx) => {
-            const key = `${g.id}_sc_${sIdx}`;
-            const st = scramblerState[key];
-            const isDone = appState.grammarDone[key];
-            return `
-              <div style="margin-bottom: 1rem; padding-bottom: 0.9rem; border-bottom: 1.5px dashed #c7d2fe;">
-                <div style="font-weight: 800; color: #1e1b4b; margin-bottom: 0.4rem;">
-                  造句 ${sIdx + 1}：${sc.zh} ${isDone ? '<span class="verified-stamp">🏅 語序通過 ✓</span>' : ''}
-                </div>
-                <div class="tile-tray" id="sc-tray-${key}">
-                  ${st.tray.length === 0
-                    ? '<span style="color:#94a3b8; font-size:0.82rem; font-weight:700;">👇 請依序點擊下方詞彙積木放入此作答區（點擊已放入的積木可退回）</span>'
-                    : st.tray.map((item, tIdx) => `
-                        <button class="word-tile in-tray" onclick="removeScramblerTile('${g.id}', ${sIdx}, ${tIdx})">${item.w}</button>
-                      `).join("")}
-                </div>
-                <div class="tile-pool" id="sc-pool-${key}">
-                  ${st.pool.map((item, pIdx) => item.used ? '' : `
-                    <button class="word-tile" onclick="addScramblerTile('${g.id}', ${sIdx}, ${pIdx})">${item.w}</button>
-                  `).join("")}
-                </div>
-                <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
-                  <button class="btn btn-primary btn-sm" onclick="checkScramblerAnswer('${g.id}', ${sIdx})">✅ 檢查句子語序</button>
-                  <button class="btn btn-outline btn-sm" onclick="resetScrambler('${g.id}', ${sIdx})">🔄 重新排列</button>
-                  <button class="btn btn-outline btn-sm" onclick="speakText('${sc.ans.replace(/'/g, "\\'")}', 0.9)">🔊 聽標準句發音</button>
-                </div>
-                <div id="sc-fb-${key}" style="font-size: 0.86rem; margin-top: 0.45rem; font-weight: 800;"></div>
-              </div>
-            `;
-          }).join("")}
-        </div>
-
-        <!-- STAGE 3: Situational Oral Pattern Drill (AI Speech-to-Text) -->
-        <div class="practice-widget" style="background: linear-gradient(135deg, #fff1f2 0%, #fffbeb 100%); border-color: #fb7185;">
-          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.4rem; margin-bottom:0.5rem;">
-            <h4 style="color: #9f1239; font-size: 1.02rem; font-weight: 900;">
-              🎙️ 第三階段：AI 情境口說問答實測（開口回答外師提問，通過 +30 XP）
-            </h4>
-            ${appState.grammarDone[`${g.id}_spk`] ? '<span class="verified-stamp">🏅 口說實證通過 ✓</span>' : ''}
-          </div>
-          <p style="font-size: 0.88rem; font-weight: 800; color: #1e1b4b; margin-bottom: 0.55rem;">
-            ${gExtra.oral.promptZh}
-          </p>
-          <div style="background:white; border:1.5px solid #fecdd3; border-radius:0.75rem; padding:0.75rem; margin-bottom:0.65rem;">
-            <div style="font-size:0.86rem; font-weight:800; color:#4f46e5; margin-bottom:0.25rem;">
-              👩‍🏫 外師提問：<code>"${gExtra.oral.teacherQ}"</code>
-            </div>
-            <div style="font-size:0.95rem; font-weight:900; color:#0f172a;">
-              🗣️ 你的目標回答：<code>"${gExtra.oral.targetAns}"</code>
-            </div>
-          </div>
-          <div style="display:flex; gap:0.55rem; flex-wrap:wrap;">
-            <button class="btn btn-outline btn-sm" onclick="speakText('${gExtra.oral.teacherQ.replace(/'/g, "\\'")}', 0.9)">🔊 1. 先聽外師提問</button>
-            <button class="btn btn-outline btn-sm" onclick="speakText('${gExtra.oral.targetAns.replace(/'/g, "\\'")}', 0.88)">🔊 2. 聽目標答句示範</button>
-            <button class="btn btn-sm mic-btn" onclick="startGrammarOralDrill('${g.id}', this)">🎙️ 3. 按下開口回答外師</button>
-          </div>
-          <div id="grammar-oral-res-${g.id}"></div>
-        </div>
+        ${stageContentHtml}
       `;
     }
 
