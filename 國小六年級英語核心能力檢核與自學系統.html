@@ -1042,7 +1042,7 @@
               <span id="hud-xp-text" class="xp-text">0 XP</span>
             </div>
             <div style="font-size: 0.73rem; color: rgba(255,255,255,0.86); margin-top: 0.15rem;">
-              已收服單字：<strong id="hdr-vocab-count" style="color:#fde047;">0/64</strong> · 檢定：<strong id="hdr-cefr-level" style="color:#67e8f9;">尚未檢測</strong>
+              已收服單字：<strong id="hdr-vocab-count" style="color:#fde047;">0/96</strong> · 檢定：<strong id="hdr-cefr-level" style="color:#67e8f9;">尚未檢測</strong>
             </div>
           </div>
           <button id="btn-sound-toggle" class="sound-toggle-btn" onclick="toggleSoundEffects()" title="切換闖關音效">🔊</button>
@@ -1052,7 +1052,7 @@
 
       <nav class="nav-tabs">
         <button class="nav-tab active" onclick="switchTab('tab-dashboard', this)">🏰 冒險總覽中心</button>
-        <button class="nav-tab" onclick="switchTab('tab-vocab', this)">🃏 主題單字魔法卡 (64詞)</button>
+        <button class="nav-tab" onclick="switchTab('tab-vocab', this)">🃏 主題單字魔法卡 (96詞)</button>
         <button class="nav-tab" onclick="switchTab('tab-grammar', this)">⚡ 核心句型與文法館</button>
         <button class="nav-tab" onclick="switchTab('tab-reading', this)">💬 漫畫對話與閱讀工坊</button>
         <button class="nav-tab" onclick="switchTab('tab-assessment', this)">🏆 自我檢測與診斷處方</button>
@@ -1142,7 +1142,7 @@
           <div class="stat-icon-circle" style="background: #e0e7ff; color: #4338ca;">🃏</div>
           <div>
             <div style="font-size: 0.8rem; font-weight: 800; color: var(--text-muted);">已收服單字卡</div>
-            <div id="stat-vocab-val" class="stat-val">0 / 64</div>
+            <div id="stat-vocab-val" class="stat-val">0 / 96</div>
             <div style="font-size: 0.76rem; color: var(--amber-dark); font-weight: 700;">⭐ 待加強：<span id="stat-vocab-review">0</span> 詞</div>
           </div>
         </div>
@@ -1151,8 +1151,8 @@
           <div class="stat-icon-circle" style="background: #ccfbf1; color: #0f766e;">⚡</div>
           <div>
             <div style="font-size: 0.8rem; font-weight: 800; color: var(--text-muted);">文法關卡破解</div>
-            <div id="stat-grammar-val" class="stat-val">0 / 12</div>
-            <div style="font-size: 0.76rem; color: var(--text-muted); font-weight: 700;">6 大核心句型公式</div>
+            <div id="stat-grammar-val" class="stat-val">0 / 16</div>
+            <div style="font-size: 0.76rem; color: var(--text-muted); font-weight: 700;">8 大核心與高階句型</div>
           </div>
         </div>
 
@@ -1188,7 +1188,7 @@
               </div>
             </div>
             <p style="font-size: 0.88rem; color: var(--text-sub); font-weight: 600; margin-bottom: 0.5rem;">
-              8 大主題共 64 個必背詞彙，支援雙速發音與聽音快篩遊戲。
+              8 大主題共 96 個兩版本完整詞彙，支援雙速發音與聽音快篩遊戲。
             </p>
             <button class="expand-toggle-btn" style="margin-bottom: 0.85rem;" onclick="toggleAccordion(this)">
               <span>📋 查看 8 大主題範圍</span><span class="arrow">▼</span>
@@ -1210,7 +1210,7 @@
               </div>
             </div>
             <p style="font-size: 0.88rem; color: var(--text-sub); font-weight: 600; margin-bottom: 0.5rem;">
-              彩色積木公式秒懂高年級 6 大核心文法，隨堂填空即時驗收。
+              彩色積木公式秒懂高年級 8 大核心與高階句構，隨堂填空即時驗收。
             </p>
             <button class="expand-toggle-btn" style="margin-bottom: 0.85rem;" onclick="toggleAccordion(this)">
               <span>📋 查看 6 大文法單元</span><span class="arrow">▼</span>
@@ -1375,7 +1375,7 @@
           <div class="mode-card selected" id="mode-full" onclick="selectAssessMode('full')">
             <div style="display:flex; justify-content:space-between; align-items:center;">
               <span style="font-size: 1.85rem;">🏆</span>
-              <span class="tag tag-blue">推薦 · 24題</span>
+              <span class="tag tag-blue">推薦 · 30題</span>
             </div>
             <h4 style="font-size: 1.1rem; font-weight: 900; margin: 0.45rem 0 0.25rem;">全能力綜合檢定</h4>
             <p style="font-size: 0.82rem; color: var(--text-sub); font-weight: 600;">全面評估六大能力並核發正式證書。</p>
@@ -1383,7 +1383,7 @@
               <span>ℹ️ 查看測驗範圍明細</span><span class="arrow">▼</span>
             </button>
             <div class="expand-drawer" onclick="event.stopPropagation()">
-              包含：主題單字(4題)、現在式與單複數(5題)、Be動詞過去式(4題)、一般動詞過去式(4題)、情境閱讀(4題)、語音聽力(3題)。
+              包含：完整主題單字(5題)、現在式與可數不可數語法(6題)、Be動詞過去式與時間副詞(4題)、一般動詞過去式(4題)、高層次會話與閱讀推論(7題)、語音聽力(4題)，共 30 題。
             </div>
           </div>
 
@@ -1442,7 +1442,7 @@
           <div style="flex: 1; height: 12px; background: #e2e8f0; border-radius: 99px; overflow: hidden;">
             <div id="q-progress-fill" style="height: 100%; width: 0%; background: linear-gradient(90deg, #4f46e5, #06b6d4, #10b981); transition: width 0.35s;"></div>
           </div>
-          <span id="q-progress-text" style="font-weight: 900; font-size: 0.95rem; color: var(--primary);">1 / 24</span>
+          <span id="q-progress-text" style="font-weight: 900; font-size: 0.95rem; color: var(--primary);">1 / 30</span>
         </div>
 
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.85rem; flex-wrap: wrap; gap: 0.5rem;">
@@ -1730,77 +1730,117 @@
     ];
 
     const vocabList = [
-      { id: "v1", icon: "🦘", topic: "countries", word: "Australia", zh: "澳洲", ver: "共同核心", ex: "Koalas come from Australia.", note: "字首母音發音，國名首字母大寫。" },
-      { id: "v2", icon: "🍁", topic: "countries", word: "Canada", zh: "加拿大", ver: "版本 A 重點", ex: "He is from Canada.", note: "楓葉之國，直接說 from Canada。" },
-      { id: "v3", icon: "🗼", topic: "countries", word: "France", zh: "法國", ver: "版本 A 重點", ex: "Is she from France?", note: "艾菲爾鐵塔所在的歐洲國家。" },
-      { id: "v4", icon: "🕌", topic: "countries", word: "India", zh: "印度", ver: "共同核心", ex: "Curry is famous in India.", note: "首字母 I 大寫。" },
-      { id: "v5", icon: "🗾", topic: "countries", word: "Japan", zh: "日本", ver: "共同核心", ex: "I’m from Japan.", note: "重音在第二音節 pan。" },
-      { id: "v6", icon: "🦁", topic: "countries", word: "Singapore", zh: "新加坡", ver: "版本 B 重點", ex: "My uncle lives in Singapore.", note: "東南亞花園城市國家。" },
-      { id: "v7", icon: "💂", topic: "countries", word: "the UK", zh: "英國", ver: "共同核心", ex: "Are you from the UK?", note: "★必考：縮寫國名前面一定要加定冠詞 the！" },
-      { id: "v8", icon: "🗽", topic: "countries", word: "the USA", zh: "美國", ver: "共同核心", ex: "They are from the USA.", note: "★必考：前面一定要加定冠詞 the！" },
+      // Topic 1: 國家與世界文化 (12 words: 完整收錄兩版本 U1 全部國家與文化詞彙)
+      { id: "v1", icon: "🦘", topic: "countries", word: "Australia", zh: "澳洲", ver: "兩版共同 (7上U1)", ex: "Koalas come from Australia.", note: "字首母音發音，國名首字母大寫。" },
+      { id: "v2", icon: "🍁", topic: "countries", word: "Canada", zh: "加拿大", ver: "版本A (7上U1)", ex: "He is from Canada.", note: "楓葉之國，直接說 from Canada。" },
+      { id: "v3", icon: "🗼", topic: "countries", word: "France", zh: "法國", ver: "版本A (7上U1)", ex: "Ella is from France.", note: "艾菲爾鐵塔所在的歐洲國家。" },
+      { id: "v4", icon: "🕌", topic: "countries", word: "India", zh: "印度", ver: "兩版共同 (7上U1)", ex: "Is she from India? Yes, she is.", note: "首字母 I 大寫。" },
+      { id: "v5", icon: "🗾", topic: "countries", word: "Japan", zh: "日本", ver: "兩版共同 (7上U1)", ex: "I’m from Japan.", note: "重音在第二音節 pan。" },
+      { id: "v6", icon: "🦁", topic: "countries", word: "Singapore", zh: "新加坡", ver: "版本B (7上U1)", ex: "My uncle lives in Singapore.", note: "東南亞花園城市國家。" },
+      { id: "v7", icon: "💃", topic: "countries", word: "Spain", zh: "西班牙", ver: "版本B (7上U1)", ex: "Are they from Spain?", note: "sp 在母音前發音接近 /sb/。" },
+      { id: "v8", icon: "🧋", topic: "countries", word: "Taiwan", zh: "臺灣", ver: "兩版共同 (7上U1)", ex: "It's my first time in Taiwan!", note: "高階會話：It's my first time in Taiwan (這是我第一次來臺灣)。" },
+      { id: "v9", icon: "💂", topic: "countries", word: "the UK", zh: "英國", ver: "兩版共同 (7上U1)", ex: "He’s not from the USA. He’s from the UK.", note: "★必考：縮寫國名前面一定要加定冠詞 the！" },
+      { id: "v10", icon: "🗽", topic: "countries", word: "the USA", zh: "美國", ver: "兩版共同 (7上U1)", ex: "Are you from the USA?", note: "★必考：前面一定要加定冠詞 the！" },
+      { id: "v11", icon: "🐋", topic: "countries", word: "whale watching", zh: "賞鯨", ver: "版本A (7上U1故事)", ex: "I can't wait to go whale watching! What a big mammal!", note: "★高階句型：can't wait to + V (迫不及待做某事)；鯨魚是哺乳動物 (mammal)。" },
+      { id: "v12", icon: "🥮", topic: "countries", word: "moon cake & pomelo", zh: "月餅與柚子", ver: "節慶文化單元", ex: "We eat moon cakes, pomelos, and have a barbecue on Moon Festival.", note: "節慶必備詞彙：full moon (滿月)、have a barbecue (烤肉)。" },
 
-      { id: "v9", icon: "😷", topic: "health", word: "have a cold", zh: "感冒", ver: "健康症狀主題", ex: "I have a bad cold today.", note: "生病症狀常搭配動詞 have a + 症狀。" },
-      { id: "v10", icon: "🌡️", topic: "health", word: "have a fever", zh: "發燒", ver: "健康症狀主題", ex: "Does he have a fever?", note: "第三人稱問句：Does he have a fever?" },
-      { id: "v11", icon: "🤕", topic: "health", word: "have a headache", zh: "頭痛", ver: "健康症狀主題", ex: "My mom has a headache.", note: "head (頭) + ache (疼痛)。" },
-      { id: "v12", icon: "🦷", topic: "health", word: "have a toothache", zh: "牙痛", ver: "健康症狀主題", ex: "Don't eat too much candy, or you'll have a toothache.", note: "tooth (牙齒) + ache (痛)。" },
-      { id: "v13", icon: "🤢", topic: "health", word: "have a stomachache", zh: "胃痛 / 肚子痛", ver: "健康症狀主題", ex: "Leo has a stomachache.", note: "stomach 字尾 ch 發 /k/ 的音。" },
-      { id: "v14", icon: "🧣", topic: "health", word: "have a sore throat", zh: "喉嚨痛", ver: "健康症狀主題", ex: "I have a sore throat and can't talk loudly.", note: "sore (發炎疼痛的) + throat (喉嚨)。" },
-      { id: "v15", icon: "🤧", topic: "health", word: "have a runny nose", zh: "流鼻水", ver: "健康症狀主題", ex: "She has a runny nose.", note: "runny (流個不停的) + nose。" },
-      { id: "v16", icon: "🗣️", topic: "health", word: "have a cough", zh: "咳嗽", ver: "健康症狀主題", ex: "He has a cough. Please give him warm water.", note: "cough 字尾 gh 發 /f/ 的音。" },
+      // Topic 2: 生病與健康關懷 (12 words: 完整收錄 U2 8大症狀 + 身體部位疼痛 hurts 與醫療照護)
+      { id: "v13", icon: "😷", topic: "health", word: "have a cold", zh: "感冒", ver: "版本A (7上U2) / 版本B複習", ex: "I have a bad cold today.", note: "生病症狀常搭配動詞 have a + 症狀。" },
+      { id: "v14", icon: "🌡️", topic: "health", word: "have a fever", zh: "發燒", ver: "版本A (7上U2) / 版本B複習", ex: "Does he have a fever? Yes, he does.", note: "第三人稱問句：Does he have a fever? (助動詞後用原形 have)。" },
+      { id: "v15", icon: "🤕", topic: "health", word: "have a headache", zh: "頭痛", ver: "版本A (7上U2) / 版本B複習", ex: "What's wrong? I have a headache.", note: "head (頭) + ache (持續疼痛)。" },
+      { id: "v16", icon: "🦷", topic: "health", word: "have a toothache", zh: "牙痛", ver: "版本A (7上U2) / 版本B複習", ex: "She has a toothache. She needs to see a dentist.", note: "tooth (牙齒) + ache (痛)。" },
+      { id: "v17", icon: "🤢", topic: "health", word: "have a stomachache", zh: "胃痛 / 肚子痛", ver: "版本A (7上U2) / 版本B複習", ex: "Do you have a stomachache? No, I'm just hungry.", note: "stomach 字尾 ch 發 /k/ 音；高階對話：No, I'm just hungry (我只是肚子餓)。" },
+      { id: "v18", icon: "🧣", topic: "health", word: "have a sore throat", zh: "喉嚨痛", ver: "版本A (7上U2) / 版本B複習", ex: "He doesn't have a fever. He has a sore throat.", note: "sore (發炎痠痛的) 勿與 sour (味道酸的) 混淆！" },
+      { id: "v19", icon: "🤧", topic: "health", word: "have a runny nose", zh: "流鼻水", ver: "版本A (7上U2) / 版本B複習", ex: "No, I don't have a fever. I have a runny nose.", note: "runny 有兩個 n (runny nose)。" },
+      { id: "v20", icon: "🗣️", topic: "health", word: "have a cough", zh: "咳嗽", ver: "版本A (7上U2)", ex: "He has a cough. Please give him warm water.", note: "cough 與 laugh 字尾 gh 皆發 /f/ 的音 (Phonics 重點)。" },
+      { id: "v21", icon: "🦶", topic: "health", word: "My foot hurts.", zh: "我的腳很痛", ver: "版本B (7上Starter)", ex: "What's wrong? My foot hurts.", note: "★高階替換句型：除了 I have a...，也可用「身體部位 + hurts」表達疼痛！" },
+      { id: "v22", icon: "😟", topic: "health", word: "don't feel well", zh: "覺得身體不舒服", ver: "版本A (7上U2會話)", ex: "Are you OK? No, I'm not. I don't feel well.", note: "★課本高層次日常關心會話：You don't look well. / I don't feel well." },
+      { id: "v23", icon: "🛌", topic: "health", word: "get some rest", zh: "多休息", ver: "醫療照護用語", ex: "Please go to see a doctor and get some rest.", note: "醫護關懷必備建議句型。" },
+      { id: "v24", icon: "🧼", topic: "health", word: "stay healthy", zh: "保持健康", ver: "版本A (7上U2延伸)", ex: "Wash your hands and exercise to stay healthy.", note: "stay + 形容詞 (stay healthy 保持健康)。" },
 
-      { id: "v17", icon: "🚌", topic: "transport", word: "by bus", zh: "搭公車", ver: "交通方式主題", ex: "I go to school by bus.", note: "by + 交通工具（中間不加 a 或 the）。" },
-      { id: "v18", icon: "🚇", topic: "transport", word: "by metro / MRT", zh: "搭捷運", ver: "交通方式主題", ex: "She goes to the mall by MRT.", note: "metro 與 MRT 皆可表示捷運。" },
-      { id: "v19", icon: "🚲", topic: "transport", word: "by bike", zh: "騎腳踏車", ver: "交通方式主題", ex: "Do you go to the park by bike?", note: "等同於 ride a bike。" },
-      { id: "v20", icon: "🚆", topic: "transport", word: "by train", zh: "搭火車", ver: "交通方式主題", ex: "We go to Taitung by train.", note: "train (火車)，train station (火車站)。" },
-      { id: "v21", icon: "🚗", topic: "transport", word: "by car", zh: "搭汽車", ver: "交通方式主題", ex: "My dad goes to work by car.", note: "by + 單數交通工具。" },
-      { id: "v22", icon: "🛵", topic: "transport", word: "by scooter", zh: "騎機車", ver: "交通方式主題", ex: "He goes home by scooter.", note: "臺灣最常見的輕型機車。" },
-      { id: "v23", icon: "🚕", topic: "transport", word: "by taxi", zh: "搭計程車", ver: "交通方式主題", ex: "They go to the station by taxi.", note: "亦可說 take a taxi。" },
-      { id: "v24", icon: "🚶", topic: "transport", word: "on foot", zh: "步行 / 走路", ver: "交通方式主題", ex: "I go to school on foot every day.", note: "★必考陷阱：走路要用介系詞 on foot，絕不可用 by！" },
+      // Topic 3: 交通工具與方式 (12 words: 完整收錄 U2 交通工具與道路安全延伸)
+      { id: "v25", icon: "🚌", topic: "transport", word: "by bus", zh: "搭公車", ver: "版本B (7上U2) / 版本A複習", ex: "Does he go to school by bus? Yes, he does.", note: "by + 交通工具單數（中間絕不加 a 或 the）。" },
+      { id: "v26", icon: "🚇", topic: "transport", word: "by metro / MRT", zh: "搭捷運", ver: "版本B (7上U2) / 版本A複習", ex: "She goes to the department store by MRT.", note: "metro 與 MRT 皆可表示捷運。" },
+      { id: "v27", icon: "🚲", topic: "transport", word: "by bike", zh: "騎腳踏車", ver: "版本B (7上U2) / 版本A複習", ex: "We can get to the park by bike.", note: "★版本A句型：How can we get to the park? We can get there by bike." },
+      { id: "v28", icon: "🚆", topic: "transport", word: "by train", zh: "搭火車", ver: "版本B (7上U2) / 版本A複習", ex: "We go to Hualien by train.", note: "train (火車)，train station (火車站)。" },
+      { id: "v29", icon: "🚗", topic: "transport", word: "by car", zh: "搭汽車", ver: "版本B (7上U2) / 版本A複習", ex: "My dad goes to work by car.", note: "Phonics ar 發音代表字：car, park, farm, party。" },
+      { id: "v30", icon: "🛵", topic: "transport", word: "by scooter", zh: "騎機車", ver: "版本B (7上U2) / 版本A複習", ex: "He goes home by scooter.", note: "騎乘機車應戴安全帽 (wear a helmet)。" },
+      { id: "v31", icon: "🚕", topic: "transport", word: "by taxi", zh: "搭計程車", ver: "版本B (7上U2) / 版本A複習", ex: "They go to the train station by taxi.", note: "亦可說 take a taxi。" },
+      { id: "v32", icon: "✈️", topic: "transport", word: "by plane", zh: "搭飛機", ver: "版本A (7上複習)", ex: "We can go to Japan by plane.", note: "長途跨國旅行常用交通方式。" },
+      { id: "v33", icon: "🚶", topic: "transport", word: "on foot", zh: "步行 / 走路", ver: "版本B (7上U2)", ex: "No, he doesn't go by bus. He goes to school on foot.", note: "★必考陷阱：走路要用介系詞 on foot，絕不可用 by！" },
+      { id: "v34", icon: "📮", topic: "transport", word: "post office & bank", zh: "郵局與銀行", ver: "版本A (7上複習)", ex: "I'm going to the post office and the bank.", note: "常見社區場所：bakery (麵包店), bookstore (書店), hospital (醫院)。" },
+      { id: "v35", icon: "🪖", topic: "transport", word: "wear a helmet", zh: "戴安全帽", ver: "版本A (8下U3延伸)", ex: "You need to wear a helmet when you ride a scooter.", note: "交通安全素養延伸詞彙。" },
+      { id: "v36", icon: "🚦", topic: "transport", word: "traffic light & crosswalk", zh: "紅綠燈與斑馬線", ver: "版本A (8下U3延伸)", ex: "Watch the traffic light and walk on the crosswalk.", note: "crosswalk / zebra crossing (斑馬線), sidewalk (人行道)。" },
 
-      { id: "v25", icon: "🌅", topic: "routine", word: "get up", zh: "起床", ver: "共同核心", ex: "What time do you get up?", note: "第三人稱單數：He gets up at 6:30." },
-      { id: "v26", icon: "🏫", topic: "routine", word: "go to school", zh: "去上學", ver: "共同核心", ex: "I go to school at seven twenty.", note: "第三人稱單數：She goes to school." },
-      { id: "v27", icon: "🏡", topic: "routine", word: "go home", zh: "回家", ver: "共同核心", ex: "What time does he go home?", note: "★home 是地方副詞，前面不加 to！" },
-      { id: "v28", icon: "📝", topic: "routine", word: "do my homework", zh: "做功課", ver: "共同核心", ex: "I do my homework at seven.", note: "若主詞是 he，要改成：He does his homework." },
-      { id: "v29", icon: "🚿", topic: "routine", word: "take a shower", zh: "洗澡(淋浴)", ver: "生活作息主題", ex: "He takes a shower at nine o'clock.", note: "take a shower / take a bath。" },
-      { id: "v30", icon: "🛌", topic: "routine", word: "go to bed", zh: "上床睡覺", ver: "共同核心", ex: "I go to bed at nine thirty.", note: "固定片語，bed 前不加 the。" },
-      { id: "v31", icon: "🍜", topic: "routine", word: "beef noodles", zh: "牛肉麵", ver: "餐飲點餐主題", ex: "I would like some beef noodles.", note: "noodles 常以複數型態出現。" },
-      { id: "v32", icon: "🥪", topic: "routine", word: "sandwiches", zh: "三明治(複數)", ver: "共同核心", ex: "Would you like some sandwiches?", note: "字尾 ch，複數加 -es。" },
+      // Topic 4: 日常作息與餐飲點餐 (12 words: 完整收錄 U4 作息 + U3 8大食物與可數/不可數)
+      { id: "v37", icon: "🌅", topic: "routine", word: "get up", zh: "起床", ver: "兩版共同 (7上U4)", ex: "What time do you get up? I get up at six thirty.", note: "第三人稱單數：He gets up at six thirty." },
+      { id: "v38", icon: "🍳", topic: "routine", word: "have breakfast / lunch / dinner", zh: "吃早／午／晚餐", ver: "兩版共同 (7上U4)", ex: "Do you have lunch at twelve? No, I have lunch at twelve thirty.", note: "三餐前不加 the；第三人稱單數用 has breakfast / lunch / dinner。" },
+      { id: "v39", icon: "🏫", topic: "routine", word: "go to school & go home", zh: "上學與回家", ver: "兩版共同 (7上U4)", ex: "She goes to school at 7:30 and goes home at 4:00.", note: "★必考：go home 中間絕不加 to！" },
+      { id: "v40", icon: "📝", topic: "routine", word: "do my homework", zh: "做功課", ver: "兩版共同 (7上U4)", ex: "What time does he do his homework? He does his homework at five.", note: "★高階三單句型：does (助動詞) he do (原形) ➔ He does (三單動詞) his homework！" },
+      { id: "v41", icon: "🚿", topic: "routine", word: "take a shower & go to bed", zh: "洗澡與上床睡覺", ver: "兩版共同 (7上U4)", ex: "He takes a shower at 8:30 and goes to bed at 9:30.", note: "Phonics ow 發音代表字：shower, owl, clown, house。" },
+      { id: "v42", icon: "🍕", topic: "routine", word: "pizza & rice", zh: "披薩與米飯 (不可數)", ver: "版本A (7上U3)", ex: "What would you like to eat? I'd like some pizza and some rice.", note: "★Grammar Tips：pizza 與 rice 作食物份量時為不可數名詞，加 some 後字尾不加 s！" },
+      { id: "v43", icon: "🥩", topic: "routine", word: "steak & soup", zh: "牛排與湯 (不可數)", ver: "版本A (7上U3)", ex: "Would you like some soup and steak? Yes, please.", note: "★不可數名詞：some soup / some steak（不可說 a soup 或 soups）。" },
+      { id: "v44", icon: "🥟", topic: "routine", word: "dumplings & noodles", zh: "水餃與麵條 (可數複數)", ver: "版本A (7上U3)", ex: "I'd like some dumplings and beef noodles, please.", note: "★可數名詞常以複數出現：some 後方接可數名詞必須加 -s (dumplings, noodles)。" },
+      { id: "v45", icon: "🥪", topic: "routine", word: "sandwiches & French fries", zh: "三明治與薯條 (可數複數)", ver: "版本A (7上U3) / 版本B複習", ex: "Would you like some French fries and sandwiches?", note: "sandwich 字尾 ch 加 -es；French 首字母必大寫。" },
+      { id: "v46", icon: "🐴", topic: "routine", word: "I could eat a horse!", zh: "我餓壞了！(道地諺語)", ver: "版本A (7上U3故事高階表現)", ex: "I'm so hungry. I could eat a horse!", note: "★課本高層次會話諺語：形容「極度飢餓 (I'm starving)」，並非真的想吃馬肉！" },
+      { id: "v47", icon: "🍽️", topic: "routine", word: "My plate is full.", zh: "我的盤子裝滿了(婉拒用語)", ver: "版本A (7上U3故事高階表現)", ex: "Would you like some French fries? No, thank you. My plate is full.", note: "★高層次社交回應：禮貌婉拒他人招待食物並說明原因。" },
+      { id: "v48", icon: "📞", topic: "routine", word: "Who's calling?", zh: "請問是哪位？(電話用語)", ver: "版本A (7上U4故事高階表現)", ex: "Ring! Ring! Who's calling? It's six thirty on Saturday morning!", note: "★課本電話交際用語：詢問電話另一端是誰用 Who's calling?" },
 
-      { id: "v33", icon: "🥾", topic: "freetime", word: "go hiking", zh: "去健行", ver: "休閒活動主題", ex: "I like to go hiking in my free time.", note: "go + V-ing 表從事戶外休閒活動。" },
-      { id: "v34", icon: "⛺", topic: "freetime", word: "go camping", zh: "去露營", ver: "休閒活動主題", ex: "Do you like to go camping?", note: "camp (露營) -> go camping。" },
-      { id: "v35", icon: "🏃", topic: "freetime", word: "go jogging", zh: "去慢跑", ver: "日常休閒主題", ex: "My father goes jogging every morning.", note: "jog 短母音重複字尾 g 加 -ing。" },
-      { id: "v36", icon: "🎧", topic: "freetime", word: "listen to music", zh: "聽音樂", ver: "共同核心", ex: "She listens to music in her free time.", note: "★listen 後面接受詞一定要有介系詞 to！" },
-      { id: "v37", icon: "📺", topic: "freetime", word: "watch TV", zh: "看電視", ver: "共同核心", ex: "He watches TV after dinner.", note: "★watch 字尾 ch，第三人稱單數加 -es (watches)，過去式加 -ed (watched)。" },
-      { id: "v38", icon: "💻", topic: "freetime", word: "surf the Internet", zh: "上網", ver: "日常休閒主題", ex: "I surf the Internet on weekends.", note: "Internet 字首大寫並搭配 the。" },
-      { id: "v39", icon: "🏀", topic: "freetime", word: "play basketball", zh: "打籃球", ver: "共同核心", ex: "Did you play basketball last night?", note: "球類運動名稱前「不加」the！" },
-      { id: "v40", icon: "🎹", topic: "freetime", word: "play the piano", zh: "彈鋼琴", ver: "休閒活動主題", ex: "She likes to play the piano.", note: "★西洋樂器名稱前「一定要加」定冠詞 the！" },
+      // Topic 5: 休閒娛樂活動 (12 words: 完整整合版本B 7上U3 + 版本A 8下U1 所有活動與高階句型)
+      { id: "v49", icon: "🥾", topic: "freetime", word: "go hiking", zh: "去健行", ver: "版本A (8下U1)", ex: "What do you like to do in your free time? I like to go hiking.", note: "hike 去 e 加 ing；go + V-ing 表從事戶外休閒活動。" },
+      { id: "v50", icon: "⛺", topic: "freetime", word: "go camping", zh: "去露營", ver: "版本A (8下U1)", ex: "Camping is fun! Do you like to go camping?", note: "★高階句構：動名詞當主詞 (Camping is fun! / Playing basketball is fun!)。" },
+      { id: "v51", icon: "🛍️", topic: "freetime", word: "go shopping", zh: "去購物 / 逛街", ver: "版本A (8下U1)", ex: "Does she like to go shopping in her free time? Yes, she does.", note: "★拼字規則：shop 為短母音+單一子音，重複 p 再加 ing (shopping)！" },
+      { id: "v52", icon: "🏊", topic: "freetime", word: "go swimming", zh: "去游泳", ver: "版本A (8下U1)", ex: "He likes to go swimming in his free time.", note: "★拼字規則：swim 重複字尾 m 再加 ing (swimming)！" },
+      { id: "v53", icon: "🏃", topic: "freetime", word: "go jogging", zh: "去慢跑", ver: "版本B (7上U3)", ex: "What do you do in your free time? I go jogging.", note: "★拼字規則：jog 重複字尾 g 再加 ing (jogging)！" },
+      { id: "v54", icon: "🚴", topic: "freetime", word: "ride a bike", zh: "騎腳踏車(休閒)", ver: "版本B (7上U3)", ex: "She rides a bike in the park in her free time.", note: "注意：當動詞片語是 ride a bike；當交通介系詞片語則是 by bike。" },
+      { id: "v55", icon: "📖", topic: "freetime", word: "study English", zh: "讀英文 / 研讀英語", ver: "版本B (7上U3)", ex: "He studies English every evening.", note: "★三單與過去式變化：study 為「子音+y」，三單改 studies，過去式改 studied！" },
+      { id: "v56", icon: "💻", topic: "freetime", word: "surf the Internet", zh: "上網", ver: "版本B (7上U3)", ex: "My brother surfs the Internet on weekends.", note: "Internet 字首 I 大寫，前面搭配 the。" },
+      { id: "v57", icon: "🎧", topic: "freetime", word: "listen to music", zh: "聽音樂", ver: "兩版共同 (7上U3 / 8下U1)", ex: "Both Amy and Emma like to listen to music.", note: "★listen 後接受詞必須加介系詞 to，且 music 前不加 the！" },
+      { id: "v58", icon: "📺", topic: "freetime", word: "watch TV", zh: "看電視", ver: "兩版共同 (7上U3 / 8下U1)", ex: "What does he do in his free time? He watches TV.", note: "★watch 字尾 ch，第三人稱單數加 -es (watches)。" },
+      { id: "v59", icon: "🏀", topic: "freetime", word: "play basketball & baseball", zh: "打籃球與打棒球", ver: "兩版共同 (7上U3 / 8下U1)", ex: "It's sunny today. Let's play basketball! Good idea!", note: "★球類運動名稱前「不加」the！" },
+      { id: "v60", icon: "🎹", topic: "freetime", word: "play the piano", zh: "彈鋼琴", ver: "樂器延伸核心", ex: "She likes to play the piano in her free time.", note: "★西洋樂器名稱前「一定要加」定冠詞 the！" },
 
-      { id: "v41", icon: "👮", topic: "jobs", word: "police officer", zh: "警察", ver: "夢想職業主題", ex: "I want to be a police officer.", note: "現代英語通用職稱，不分性別。" },
-      { id: "v42", icon: "🩺", topic: "jobs", word: "doctor", zh: "醫生", ver: "夢想職業主題", ex: "Does she want to be a doctor?", note: "字尾為 -or。" },
-      { id: "v43", icon: "👩‍⚕️", topic: "jobs", word: "nurse", zh: "護理師 / 護士", ver: "夢想職業主題", ex: "My aunt is a kind nurse.", note: "ur 發捲舌長母音。" },
-      { id: "v44", icon: "🎨", topic: "jobs", word: "artist", zh: "藝術家 / 畫家", ver: "夢想職業主題", ex: "He wants to be an artist.", note: "★字首母音，前面冠詞要用 an artist！" },
-      { id: "v45", icon: "✍️", topic: "jobs", word: "writer", zh: "作家", ver: "夢想職業主題", ex: "She loves reading and wants to be a writer.", note: "write (寫) 字尾加 r 變職業，w 不發音。" },
-      { id: "v46", icon: "👨‍🍳", topic: "jobs", word: "cook", zh: "廚師", ver: "夢想職業主題", ex: "My brother wants to be a cook.", note: "★注意：cook 當名詞就是「廚師」，cooker 是炊具鍋具！" },
-      { id: "v47", icon: "🎤", topic: "jobs", word: "singer", zh: "歌手", ver: "夢想職業主題", ex: "Do you want to be a singer?", note: "sing (唱歌) + er。" },
-      { id: "v48", icon: "⚾", topic: "jobs", word: "baseball player", zh: "棒球選手", ver: "夢想職業主題", ex: "He wants to be a baseball player.", note: "play (打球) + er (選手)。" },
+      // Topic 6: 未來夢想職業 (12 words: 完整收錄 8下U2 8大正式職業 + 4大常見醫療餐飲職業與高階理由表達)
+      { id: "v61", icon: "🎨", topic: "jobs", word: "an artist", zh: "畫家 / 藝術家", ver: "版本A (8下U2)", ex: "Do you want to be an artist? Yes, I do. Artists make our world beautiful.", note: "★必考：artist 字首母音，前面一定要用不定冠詞 an (an artist)！" },
+      { id: "v62", icon: "🦷", topic: "jobs", word: "a dentist", zh: "牙醫", ver: "版本A (8下U2)", ex: "Tim doesn't want to be a basketball player. He wants to be a dentist.", note: "字尾 -ist 表專業人員 (artist, dentist, scientist, journalist)。" },
+      { id: "v63", icon: "🌾", topic: "jobs", word: "a farmer", zh: "農夫", ver: "版本A (8下U2)", ex: "Farmers are important because they grow the food we need.", note: "★課本高階句型：說明職業重要性 (Farmers grow the food we need)。" },
+      { id: "v64", icon: "🎤", topic: "jobs", word: "a singer", zh: "歌手", ver: "版本A (8下U2)", ex: "She loves music and wants to be a singer.", note: "sing (唱歌) + er ➔ singer (歌手)。" },
+      { id: "v65", icon: "✍️", topic: "jobs", word: "a writer", zh: "作家", ver: "版本A (8下U2)", ex: "Anna writes children's books. She is a writer.", note: "★Phonics wr：write 與 wrong 的 w 不發音！" },
+      { id: "v66", icon: "🏀", topic: "jobs", word: "a basketball player", zh: "籃球選手", ver: "版本A (8下U2)", ex: "Does he want to be a basketball player? Yes, he does.", note: "亦可代換為 baseball player (棒球選手)、football player。" },
+      { id: "v67", icon: "🚌", topic: "jobs", word: "a bus driver", zh: "公車司機", ver: "版本A (8下U2)", ex: "My uncle is a kind bus driver.", note: "drive (駕駛) 去 e 加 r ➔ driver；亦可說 taxi driver。" },
+      { id: "v68", icon: "👮", topic: "jobs", word: "a police officer", zh: "警察", ver: "版本A (8下U2)", ex: "I want to be a police officer. A police officer can help people in need.", note: "★課本高階寫作句：A police officer keeps our town safe and helps people in need." },
+      { id: "v69", icon: "🩺", topic: "jobs", word: "a doctor", zh: "醫生", ver: "醫療常見職業", ex: "What does your sister want to be? She wants to be a doctor.", note: "字尾為 -or (doctor, actor)。" },
+      { id: "v70", icon: "👩‍⚕️", topic: "jobs", word: "a nurse", zh: "護理師", ver: "Phonics ur / 醫療職業", ex: "The nurse has a purple purse.", note: "Phonics ur 發音代表句：The nurse has a purple purse." },
+      { id: "v71", icon: "👨‍🍳", topic: "jobs", word: "a cook", zh: "廚師", ver: "餐飲常見職業", ex: "He likes cooking and wants to be a cook.", note: "★易錯陷阱：cook 當名詞就是「廚師」，cooker 是鍋具炊具！" },
+      { id: "v72", icon: "📰", topic: "jobs", word: "be a journalist", zh: "當小記者(任務專題)", ver: "版本A (8下Task)", ex: "Let's be a journalist and interview our classmates about their dream jobs!", note: "課本綜合任務 (Task)：採訪同學的休閒嗜好與未來夢想職業。" },
 
-      { id: "v49", icon: "👕", topic: "clothes", word: "T-shirt", zh: "T恤 / 短袖上衣", ver: "服飾購物主題", ex: "How much is this T-shirt?", note: "單數可數名詞，問價錢用 How much is...?" },
-      { id: "v50", icon: "🧥", topic: "clothes", word: "jacket", zh: "夾克 / 外套", ver: "服飾購物主題", ex: "The yellow jacket is 500 dollars.", note: "單數搭配 It is (It's)。" },
-      { id: "v51", icon: "👗", topic: "clothes", word: "dress", zh: "洋裝", ver: "服飾購物主題", ex: "How much is that pink dress?", note: "字尾 s，複數形為 dresses。" },
-      { id: "v52", icon: "👚", topic: "clothes", word: "skirt", zh: "裙子", ver: "服飾購物主題", ex: "It's a nice skirt.", note: "注意與 shirt (襯衫) 拼字區別。" },
-      { id: "v53", icon: "👖", topic: "clothes", word: "jeans", zh: "牛仔褲", ver: "服飾購物主題", ex: "How much are the jeans? They're 800 dollars.", note: "★必考：褲子有兩條褲管，永遠是複數，搭配 are / They're！" },
-      { id: "v54", icon: "👖", topic: "clothes", word: "pants", zh: "長褲", ver: "服飾購物主題", ex: "These pants are too long for me.", note: "★必考恆複數名詞：How much are the pants?" },
-      { id: "v55", icon: "🩳", topic: "clothes", word: "shorts", zh: "短褲", ver: "服飾購物主題", ex: "How much are these shorts?", note: "★必考恆複數名詞：搭配 these / are / They're。" },
-      { id: "v56", icon: "💵", topic: "clothes", word: "hundred dollars", zh: "百元", ver: "服飾購物主題", ex: "They are two hundred dollars.", note: "★表幾百元時，hundred 字尾不加 s，dollars 要加 s！" },
+      // Topic 7: 服飾配件與購物所有權 (12 words: 完整收錄 8下U3 9大服飾 + 價格與 Whose 物主問句)
+      { id: "v73", icon: "🧥", topic: "clothes", word: "coat", zh: "大衣 / 長外套", ver: "版本B (8下U3)", ex: "How much is this coat? It's nine hundred dollars.", note: "單數服飾名詞，問價格用 How much is...?" },
+      { id: "v74", icon: "👗", topic: "clothes", word: "dress", zh: "洋裝", ver: "版本B (8下U3) / 版本A複習", ex: "How much is that pink dress? It's 610 dollars.", note: "字尾 ss，複數形加 -es (dresses)。" },
+      { id: "v75", icon: "👒", topic: "clothes", word: "hat & cap", zh: "帽子與棒球帽", ver: "版本B (8下U3 / 7上複習)", ex: "Whose hat is this? It's my hat.", note: "hat 為有邊帽，cap 為有帽舌的鴨舌帽／棒球帽。" },
+      { id: "v76", icon: "🧥", topic: "clothes", word: "jacket & sweater", zh: "夾克與毛衣", ver: "版本B (8下U3) / 版本A複習", ex: "How much is the yellow jacket? It's 550 dollars.", note: "單數衣物回答用 It is (It's)..." },
+      { id: "v77", icon: "👚", topic: "clothes", word: "skirt", zh: "裙子", ver: "版本B (8下U3) / 版本A複習", ex: "The girl is wearing a skirt.", note: "Phonics ir 代表字：girl, skirt, shirt, bird。" },
+      { id: "v78", icon: "👕", topic: "clothes", word: "T-shirt", zh: "T恤 / 短袖上衣", ver: "版本B (8下U3) / 版本A複習", ex: "How much is the T-shirt? It's ten dollars.", note: "T 必須大寫並加連字號 (T-shirt)。" },
+      { id: "v79", icon: "👖", topic: "clothes", word: "jeans", zh: "牛仔褲 (恆複數)", ver: "版本B (8下U3)", ex: "How much are these jeans? They're eight hundred dollars.", note: "★必考：褲類有兩條褲管，永遠視為複數，搭配 are / these / They're！" },
+      { id: "v80", icon: "👖", topic: "clothes", word: "pants", zh: "長褲 (恆複數)", ver: "版本B (8下U3) / 版本A複習", ex: "How much are the pants? They're one hundred dollars.", note: "★必考恆複數名詞：How much are the pants?" },
+      { id: "v81", icon: "🩳", topic: "clothes", word: "shorts", zh: "短褲 (恆複數)", ver: "版本B (8下U3) / 版本A複習", ex: "How much are those shorts? They're 300 dollars.", note: "★必考恆複數名詞：搭配 are / They're。" },
+      { id: "v82", icon: "🧦", topic: "clothes", word: "shoes, sneakers & socks", zh: "鞋子、運動鞋與襪子(複數)", ver: "版本A/B 複習核心", ex: "How much are the socks? They're thirty dollars.", note: "成雙穿戴的鞋襪 (shoes, sneakers, socks, glasses) 皆常以複數搭配 are / They're！" },
+      { id: "v83", icon: "🎒", topic: "clothes", word: "Whose ... is that?", zh: "那是誰的⋯⋯？(所有權問句)", ver: "版本B (7上Starter) / 版本A失物招領", ex: "Whose backpack is that on the chair? It's my backpack.", note: "★高頻句型：Whose (誰的) + 單數名詞 is this/that? ➔ It's my...；複數用 Whose glasses are those? ➔ They're my glasses." },
+      { id: "v84", icon: "💵", topic: "clothes", word: "hundred dollars", zh: "百元 (計價單位)", ver: "版本B (8下U3)", ex: "They're five hundred dollars.", note: "★必考：幾百元寫作 two hundred dollars（hundred 絕不加 s，dollars 要加 s）。" },
 
-      { id: "v57", icon: "🌸", topic: "seasons", word: "spring", zh: "春天", ver: "四季氣候主題", ex: "It's warm in spring.", note: "季節前面使用介系詞 in (in spring)。" },
-      { id: "v58", icon: "☀️", topic: "seasons", word: "summer", zh: "夏天", ver: "四季氣候主題", ex: "It's hot and wet in summer.", note: "My favorite season is summer." },
-      { id: "v59", icon: "🍂", topic: "seasons", word: "fall / autumn", zh: "秋天", ver: "四季氣候主題", ex: "It's cool and dry in fall.", note: "美式常用 fall，英式常用 autumn。" },
-      { id: "v60", icon: "⛄", topic: "seasons", word: "winter", zh: "冬天", ver: "四季氣候主題", ex: "It's cold and windy in winter.", note: "搭配天氣形容詞 cold / snowy。" },
-      { id: "v61", icon: "🛒", topic: "seasons", word: "supermarket", zh: "超級市場", ver: "共同核心", ex: "I was at the supermarket yesterday.", note: "過去式地點常搭配介系詞 at the..." },
-      { id: "v62", icon: "🏛️", topic: "seasons", word: "museum", zh: "博物館", ver: "共同核心", ex: "We were at the museum last Sunday.", note: "重音在第二音節 se。" },
-      { id: "v63", icon: "🤝", topic: "seasons", word: "visited a friend", zh: "拜訪朋友(過去式)", ver: "過去行動主題", ex: "I visited a friend last night.", note: "visit 字尾 t，加 -ed 發 /ɪd/ 的音。" },
-      { id: "v64", icon: "🧹", topic: "seasons", word: "cleaned my room", zh: "打掃房間(過去式)", ver: "過去行動主題", ex: "He cleaned his room yesterday.", note: "clean + ed 表過去完成的動作。" }
+      // Topic 8: 四季氣候、過去時間場所與過去式行動 (12 words: 完整收錄 8下 雙版本所有時態、地點與天氣詞彙)
+      { id: "v85", icon: "🌸", topic: "seasons", word: "spring & summer", zh: "春天與夏天", ver: "版本B (8下U4)", ex: "What's your favorite season? My favorite season is summer.", note: "季節前介系詞用 in (in spring, in summer)，四季名稱小寫即可。" },
+      { id: "v86", icon: "🍂", topic: "seasons", word: "fall & winter", zh: "秋天與冬天", ver: "版本B (8下U4)", ex: "My favorite season is fall. It's cool and dry in fall.", note: "描述某季節氣候：It's + 天氣形容詞 + in + 季節。" },
+      { id: "v87", icon: "🌧️", topic: "seasons", word: "dry & wet", zh: "乾燥的 vs. 潮濕的", ver: "版本B (8下U4)", ex: "It's hot and wet in summer, and it's cool and dry in fall.", note: "★版本B 第8冊 U4 必考反義氣候形容詞：dry (乾燥的) ↔ wet (潮濕的)！" },
+      { id: "v88", icon: "🌫️", topic: "seasons", word: "foggy & snowy", zh: "多霧的與下雪的", ver: "版本B (8下U4)", ex: "It is cold and snowy in winter. Sometimes it is foggy.", note: "fog (霧) 重複 g 加 y ➔ foggy；snow (雪) 加 y ➔ snowy。" },
+      { id: "v89", icon: "⏳", topic: "seasons", word: "yesterday & last night", zh: "昨天與昨晚 (過去時間)", ver: "兩版共同 (8下U1/U3)", ex: "Where were you last night? I was at the night market yesterday.", note: "過去時間副詞通常放在句尾，搭配過去式動詞 (was/were 或 did/-ed)。" },
+      { id: "v90", icon: "🕰️", topic: "seasons", word: "an hour ago & two days ago", zh: "一小時前與兩天前", ver: "版本A (8下U3)", ex: "Were you at the bakery an hour ago? No, I wasn't. I was there two hours ago.", note: "★必考：hour 的 h 不發音（母音開頭），故「一小時前」用 an hour ago；兩小時前為 two hours ago！" },
+      { id: "v91", icon: "🏛️", topic: "seasons", word: "library, museum & coffee shop", zh: "圖書館、博物館與咖啡廳", ver: "版本A (8下U4)", ex: "Was he at the museum two days ago? No, he was at the coffee shop.", note: "描述過去在某場所：was/were + at the + 場所名詞。" },
+      { id: "v92", icon: "🎬", topic: "seasons", word: "movie theater, night market & sports center", zh: "電影院、夜市與運動中心", ver: "兩版共同 (8下場所)", ex: "They were at the movie theater and the night market last night.", note: "版本B亦包含：at home (在家), at school (在學校), at the mall (在購物中心), at the zoo (在動物園)。" },
+      { id: "v93", icon: "🧹", topic: "seasons", word: "cleaned my room", zh: "整理/打掃房間 (過去式)", ver: "版本B (8下U2)", ex: "What did you do last night? I cleaned my room.", note: "規則動詞 clean + ed ➔ cleaned（尾音 /n/ 為有聲子音，ed 發 /d/）。" },
+      { id: "v94", icon: "🐕", topic: "seasons", word: "walked the dog & watched videos", zh: "遛狗與看影片 (過去式)", ver: "版本B (8下U2)", ex: "Did you play basketball last night? No, I didn't. I walked the dog and watched videos.", note: "walk + ed (/t/)、watch + ed (/t/)；注意版本B U2 主題詞為 watched videos。" },
+      { id: "v95", icon: "🤝", topic: "seasons", word: "visited a friend", zh: "拜訪朋友 (過去式)", ver: "版本B (8下U2)", ex: "I visited a friend yesterday afternoon.", note: "visit 字尾為 /t/，加 -ed 後發 /ɪd/ 的音 (visited)。" },
+      { id: "v96", icon: "🎵", topic: "seasons", word: "listened to music & played basketball", zh: "聽音樂與打籃球 (過去式)", ver: "版本B (8下U2)", ex: "She listened to music and played basketball yesterday.", note: "listen + ed ➔ listened；play + ed ➔ played（母音+y 直接加 ed）。" }
     ];
 
     const grammarModules = [
@@ -1900,6 +1940,40 @@
           { q: "練習 1：A: What ______ you do last weekend? B: I ______ my grandparents.", opts: ["did; visit", "did; visited", "were; visited"], ans: 1, exp: "過去式問句用助動詞 did；肯定答句無助動詞，動詞需用過去式 visited。" },
           { q: "練習 2：A: Did Kevin play baseball yesterday? B: No, he ______. He ______ TV at home.", opts: ["didn't; watched", "wasn't; watched", "didn't; watch"], ans: 0, exp: "Did 問句以 No, he didn't 簡答；後方完整肯定句描述昨天在家看電視，動詞用過去式 watched。" }
         ]
+      },
+      {
+        id: "g7",
+        title: "單元 7：可數與不可數食物名詞 (some) & 物品所有權 (Whose)",
+        tag: "第7冊關鍵語法 (Grammar Tips & Starter)",
+        summary: "點餐時 some 代表「一些」，後面若接「不可數名詞」不加 s；若接「可數名詞」則字尾必須加 -s/-es！詢問物品是誰的用 Whose。",
+        formula: "1. I'd like <span class='formula-highlight'>some + 不可數名詞</span> (<span class='formula-warn'>soup / rice / steak / pizza / milk / tea</span>).<br>2. I'd like <span class='formula-highlight'>some + 可數複數名詞</span> (<span class='formula-warn'>dumplings / sandwiches / noodles / French fries</span>).<br>3. <span class='formula-highlight'>Whose</span> backpack / soda <span class='formula-warn'>is that</span>? ➔ It's <span class='formula-highlight'>my</span> backpack.",
+        rows: [
+          ["some + 不可數名詞 (字尾絕不加 s)", "Would you like <b>some soup / rice / steak / pizza</b>?", "Yes, please. I'd like <b>some soup</b>.<br>(註：a pizza 指整個完整披薩；some pizza 指一些披薩切片)"],
+          ["some + 可數複數名詞 (字尾必加 -s/-es)", "What would you like to eat?", "I'd like <b>some dumplings / sandwiches / noodles / French fries</b>.<br>(若只點一個三明治則說：I'd like <b>a sandwich</b>.)"],
+          ["Whose 詢問物品主人 (單數 vs. 複數)", "<b>Whose</b> hat <b>is this / that</b>?<br><b>Whose</b> glasses <b>are those</b>?", "<b>It's</b> my hat.<br><b>They're</b> my glasses."]
+        ],
+        tip: "💡 課本 Grammar Tips 必考秘訣：看到 some 先判斷後方的食物能不能一個個數！湯(soup)、飯(rice)、牛排(steak)不可數不加 s；水餃(dumplings)、三明治(sandwiches)可數，放在 some 後面一定要加 s/es！",
+        practices: [
+          { q: "練習 1：A: What would you like for lunch? B: I'd like some ______ and ______, please.", opts: ["soup; sandwich", "soups; sandwiches", "soup; sandwiches"], ans: 2, exp: "soup 為不可數名詞不加 s；sandwich 為可數名詞，接在 some 後方必須加 -es 變成 sandwiches！" },
+          { q: "練習 2：A: ______ water bottle is that on the desk? B: It's my water bottle.", opts: ["Who", "Whose", "Where"], ans: 1, exp: "後方緊接名詞 water bottle 且回答為 It's my...（是我的...），故用詢問所有權的疑問詞 Whose（誰的）。" }
+        ]
+      },
+      {
+        id: "g8",
+        title: "單元 8：高層次句構表現（動名詞主詞、感嘆句、因果與序列敘事）",
+        tag: "★ 兩版本課文高層次會話與寫作表現",
+        summary: "彙整兩本課文故事與讀寫任務中的高階句型：(1) like to V 與 V-ing 作主詞、(2) What a...! 感嘆句與 can't wait to V、(3) 職業使命與序列詞 (First/Next/Then/Finally)。",
+        formula: "1. <span class='formula-highlight'>動名詞作主詞</span>：<span class='formula-warn'>Camping / Playing basketball</span> is fun!<br>2. <span class='formula-highlight'>感嘆與期待</span>：<span class='formula-warn'>What a</span> big whale! / I <span class='formula-warn'>can't wait to</span> go whale watching!<br>3. <span class='formula-highlight'>序列與因果</span>：<span class='formula-warn'>First</span>... <span class='formula-warn'>Next</span>... <span class='formula-warn'>Then</span>... <span class='formula-warn'>Finally</span>... / I want to be a police officer <span class='formula-warn'>to help people in need</span>.",
+        rows: [
+          ["休閒雙軌問法對照 (習慣 vs. 喜好)", "B版問習慣：What <b>do</b> you <b>do</b> in your free time?<br>A版問喜好：What do you <b>like to do</b> in your free time?", "習慣：I <b>go jogging</b>. / She <b>watches</b> TV.<br>喜好：I <b>like to go hiking</b>. / He <b>likes to go swimming</b>."],
+          ["課文高層次感嘆句與道地慣用語", "1. <b>What a</b> big fish! (多麼大的魚啊！)<br>2. I <b>can't wait to</b> go whale watching!<br>3. I'm so hungry. <b>I could eat a horse!</b>", "1. What + a/an + 形容詞 + 單數名詞! 為感嘆句而非疑問句。<br>2. can't wait to + 原形動詞 = 迫不及待做某事。<br>3. I could eat a horse! = 我餓壞了(誇飾諺語)。"],
+          ["閱讀與寫作高階策略 (Sequence & Inferences)", "序列詞：<b>First, Next, Then, Finally</b><br>職業價值：Why is this job important?", "• <b>Farmers</b> grow the food we need.<br>• <b>Police officers</b> keep our town safe and help people in need.<br>• <b>Artists</b> make our world beautiful."]
+        ],
+        tip: "💡 高層次表現關鍵：會用單句回答只是基礎（A1），若能在對話與寫作中自然運用『Camping is fun!』、『I can't wait to...』、『First / Next / Finally』以及說明『為什麼想當某職業』，就是六年級最高層次的 A1 High / A2 表現！",
+        practices: [
+          { q: "練習 1：A: Look at that whale jumping out of the water! ______ big mammal! B: This is amazing! We're so lucky!", opts: ["How", "What a", "Where is"], ans: 1, exp: "後方為 a + 形容詞 (big) + 單數可數名詞 (mammal)，感嘆句構使用 What a big mammal!（多麼巨大的哺乳動物啊！）。" },
+          { q: "練習 2：A: I'm so hungry! I could eat a horse! B: Here, would you like some beef noodles? 請問 A 說『I could eat a horse!』真正的意思是什麼？", opts: ["他真的想吃馬肉料理", "他覺得馬跑得很快", "他現在肚子超級餓 (very hungry)"], ans: 2, exp: "課本第 7 冊 Unit 3 故事重點諺語：'I could eat a horse.' 代表 'I am very hungry / starving'（我餓極了）。" }
+        ]
       }
     ];
 
@@ -1915,14 +1989,14 @@
           { label: "第 3 格：量體溫發燒 38.5°C (have a fever)", lineIdx: 4 },
           { label: "第 4 格：醫護叮嚀回家休息 (get some rest)", lineIdx: 5 }
         ],
-        keyNotes: "• 核心單字：headache (頭痛), sore throat (喉嚨痛), fever (發燒), runny nose (流鼻水), cough (咳嗽)<br>• 核心句型：What's wrong? (怎麼了？) / Do you have a fever? (你有發燒嗎？)",
+                keyNotes: "• 核心單字：headache, sore throat, fever, runny nose, cough, stomachache, soup, sandwiches<br>• <strong>★ 課本高層次會話表現</strong>：<br>  1. <code>You don't look well. / I don't feel well.</code>（關心氣色與表達身體不適）<br>  2. <code>Do you have a stomachache? No, I'm just hungry! I could eat a horse!</code>（課本經典幽默轉折與諺語：我只是超餓！）<br>  3. <code>some + 不可數 (some warm soup)</code> vs. <code>some + 可數複數 (some sandwiches)</code>",
         lines: [
-          { avatar: "👩‍⚕️", en: "Nurse: Good morning, Leo. You don't look well. <span class='hl-grammar'>What's wrong?</span>", zh: "護理師：早安，Leo。你氣色看起來不太好。怎麼了嗎？", raw: "Good morning, Leo. You don't look well. What's wrong?" },
-          { avatar: "🤒", en: "Leo: I <span class='hl-vocab'>have a headache</span> and a bad <span class='hl-vocab'>sore throat</span>.", zh: "Leo：我頭很痛，而且喉嚨非常痛。", raw: "I have a headache and a bad sore throat." },
+          { avatar: "👩‍⚕️", en: "Nurse: Good morning, Leo. <span class='hl-grammar'>You don't look well. What's wrong?</span>", zh: "護理師：早安，Leo。你氣色看起來不太好。怎麼了嗎？", raw: "Good morning, Leo. You don't look well. What's wrong?" },
+          { avatar: "🤒", en: "Leo: <span class='hl-grammar'>I don't feel well.</span> I <span class='hl-vocab'>have a headache</span> and a bad <span class='hl-vocab'>sore throat</span>.", zh: "Leo：我覺得很不舒服。我頭很痛，而且喉嚨非常痛。", raw: "I don't feel well. I have a headache and a bad sore throat." },
           { avatar: "👩‍⚕️", en: "Nurse: <span class='hl-grammar'>Do you have a fever?</span> Let me check your temperature.", zh: "護理師：你有發燒嗎？讓我量一下你的體溫。", raw: "Do you have a fever? Let me check your temperature." },
           { avatar: "🤧", en: "Leo: I also <span class='hl-vocab'>have a runny nose</span> and <span class='hl-vocab'>a cough</span>.", zh: "Leo：我還有流鼻水和咳嗽。", raw: "I also have a runny nose and a cough." },
-          { avatar: "👩‍⚕️", en: "Nurse: Oh, your temperature is 38.5 degrees. You <span class='hl-vocab'>have a fever</span> and a cold!", zh: "護理師：喔，你的體溫是 38.5 度。你發燒而且感冒了！", raw: "Oh, your temperature is 38.5 degrees. You have a fever and a cold!" },
-          { avatar: "👩‍⚕️", en: "Nurse: Please call your mom, go to see a <span class='hl-vocab'>doctor</span>, and <span class='hl-grammar'>get some rest</span> at home.", zh: "護理師：請打電話給媽媽、去看醫生，並在家多休息。", raw: "Please call your mom, go to see a doctor, and get some rest at home." }
+          { avatar: "👩‍⚕️", en: "Nurse: Oh, your temperature is 38.5 degrees. You <span class='hl-vocab'>have a fever</span> and a cold! Please drink some warm water and <span class='hl-grammar'>get some rest</span>.", zh: "護理師：喔，你的體溫是 38.5 度。你發燒而且感冒了！請喝點溫水並多休息。", raw: "Oh, your temperature is 38.5 degrees. You have a fever and a cold! Please drink some warm water and get some rest." },
+          { avatar: "👦", en: "Max (Friend): Gulp... Nurse, <span class='hl-grammar'>do I have a stomachache?</span> Actually, no, <span class='hl-vocab'>I'm just hungry! I could eat a horse!</span> <span class='hl-grammar'>I'd like some soup and sandwiches!</span>", zh: "Max（陪同好友）：咕嚕（肚子叫）⋯⋯護理師，我是胃痛嗎？其實不是，我只是太餓了！我餓到可以吃下一匹馬！我想吃一些湯和三明治！", raw: "Nurse, do I have a stomachache? Actually, no, I'm just hungry! I could eat a horse! I'd like some soup and sandwiches!" }
         ],
         questions: [
           { q: "1. What symptoms (症狀) does Leo NOT have?", opts: ["A headache and a fever", "A sore throat and a cough", "A toothache and a stomachache"], ans: 2, exp: "對話與四格漫畫中 Leo 提到頭痛、喉嚨痛、流鼻水、咳嗽與發燒，並未提到牙痛與胃痛。" },
@@ -1965,13 +2039,13 @@
           { label: "第 3 格：下午四點公園遛狗 (Walked the dog)", lineIdx: 3 },
           { label: "第 4 格：晚上拜訪朋友看電視 (Watched TV)", lineIdx: 4 }
         ],
-        keyNotes: "• 核心單字：cool and dry (涼爽乾燥), cleaned my room (打掃房間), washed the dishes (洗碗), museum (博物館), walked the dog (遛狗), visited a friend (拜訪朋友)<br>• 時態雙軌：was/were 表過去所在位置與狀態；規則動詞加 -ed 表過去完成的動作。",
+        keyNotes: "• 核心單字：cool and dry, cleaned my room, museum, walked the dog, visited a friend, watched TV, an hour ago<br>• <strong>★ 課本高層次敘事表現</strong>：<br>  1. <strong>序列詞組織法 (Sequence Words)</strong>：運用 <code>First, ... Next, ... Then, ... Finally, ...</code> 串聯一整天的時間軸 (Timeline)！<br>  2. <strong>感嘆句構 (Exclamation)</strong>：<code>What a big dinosaur! This is amazing!</code><br>  3. <strong>雙軌過去式整合</strong>：同時運用 <code>was/were + 地點/時間副詞 (ago/yesterday)</code> 與 <code>規則動詞 -ed</code>。",
         lines: [
-          { avatar: "🌤️", en: "Yesterday <span class='hl-grammar'>was</span> Sunday. The weather <span class='hl-grammar'>was</span> <span class='hl-vocab'>cool and dry</span>.", zh: "昨天是星期日。天氣涼爽又乾燥。", raw: "Yesterday was Sunday. The weather was cool and dry." },
-          { avatar: "🧹", en: "In the morning, I <span class='hl-grammar'>was</span> at home. I <span class='hl-vocab'>cleaned my room</span> and <span class='hl-vocab'>washed the dishes</span>.", zh: "早上我在家。我打掃了房間並且洗了碗盤。", raw: "In the morning, I was at home. I cleaned my room and washed the dishes." },
-          { avatar: "🏛️", en: "In the afternoon, my sister and I <span class='hl-grammar'>were</span> at the <span class='hl-vocab'>museum</span>.", zh: "下午，我和妹妹在博物館。", raw: "In the afternoon, my sister and I were at the museum." },
-          { avatar: "🐕", en: "Then we <span class='hl-vocab'>walked the dog</span> in the park at four o'clock.", zh: "接著我們四點鐘在公園遛狗。", raw: "Then we walked the dog in the park at four o'clock." },
-          { avatar: "📺", en: "Last night, we <span class='hl-vocab'>visited a friend</span> and <span class='hl-vocab'>watched TV</span> together. We <span class='hl-grammar'>were</span> tired but very happy!", zh: "昨晚，我們去拜訪了一位朋友並一起看電視。我們很累但非常開心！", raw: "Last night, we visited a friend and watched TV together. We were tired but very happy!" }
+          { avatar: "🌤️", en: "Yesterday <span class='hl-grammar'>was</span> Sunday, and the weather <span class='hl-grammar'>was</span> <span class='hl-vocab'>cool and dry</span>.", zh: "昨天是星期日，天氣涼爽又乾燥。", raw: "Yesterday was Sunday, and the weather was cool and dry." },
+          { avatar: "🧹", en: "<span class='hl-grammar'>First,</span> in the morning, I <span class='hl-grammar'>was</span> at home. I <span class='hl-vocab'>cleaned my room</span> and listened to music.", zh: "首先，早上我在家。我整理了房間並且聽了音樂。", raw: "First, in the morning, I was at home. I cleaned my room and listened to music." },
+          { avatar: "🏛️", en: "<span class='hl-grammar'>Next,</span> in the afternoon, my sister and I <span class='hl-grammar'>were</span> at the <span class='hl-vocab'>museum</span>. <span class='hl-grammar'>What a big dinosaur!</span> It was amazing!", zh: "接著，下午我和妹妹在博物館。多麼巨大的恐龍啊！真是太驚奇了！", raw: "Next, in the afternoon, my sister and I were at the museum. What a big dinosaur! It was amazing!" },
+          { avatar: "🐕", en: "<span class='hl-grammar'>Then,</span> we <span class='hl-vocab'>walked the dog</span> in the park at four o'clock.", zh: "然後，我們四點鐘在公園遛狗。", raw: "Then, we walked the dog in the park at four o'clock." },
+          { avatar: "📺", en: "<span class='hl-grammar'>Finally,</span> last night, we <span class='hl-vocab'>visited a friend</span> and <span class='hl-vocab'>watched TV</span> together. We <span class='hl-grammar'>were</span> tired but very happy!", zh: "最後，昨晚我們拜訪了一位朋友並一起看電視。我們很累但非常開心！", raw: "Finally, last night, we visited a friend and watched TV together. We were tired but very happy!" }
         ],
         questions: [
           { q: "1. What did the writer do in the morning?", opts: ["He visited a friend.", "He cleaned his room and washed the dishes.", "He walked the dog in the park."], ans: 1, exp: "對應漫畫第 1 格與日記第二句：'In the morning, I was at home. I cleaned my room and washed the dishes.'" },
@@ -1989,13 +2063,13 @@
           { label: "第 3 格：空閒時間彈鋼琴 (Play the piano)", lineIdx: 3 },
           { label: "第 4 格：未來想當作家 (I want to be a writer!)", lineIdx: 4 }
         ],
-        keyNotes: "• 核心單字：Canada (加拿大), fall (秋天), get up (起床), on foot (步行), play the piano (彈鋼琴), writer (作家)<br>• 核心句型：I'm from... / My favorite season is... / I want to be a...",
+        keyNotes: "• 核心單字：Canada, fall, get up, on foot, play the piano, go camping, writer<br>• <strong>★ 課本高層次會話與寫作表現</strong>：<br>  1. <code>I can't wait to visit Taiwan!</code>（迫不及待想做某事）<br>  2. <code>Camping is fun! / Playing the piano is fun!</code>（動名詞片語當主詞）<br>  3. <code>I want to be a writer to share great stories with people!</code>（結合職業志向與背後使命感）",
         lines: [
-          { avatar: "🍁", en: "Hello! My name is Emma, and <span class='hl-grammar'>I'm from</span> <span class='hl-vocab'>Canada</span>.", zh: "哈囉！我的名字是 Emma，我來自加拿大。", raw: "Hello! My name is Emma, and I'm from Canada." },
-          { avatar: "🍂", en: "<span class='hl-grammar'>My favorite season is</span> <span class='hl-vocab'>fall</span> because the maple leaves are beautiful.", zh: "我最喜歡的季節是秋天，因為楓葉非常美麗。", raw: "My favorite season is fall because the maple leaves are beautiful." },
+          { avatar: "🍁", en: "Hello! My name is Emma, and <span class='hl-grammar'>I'm from</span> <span class='hl-vocab'>Canada</span>. <span class='hl-grammar'>I can't wait to</span> make new friends in Taiwan!", zh: "哈囉！我的名字是 Emma，我來自加拿大。我迫不及待想在臺灣交新朋友了！", raw: "Hello! My name is Emma, and I'm from Canada. I can't wait to make new friends in Taiwan!" },
+          { avatar: "🍂", en: "<span class='hl-grammar'>My favorite season is</span> <span class='hl-vocab'>fall</span>. It's cool and dry, and the maple leaves are beautiful.", zh: "我最喜歡的季節是秋天。天氣涼爽乾燥，而且楓葉非常美麗。", raw: "My favorite season is fall. It's cool and dry, and the maple leaves are beautiful." },
           { avatar: "🚶‍♀️", en: "On school days, I <span class='hl-vocab'>get up</span> at 7:00 and go to school <span class='hl-vocab'>on foot</span>.", zh: "在上學日，我七點起床並走路去上學。", raw: "On school days, I get up at 7:00 and go to school on foot." },
-          { avatar: "🎹", en: "In my free time, I like to <span class='hl-vocab'>play the piano</span> and read storybooks.", zh: "在空閒時間，我喜歡彈鋼琴和讀故事書。", raw: "In my free time, I like to play the piano and read storybooks." },
-          { avatar: "✍️", en: "In the future, <span class='hl-grammar'>I want to be a</span> <span class='hl-vocab'>writer</span>! What about you?", zh: "在未來，我想要成為一名作家！那你呢？", raw: "In the future, I want to be a writer! What about you?" }
+          { avatar: "🎹", en: "In my free time, I like to <span class='hl-vocab'>play the piano</span> and <span class='hl-vocab'>go camping</span>. <span class='hl-grammar'>Camping is fun!</span>", zh: "在空閒時間，我喜歡彈鋼琴和去露營。露營超有趣！", raw: "In my free time, I like to play the piano and go camping. Camping is fun!" },
+          { avatar: "✍️", en: "In the future, <span class='hl-grammar'>I want to be a</span> <span class='hl-vocab'>writer</span> to write great children's books! What about you?", zh: "在未來，我想要成為一名作家，寫出很棒的兒童故事書！那你呢？", raw: "In the future, I want to be a writer to write great children's books! What about you?" }
         ],
         questions: [
           { q: "1. Where is Emma from and what is her favorite season?", opts: ["Australia; summer", "Canada; fall", "The UK; winter"], ans: 1, exp: "對應漫畫第 1 格：Emma 來自加拿大 (Canada)，最喜歡秋天 (fall)。" },
@@ -2033,7 +2107,20 @@
 
       { id: "q22", dim: "dim6", dimName: "英語聽力與語音辨識", ver: "聽力測驗", remedyTab: "tab-vocab", remedyTarget: "transport", audioText: "Excuse me. How does your brother go to the library? He goes there by bike.", stem: "請點擊右上角「🔊 播放真人美語發音」聆聽對話：How does the boy's brother go to the library?", options: ["By bus", "By bicycle (bike)", "By MRT", "On foot"], correct: 1, exp: "語音內容：'How does your brother go to the library? He goes there by bike.'（騎腳踏車）。" },
       { id: "q23", dim: "dim6", dimName: "英語聽力與語音辨識", ver: "聽力測驗", remedyTab: "tab-grammar", remedyTarget: "g6", audioText: "What did you do last night? I visited my grandma and cleaned the living room.", stem: "請點擊右上角「🔊 播放真人美語發音」聆聽對話：What did the speaker do last night?", options: ["Played basketball and watched TV", "Visited grandma and cleaned the living room", "Went camping and went hiking", "Did homework and went to bed early"], correct: 1, exp: "語音內容：'What did you do last night? I visited my grandma and cleaned the living room.'" },
-      { id: "q24", dim: "dim6", dimName: "英語聽力與語音辨識", ver: "聽力測驗", remedyTab: "tab-vocab", remedyTarget: "seasons", audioText: "What is your favorite season? My favorite season is winter, because I like snow.", stem: "請點擊右上角「🔊 播放真人美語發音」聆聽對話：Why does the speaker like winter?", options: ["Because he likes warm flowers.", "Because he likes swimming at the beach.", "Because he likes snow.", "Because it is cool and dry."], correct: 2, exp: "語音內容：'My favorite season is winter, because I like snow.'" }
+      { id: "q24", dim: "dim6", dimName: "英語聽力與語音辨識", ver: "聽力測驗", remedyTab: "tab-vocab", remedyTarget: "seasons", audioText: "What is your favorite season? My favorite season is winter, because I like snow.", stem: "請點擊右上角「🔊 播放真人美語發音」聆聽對話：Why does the speaker like winter?", options: ["Because he likes warm flowers.", "Because he likes swimming at the beach.", "Because he likes snow.", "Because it is cool and dry."], correct: 2, exp: "語音內容：'My favorite season is winter, because I like snow.'" },
+      { id: "q25", dim: "dim1", dimName: "主題字彙廣度", ver: "第8冊重點 (四季與氣候)", remedyTab: "tab-vocab", remedyTarget: "seasons", stem: "In Taiwan, it is often hot and ______ in summer, and it is cool and ______ in fall.", options: ["dry; wet", "wet; dry", "snowy; hot", "foggy; warm"], correct: 1, exp: "第 8 冊四季氣候核心反義形容詞：夏天炎熱且潮濕 (hot and wet)，秋天涼爽且乾燥 (cool and dry)。" },
+      { id: "q26", dim: "dim2", dimName: "現在式與單複數語法", ver: "第7冊重點 (可數與不可數)", remedyTab: "tab-grammar", remedyTarget: "g7", stem: "A: What would you like for dinner?
+B: I'd like some ______ and some ______, please.", options: ["steak; dumplings", "steaks; dumpling", "steak; dumpling", "steaks; dumplings"], correct: 0, exp: "some 後方接不可數名詞時不加 s (some steak)；接可數名詞時必須加複數 -s (some dumplings)！" },
+      { id: "q27", dim: "dim5", dimName: "篇章閱讀與推論", ver: "高層次會話語境推論", remedyTab: "tab-grammar", remedyTarget: "g8", context: "Amy: Come on, everyone! Lunch is ready. Would you like some sandwiches, Jello?
+Jello: No, thank you. My plate is full.
+Kevin: I'd like two sandwiches and some beef noodles, please! I could eat a horse!", stem: "根據對話中的高層次會話表現，下列何者推論「完全正確」？", options: ["Jello is very hungry and wants more food.", "Kevin really wants to eat horse meat.", "Kevin is very hungry, and Jello cannot eat any more food now.", "Amy doesn't have any sandwiches."], correct: 2, exp: "Jello 說 'My plate is full'（盤子滿了，婉拒再取餐）；Kevin 說 'I could eat a horse!' 為課本經典誇飾諺語，代表他現在超級餓 (very hungry)！" },
+      { id: "q28", dim: "dim5", dimName: "篇章閱讀與推論", ver: "課本閱讀技巧：Making Inferences (邏輯推論)", remedyTab: "tab-vocab", remedyTarget: "jobs", context: "【Read and Infer 職業線索推論】
+• Anna writes children's storybooks. She often goes to the bookstore to get new ideas.
+• Frank works at a station. He helps people in need and keeps his town safe.
+• Ron keeps chickens and grows tomatoes and papayas on his land.", stem: "根據課本「邏輯推論 (Making Inferences)」技巧，Anna、Frank 與 Ron 的職業依序為何？", options: ["A writer, a police officer, and a farmer", "An artist, a bus driver, and a dentist", "A singer, a doctor, and a cook", "A writer, a farmer, and a police officer"], correct: 0, exp: "寫童書 (writes children's books) ➔ writer (作家)；保護小鎮安全並幫助民眾 (keeps his town safe) ➔ police officer (警察)；養雞與種植蔬果 (grows tomatoes) ➔ farmer (農夫)。" },
+      { id: "q29", dim: "dim5", dimName: "篇章閱讀與推論", ver: "課本高階句構與序列詞 (Sequence)", remedyTab: "tab-grammar", remedyTarget: "g8", context: "Look at the whale jumping out of the water! (1)______ big mammal!
+Here is our whale watching trip schedule: (2)______, we put on our life jackets. Next, we get on the boat. Finally, we see the whales!", stem: "請選出最適合填入 (1)「感嘆句」與 (2)「序列詞 (Sequence Words)」的組合：", options: ["How; Finally", "What a; First", "What; Then", "Where is; First"], correct: 1, exp: "(1) What + a + 形容詞 + 單數名詞! (What a big mammal! 多麼大的哺乳動物啊！)；(2) 行程步驟的第一步搭配 Next 與 Finally，開頭使用序列詞 First（首先）。" },
+      { id: "q30", dim: "dim6", dimName: "英語聽力與語音辨識", ver: "聽力測驗 (高階會話)", remedyTab: "tab-reading", remedyTarget: "s1", audioText: "Ring! Ring! Hello, who's calling? Hi, Amy! It's sunny today. Let's go to the park and play basketball! Good idea! I can't wait!", stem: "請點擊右上角「🔊 播放真人美語發音」聆聽電話對話：What are they going to do at the park?", options: ["Go camping and listen to music", "Play basketball", "Walk the dog", "Buy a yellow jacket"], correct: 1, exp: "電話會話內容：'Who's calling? ... It's sunny today. Let's go to the park and play basketball! Good idea! I can't wait!'" }
     ];
 
     /* =========================================================================
@@ -2685,7 +2772,7 @@
       const mode = appState.selectedAssessMode;
       if (mode === "full") {
         activeQuizQuestions = [...masterQuestionBank];
-        document.getElementById("quiz-mode-title").innerText = "🏆 全能力綜合檢定 (24題)";
+        document.getElementById("quiz-mode-title").innerText = "🏆 全能力綜合檢定 (30題)";
       } else if (mode === "past") {
         activeQuizQuestions = masterQuestionBank.filter(q => q.dim === "dim3" || q.dim === "dim4" || q.id === "q20" || q.id === "q23");
         document.getElementById("quiz-mode-title").innerText = "⚡ 過去式雙軌專項挑戰";
